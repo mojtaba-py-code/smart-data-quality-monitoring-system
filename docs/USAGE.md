@@ -181,6 +181,36 @@ Reports written:
   summary -> output/customers_summary.txt
 ```
 
+### `history`
+
+Lists runs previously recorded by `analyze`.
+
+```bash
+dqms history                      # every dataset, newest first
+dqms history --dataset customers --limit 50
+```
+
+### `trend`
+
+Plots how one dataset's score has moved across its recorded runs, and reports the net movement.
+
+```bash
+dqms trend customers
+```
+
+```text
+                        Quality trend: customers
+┏━━━━━━━━━━━━━━━━━━┳━━━━━━━┳━━━━━━━━┳━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ When (UTC)       ┃ Score ┃ Status ┃ Chart                                 ┃
+┡━━━━━━━━━━━━━━━━━━╇━━━━━━━╇━━━━━━━━╇━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┩
+│ 2026-08-01 09:00 │ 97.2% │ PASS   │ #######################################│
+│ 2026-08-02 09:00 │ 95.0% │ PASS   │ ######################################.│
+└──────────────────┴───────┴────────┴───────────────────────────────────────┘
+Across 2 runs the score has declined by 2.2 points.
+```
+
+It exits `1` when the dataset has no recorded runs.
+
 ### `dashboard`
 
 Launches the Streamlit dashboard.
@@ -197,6 +227,57 @@ Options:
 
 The command also forwards the `dashboard` configuration section (`max_upload_mb`, `theme`) to
 Streamlit and disables Streamlit's usage telemetry.
+
+## Monitoring over time
+
+`analyze` records each run in a SQLite file (`paths.history_db`) and compares the result against that
+dataset's previous run, so a regression is visible the moment it appears:
+
+```text
+Previous run 2026-08-01 09:00 UTC scored 97.2% - now down 2.2 points.
+```
+
+Pass `--no-record` for a one-off analysis that should not enter the history, or set
+`history.enabled: false` to switch recording off entirely. `history.retention_runs` caps how many
+runs are kept per dataset.
+
+### Alerting on a regression
+
+A regression is one of: the quality gate failed, the score fell below `alerts.min_score`, or the
+score dropped by more than `alerts.max_score_drop` since the previous run. The reasons are always
+printed. To also deliver them to a webhook:
+
+```bash
+export DQMS_ALERTS__ENABLED=true
+export DQMS_ALERTS__WEBHOOK_URL="https://hooks.example.com/services/..."
+dqms analyze data/customers.csv
+```
+
+Keep the URL in the environment rather than in `config/config.yaml`: a webhook URL is normally a
+credential in its own right, and that file is committed. The URL is redacted in logs for the same
+reason.
+
+The destination is validated before anything is sent - HTTPS only, no credentials in the URL, no
+redirects followed, and every address the host resolves to must be globally routable. Loopback,
+RFC1918, carrier-grade NAT, cloud metadata endpoints, and multicast are all refused, which stops a
+scheduled quality check from being turned into a probe of your own network. If you run a receiver on
+localhost, set `alerts.allow_private_targets: true` to opt out deliberately.
+
+The payload contains summary statistics only:
+
+```json
+{
+  "source": "dqms",
+  "dataset": "customers",
+  "overall_score": 91.4,
+  "grade": "A",
+  "passed": true,
+  "alerts": [{"reason": "score_dropped", "detail": "Score fell 6.1 points..."}]
+}
+```
+
+Never cell values, column names, or a source path - an alert crosses a network boundary, so it must
+not become a channel through which the dataset itself leaks.
 
 ## Python API
 

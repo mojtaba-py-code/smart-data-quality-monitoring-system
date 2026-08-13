@@ -69,6 +69,15 @@ prioritised recommendations](docs/screenshots/dashboard.png)
 - Multivariate Isolation Forest detection to catch rows that are unusual only in combination.
 - Which methods run is configuration-driven; each reports bounds, counts, ratios, and row indices.
 
+### Monitoring over time
+
+- Every `analyze` run is recorded in a local SQLite history, so a dataset is measured against its own
+  past rather than judged in isolation. `dqms history` lists past runs and `dqms trend` plots how a
+  dataset's score has moved.
+- Each run reports its movement against the previous one, and a regression - a failed gate, a score
+  below the alert floor, or a drop larger than the configured tolerance - can be delivered to a
+  webhook. Alerting is off by default, and the destination is validated before anything is sent.
+
 ### Drift monitoring
 
 - Schema drift: added, removed, and dtype-changed columns between a baseline and a current dataset.
@@ -85,7 +94,7 @@ prioritised recommendations](docs/screenshots/dashboard.png)
 
 ### Interfaces
 
-- A Typer-based CLI with seven commands and process-wide exit codes suitable for CI gating.
+- A Typer-based CLI with nine commands and process-wide exit codes suitable for CI gating.
 - A Streamlit dashboard that reuses the exact same pipeline as the CLI, guaranteeing consistent
   results between the two.
 
@@ -122,6 +131,13 @@ protections are enforced by default:
 - **Loopback-only dashboard.** `dqms dashboard` binds to `127.0.0.1` unless `--host` says otherwise,
   and disables Streamlit's usage telemetry, so an uploaded dataset is never exposed to the local
   network or reported to a third party by default.
+- **SSRF-guarded alerting.** Alerting is the only outbound request the system makes and is disabled
+  by default. A webhook URL is operator-supplied configuration, so it is validated before a byte is
+  sent: HTTPS only, no embedded credentials, no redirects followed, and every address the host
+  resolves to must be globally routable - an allow-list, so cloud metadata endpoints, loopback,
+  RFC1918, carrier-grade NAT, and multicast are all refused. The payload carries summary statistics
+  only, never cell values or a source path, and the webhook URL is redacted in logs because such a
+  URL is usually itself the credential.
 
 The threat model, the boundary these controls defend, and the hardening required for shared or
 automated deployments are documented in [SECURITY.md](SECURITY.md).
@@ -162,6 +178,8 @@ Every command accepts the global options `--config/-c` (path to a YAML config fi
 | `clean` | Clean a dataset and export the result | `dqms clean data/raw.csv -o data/clean.csv` |
 | `compare` | Detect schema and data drift between two datasets | `dqms compare data/jan.csv data/feb.csv` |
 | `report` | Generate HTML/PDF/summary reports | `dqms report data/customers.csv -o output/` |
+| `history` | List previously recorded runs | `dqms history --dataset customers` |
+| `trend` | Plot a dataset's score over time | `dqms trend customers` |
 | `dashboard` | Launch the Streamlit dashboard | `dqms dashboard --port 8501` |
 
 ```bash
@@ -186,6 +204,10 @@ and `compare` exits `2` when drift is detected.
 ```bash
 # Fail the build on any error-severity validation issue
 dqms validate data/customers.csv --strict
+
+# Track quality over time: analyse on a schedule, then inspect the trend
+dqms analyze data/customers.csv          # records the run and reports the movement
+dqms trend customers                     # how the score has moved across runs
 ```
 
 ## Configuration

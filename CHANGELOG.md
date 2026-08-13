@@ -4,6 +4,44 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] - 2026-08-13
+
+Turns the tool into an actual monitor. Until now every run stood alone: a dataset could be scored,
+but not tracked, so a slow decline was invisible until someone happened to look.
+
+### Added
+
+**Run history.** Every `analyze` run is recorded in a local SQLite file (`paths.history_db`). Two new
+commands read it: `dqms history` lists past runs, and `dqms trend <dataset>` plots how a dataset's
+score has moved and reports the net movement. `--no-record` skips recording a one-off analysis, and
+`history.retention_runs` caps how many runs are kept per dataset.
+
+**Regression detection.** Each run is compared against that dataset's previous run and the movement
+is printed. A regression - a failed gate, a score below `alerts.min_score`, or a drop larger than
+`alerts.max_score_drop` - is reported explicitly.
+
+**Alerting.** Regressions can be delivered to a webhook as JSON. Disabled by default.
+
+### Changed
+
+- `dqms dashboard` now starts Streamlit headless and opens the browser itself. Streamlit's
+  interactive first-run e-mail prompt would otherwise block any caller without a console - a
+  scheduled job, a container, a CI step. `--no-open` skips the browser for unattended use.
+
+### Security
+
+- The alert webhook is the only outbound request the system makes, and is guarded against SSRF:
+  HTTPS only, no credentials embedded in the URL, no redirects followed, and every address the host
+  resolves to must be globally routable. The check is written as an allow-list rather than a list of
+  banned ranges, because enumerating bad ranges is always one range behind - carrier-grade NAT
+  (100.64.0.0/10) is neither "private" nor routable. Multicast is excluded explicitly on top.
+- Alert payloads carry summary statistics only, never cell values, column names, or a source path.
+  The webhook URL is redacted in logs, since such a URL is normally a credential itself.
+- Run history uses parameterised SQL exclusively; a dataset name is derived from a file name and is
+  treated as untrusted input.
+- The history database is excluded from version control: it records which datasets were analysed and
+  when, which is operational information rather than source.
+
 ## [1.0.0] - 2026-08-13
 
 First stable release.
@@ -70,4 +108,5 @@ The operator is trusted; every dataset file is not. Enforced by default:
 See [SECURITY.md](SECURITY.md) for the full threat model, the hardening guide for shared
 deployments, and the residual limitations.
 
+[1.1.0]: https://github.com/mojtaba-py-code/smart-data-quality-monitoring-system/releases/tag/v1.1.0
 [1.0.0]: https://github.com/mojtaba-py-code/smart-data-quality-monitoring-system/releases/tag/v1.0.0

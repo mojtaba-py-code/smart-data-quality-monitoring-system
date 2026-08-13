@@ -61,6 +61,7 @@ class PathsConfig(BaseModel):
     input_dir: Path = Path("./data/input")
     output_dir: Path = Path("./output")
     log_dir: Path = Path("./logs")
+    history_db: Path = Path("./data/history.db")
 
 
 class LoggingConfig(BaseModel):
@@ -243,6 +244,47 @@ class DriftConfig(BaseModel):
         return self
 
 
+class HistoryConfig(BaseModel):
+    """Persistence of past analysis runs.
+
+    History is what turns a point-in-time analysis into monitoring: without a
+    record of previous runs there is nothing to compare against and no trend to
+    observe.
+    """
+
+    enabled: bool = True
+    retention_runs: int | None = Field(
+        default=500, ge=1, description="Runs kept per dataset; null keeps everything"
+    )
+
+
+class AlertConfig(BaseModel):
+    """Outbound notification when a dataset's quality regresses.
+
+    Disabled by default. This is the only component that makes an outbound
+    network request, so it stays opt-in and the destination is validated before
+    anything is sent (see :mod:`dqms.services.alerting`).
+    """
+
+    enabled: bool = False
+    webhook_url: str | None = Field(
+        default=None,
+        description="HTTPS endpoint receiving a JSON payload. Supply via DQMS_ALERTS__WEBHOOK_URL.",
+    )
+    min_score: float = Field(default=80.0, ge=0.0, le=100.0)
+    max_score_drop: float = Field(
+        default=5.0, ge=0.0, le=100.0, description="Alert when the score falls by more than this"
+    )
+    timeout_seconds: float = Field(default=10.0, gt=0, le=120)
+    allow_private_targets: bool = Field(
+        default=False,
+        description=(
+            "Permit webhooks resolving to loopback/private addresses, and plain http. "
+            "Only enable for a webhook you control on a trusted network."
+        ),
+    )
+
+
 class DashboardConfig(BaseModel):
     """Streamlit dashboard presentation options."""
 
@@ -301,6 +343,8 @@ class Settings(BaseSettings):
     scoring: ScoringConfig = Field(default_factory=ScoringConfig)
     anomaly: AnomalyConfig = Field(default_factory=AnomalyConfig)
     drift: DriftConfig = Field(default_factory=DriftConfig)
+    history: HistoryConfig = Field(default_factory=HistoryConfig)
+    alerts: AlertConfig = Field(default_factory=AlertConfig)
     dashboard: DashboardConfig = Field(default_factory=DashboardConfig)
     report: ReportConfig = Field(default_factory=ReportConfig)
 

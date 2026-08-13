@@ -59,6 +59,9 @@ These are enforced by default and covered by the test suite:
 | In-memory size budget, so a small compressed file cannot expand into an unbounded frame | `security.max_frame_memory_mb`, enforced in `services/loader.py` |
 | Spreadsheet formula-injection neutralisation on CSV/Excel export, applied to **cell values and column headers alike** - a hostile dataset controls its own column names, and a spreadsheet evaluates the header row like any other | `src/dqms/utils/io.py` |
 | Log-forging defence: line breaks in untrusted text are escaped, so one event can never become two log lines | `src/dqms/utils/logging.py` |
+| SSRF guard on the alert webhook: HTTPS only, no embedded credentials, no redirects followed, and every resolved address must be globally routable (an allow-list, so cloud metadata, loopback, RFC1918, carrier-grade NAT, and multicast are all refused) | `src/dqms/services/alerting.py` |
+| Alert payloads carry summary statistics only - never cell values, column names, or a source path - and the webhook URL is redacted in logs, because such a URL is usually itself the credential | `src/dqms/services/alerting.py` |
+| Run history uses parameterised SQL exclusively; a dataset name comes from a file name and is treated as untrusted input | `src/dqms/services/history.py` |
 | Unicode-normalised, separator-stripped output file names | `sanitize_filename` |
 | HTML autoescaping in report rendering | `src/dqms/reports/generator.py` |
 | YAML parsed through Pydantic settings, never `yaml.load` with an unsafe loader | `src/dqms/config/settings.py` |
@@ -99,3 +102,11 @@ Stated plainly so operators can judge the residual risk:
   by default, not because it can defend itself.
 - **Dependencies are declared with lower bounds only.** There is no lockfile, so a reproducible
   deployment should pin its own versions and track advisories for the parsing libraries.
+- **The SSRF guard resolves the webhook host, then the standard library resolves it again to
+  connect.** A deliberately hostile DNS server could rebind between the two lookups. Closing that
+  gap requires pinning the connection to the validated address, which `urllib` does not expose. For
+  a webhook the operator configures themselves this is a proportionate control, but do not treat
+  alerting as safe to point at a URL supplied by someone else.
+- **The run history is an operational record, not a secret store.** It holds dataset names, source
+  paths, and scores - enough to reveal what a team analyses and when. It is excluded from version
+  control by `.gitignore`; give the file the same protection as any other operational database.

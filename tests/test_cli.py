@@ -96,3 +96,56 @@ def test_compare_command(tmp_path: Path) -> None:
 def test_unknown_file_errors(tmp_path: Path) -> None:
     result = runner.invoke(app, ["profile", str(tmp_path / "missing.csv")])
     assert result.exit_code == 1
+
+
+# -- monitoring -------------------------------------------------------------
+
+
+@pytest.fixture
+def history_config(tmp_path: Path) -> Path:
+    """A config file pointing the run history at an isolated database."""
+    database = (tmp_path / "history.db").as_posix()
+    path = tmp_path / "history.yaml"
+    path.write_text(f"paths:\n  history_db: {database}\n", encoding="utf-8")
+    return path
+
+
+def test_analyze_records_a_run_that_history_then_lists(
+    clean_csv: Path, history_config: Path
+) -> None:
+    assert runner.invoke(app, ["-c", str(history_config), "history"]).stdout.count(
+        "No runs recorded"
+    )
+
+    analyse = runner.invoke(app, ["-c", str(history_config), "analyze", str(clean_csv)])
+    assert analyse.exit_code == 0
+
+    listing = runner.invoke(app, ["-c", str(history_config), "history"])
+    assert listing.exit_code == 0
+    assert "clean" in listing.stdout
+
+
+def test_no_record_leaves_the_history_empty(clean_csv: Path, history_config: Path) -> None:
+    runner.invoke(app, ["-c", str(history_config), "analyze", str(clean_csv), "--no-record"])
+    listing = runner.invoke(app, ["-c", str(history_config), "history"])
+    assert "No runs recorded" in listing.stdout
+
+
+def test_second_run_reports_the_movement(clean_csv: Path, history_config: Path) -> None:
+    runner.invoke(app, ["-c", str(history_config), "analyze", str(clean_csv)])
+    second = runner.invoke(app, ["-c", str(history_config), "analyze", str(clean_csv)])
+    assert second.exit_code == 0
+    assert "Previous run" in second.stdout
+
+
+def test_trend_plots_recorded_runs(clean_csv: Path, history_config: Path) -> None:
+    runner.invoke(app, ["-c", str(history_config), "analyze", str(clean_csv)])
+    runner.invoke(app, ["-c", str(history_config), "analyze", str(clean_csv)])
+    trend = runner.invoke(app, ["-c", str(history_config), "trend", "clean"])
+    assert trend.exit_code == 0
+    assert "Quality trend" in trend.stdout
+
+
+def test_trend_of_an_unknown_dataset_exits_non_zero(history_config: Path) -> None:
+    result = runner.invoke(app, ["-c", str(history_config), "trend", "never-analysed"])
+    assert result.exit_code == 1

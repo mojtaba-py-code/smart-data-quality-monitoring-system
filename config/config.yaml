@@ -12,6 +12,7 @@ paths:
   input_dir: ./data/input          # where datasets are read from
   output_dir: ./output             # where reports and exports are written
   log_dir: ./logs                  # rotating log files live here
+  history_db: ./data/history.db    # SQLite file holding the record of past runs
 
 logging:
   level: INFO                      # TRACE|DEBUG|INFO|SUCCESS|WARNING|ERROR|CRITICAL
@@ -85,6 +86,21 @@ drift:
   psi_critical: 0.25               # PSI critical band
   ks_pvalue_alpha: 0.05            # KS test significance level
   numeric_bins: 10                 # bins used for distribution comparison
+
+history:
+  enabled: true                    # record every analyse run so trends can be tracked
+  retention_runs: 500              # runs kept per dataset (null keeps everything)
+
+alerts:
+  # Disabled by default: this is the only outbound network request the system
+  # makes. Supply the URL through the environment, never in this file:
+  #   DQMS_ALERTS__WEBHOOK_URL=https://hooks.example.com/services/...
+  enabled: false
+  webhook_url: null
+  min_score: 80.0                  # alert when a run scores below this
+  max_score_drop: 5.0              # alert when the score falls by more than this
+  timeout_seconds: 10.0
+  allow_private_targets: false     # true also permits plain http; only for a hook you control
 
 dashboard:
   title: "Smart Data Quality Monitoring System"

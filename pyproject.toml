@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dqms"
-version = "1.0.0"
+version = "1.1.0"
 description = "Smart Data Quality Monitoring System - enterprise-grade dataset quality analysis, validation, cleaning, and drift detection."
 readme = "README.md"
 requires-python = ">=3.11"

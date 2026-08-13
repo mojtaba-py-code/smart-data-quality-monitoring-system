@@ -50,3 +50,9 @@ Thumbs.db
 data/raw/
 data/private/
 *.parquet.local
+
+# Run history: an operational record of the datasets analysed on this machine,
+# including their names. It belongs to the deployment, not to the repository.
+data/history.db
+*.db-journal
+*.db-wal

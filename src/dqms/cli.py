@@ -19,7 +19,9 @@ from dqms import __version__
 from dqms.config.settings import Settings, load_settings
 from dqms.core.constants import Severity
 from dqms.core.exceptions import DataQualityError
+from dqms.services.alerting import AlertDispatcher
 from dqms.services.data_drift import DataDriftDetector
+from dqms.services.history import RunHistory
 from dqms.services.orchestrator import QualityPipeline
 from dqms.services.profiler import DataProfiler
 from dqms.services.schema_drift import SchemaDriftDetector
@@ -81,9 +83,13 @@ def analyze(
     anomalies: bool = typer.Option(
         True, "--anomalies/--no-anomalies", help="Run anomaly detection."
     ),
+    record: bool = typer.Option(
+        True, "--record/--no-record", help="Record this run in the history database."
+    ),
     output: Path | None = typer.Option(None, "--output", "-o", help="Report output directory."),
 ) -> None:
     """Run the full quality pipeline on a dataset and print a summary."""
+    settings: Settings = ctx.obj
     pipeline = _pipeline(ctx)
     try:
         result = pipeline.analyze_file(path, detect_anomalies=anomalies)
@@ -91,7 +97,20 @@ def analyze(
         _fail("analysis failed", exc)
         return
 
+    # Compare against this dataset's own past before recording the new run, so
+    # the comparison is against the previous state rather than against itself.
+    previous = None
+    if settings.history.enabled:
+        try:
+            history = RunHistory(settings)
+            previous = history.previous(result.dataset_name, before=result.generated_at)
+            if record:
+                history.record(result)
+        except DataQualityError as exc:
+            console.print(f"[yellow]Run history unavailable:[/yellow] {exc}")
+
     _print_analysis(result)
+    _report_regression(settings, result, previous)
 
     if report:
         from dqms.reports.generator import ReportGenerator
@@ -296,6 +315,91 @@ def report(
 
 
 @app.command()
+def history(
+    ctx: typer.Context,
+    dataset: str | None = typer.Option(
+        None, "--dataset", "-d", help="Restrict to one dataset name."
+    ),
+    limit: int = typer.Option(20, "--limit", "-n", help="How many runs to show."),
+) -> None:
+    """List previously recorded analysis runs, newest first."""
+    settings: Settings = ctx.obj
+    try:
+        records = RunHistory(settings).recent(dataset, limit=limit)
+    except DataQualityError as exc:
+        _fail("could not read the run history", exc)
+        return
+
+    if not records:
+        console.print(
+            "[yellow]No runs recorded yet.[/yellow] Run 'dqms analyze <file>' to start a history."
+        )
+        return
+
+    table = Table(title="Run history")
+    for column in ("When (UTC)", "Dataset", "Score", "Grade", "Status", "Rows", "Issues"):
+        table.add_column(column, overflow="fold")
+    for item in records:
+        table.add_row(
+            item.run_at.strftime("%Y-%m-%d %H:%M"),
+            item.dataset_name,
+            f"{item.overall_score:.1f}%",
+            item.grade,
+            "PASS" if item.passed else "FAIL",
+            f"{item.row_count:,}",
+            f"{item.validation_issues:,}",
+        )
+    console.print(table)
+
+
+@app.command()
+def trend(
+    ctx: typer.Context,
+    dataset: str = typer.Argument(..., help="Dataset name, as shown by 'dqms history'."),
+    limit: int = typer.Option(30, "--limit", "-n", help="How many runs to plot."),
+) -> None:
+    """Plot how a dataset's quality score has moved over time."""
+    settings: Settings = ctx.obj
+    try:
+        timeline = RunHistory(settings).trend(dataset, limit=limit)
+    except DataQualityError as exc:
+        _fail("could not read the run history", exc)
+        return
+
+    if not timeline.points:
+        console.print(f"[yellow]No recorded runs for '{dataset}'.[/yellow]")
+        raise typer.Exit(code=1)
+
+    table = Table(title=f"Quality trend: {dataset}")
+    table.add_column("When (UTC)")
+    table.add_column("Score")
+    table.add_column("Status")
+    table.add_column("Chart", overflow="crop")
+    for point in timeline.points:
+        # Plain ASCII: the bar must render on a legacy Windows code page.
+        filled = round(point.overall_score / 2.5)
+        colour = "green" if point.passed else "red"
+        table.add_row(
+            point.run_at.strftime("%Y-%m-%d %H:%M"),
+            f"{point.overall_score:.1f}%",
+            "PASS" if point.passed else "FAIL",
+            f"[{colour}]{'#' * filled}{'.' * (40 - filled)}[/{colour}]",
+        )
+    console.print(table)
+
+    change = timeline.change
+    if change is None:
+        console.print("Only one run recorded so far; no movement to report.")
+        return
+    direction = "improved" if change > 0 else "declined" if change < 0 else "held steady"
+    colour = "green" if change > 0 else "red" if change < 0 else "white"
+    console.print(
+        f"Across {len(timeline.points)} runs the score has "
+        f"[{colour}]{direction} by {abs(change):.1f} points[/{colour}]."
+    )
+
+
+@app.command()
 def dashboard(
     ctx: typer.Context,
     port: int = typer.Option(8501, "--port", "-p", help="Port for the Streamlit server."),
@@ -392,6 +496,37 @@ def _print_analysis(result) -> None:  # type: ignore[no-untyped-def]
         console.print("[bold]Recommendations:[/bold]")
         for rec in result.recommendations:
             console.print(f"  [{rec.severity.value}] {rec.title} - {rec.detail}")
+
+
+def _report_regression(settings: Settings, result, previous) -> None:  # type: ignore[no-untyped-def]
+    """Show how this run compares with the last one, and alert if configured.
+
+    The comparison is printed whether or not alerting is switched on, so the
+    information is never hidden behind a webhook the operator has not set up.
+    """
+    if previous is not None:
+        delta = result.quality.overall_score - previous.overall_score
+        arrow = "up" if delta > 0 else "down" if delta < 0 else "level"
+        colour = "green" if delta > 0 else "red" if delta < 0 else "white"
+        console.print(
+            f"Previous run {previous.run_at:%Y-%m-%d %H:%M} UTC scored "
+            f"{previous.overall_score:.1f}% - now [{colour}]{arrow} {abs(delta):.1f} points[/"
+            f"{colour}]."
+        )
+
+    dispatcher = AlertDispatcher(settings)
+    alerts = dispatcher.evaluate(result, previous)
+    if not alerts:
+        return
+    console.print("[bold red]Regression detected:[/bold red]")
+    for alert in alerts:
+        console.print(f"  [{alert.reason}] {alert.detail}")
+    try:
+        if dispatcher.send(result, alerts):
+            console.print("  [green]Alert delivered to the configured webhook.[/green]")
+    except DataQualityError as exc:
+        # A refused endpoint is a configuration error the operator must see.
+        console.print(f"  [yellow]Alert not sent:[/yellow] {exc}")
 
 
 def _fmt(value: object) -> str:
