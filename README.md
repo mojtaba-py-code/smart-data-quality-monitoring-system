@@ -1,5 +1,6 @@
 # Smart Data Quality Monitoring System
 
+[![CI](https://github.com/mojtaba-py-code/smart-data-quality-monitoring-system/actions/workflows/ci.yml/badge.svg)](https://github.com/mojtaba-py-code/smart-data-quality-monitoring-system/actions/workflows/ci.yml)
 ![Python 3.11+](https://img.shields.io/badge/python-3.11%2B-blue)
 ![License MIT](https://img.shields.io/badge/license-MIT-green)
 ![Style Ruff](https://img.shields.io/badge/style-ruff-000000)
@@ -110,6 +111,9 @@ protections are enforced by default:
 - **Loopback-only dashboard.** `dqms dashboard` binds to `127.0.0.1` unless `--host` says otherwise,
   and disables Streamlit's usage telemetry, so an uploaded dataset is never exposed to the local
   network or reported to a third party by default.
+
+The threat model, the boundary these controls defend, and the hardening required for shared or
+automated deployments are documented in [SECURITY.md](SECURITY.md).
 
 ## Quick Start
 
