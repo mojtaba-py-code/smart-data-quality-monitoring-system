@@ -1,0 +1,23 @@
+# Normalise line endings so the repository content does not depend on the
+# operating system a contributor happens to use. Text files are stored with LF
+# in the repository and checked out with the platform's native ending.
+* text=auto eol=lf
+
+# Windows-only tooling that expects CRLF.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Binary formats: never touch these, line-ending conversion would corrupt them.
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.pdf binary
+*.parquet binary
+*.pq binary
+*.xlsx binary
+*.xlsm binary
+*.xls binary
+*.zip binary
