@@ -95,12 +95,20 @@ protections are enforced by default:
   configured, the resolved path must stay inside it.
 - **File-size limits.** Files larger than the configured maximum are refused before any bytes are
   read into memory.
-- **Extension allow-list.** Only explicitly permitted extensions are accepted.
+- **Extension allow-list.** Only explicitly permitted extensions are accepted, and NTFS
+  alternate-data-stream paths are rejected outright - `payload.exe:hidden.csv` presents a `.csv`
+  suffix to a naive check while the bytes read belong to a stream on an executable.
+- **In-memory size budget.** A dataset that expands past `security.max_frame_memory_mb` once parsed
+  is refused, so a small, highly compressible file cannot balloon into an unbounded frame.
 - **Symlink refusal.** Symlinked dataset files are rejected unless explicitly allowed, preventing a
   link from redirecting a read outside the permitted directory.
-- **Formula-injection neutralisation.** On CSV/Excel export, cell values beginning with a formula
-  trigger (`=`, `+`, `-`, `@`, tab, carriage return) are prefixed with a single quote so spreadsheet
-  software treats them as text.
+- **Formula-injection neutralisation.** On CSV/Excel export, values beginning with a formula trigger
+  (`=`, `+`, `-`, `@`, tab, carriage return) are prefixed with a single quote so spreadsheet software
+  treats them as text. This covers **column headers as well as cell values**: a hostile dataset
+  controls its own column names, and an Excel writer stores a header beginning with `=` as a live
+  formula.
+- **Log-forging defence.** Line breaks in untrusted text (file names, column labels) are escaped
+  before they reach a log sink, so a crafted name cannot fabricate an extra log line.
 - **Safe filename derivation.** Dataset and column values used in output file names are Unicode
   normalised and stripped of path separators and control characters.
 - **Safe YAML loading.** Configuration is parsed through Pydantic's YAML settings source, never via

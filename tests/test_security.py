@@ -75,3 +75,43 @@ def test_sanitize_filename() -> None:
     assert sanitize_filename("../../etc/passwd") == "etc_passwd"
     assert sanitize_filename("") == "export"
     assert "/" not in sanitize_filename("a/b\\c")
+
+
+# -- attack regressions ----------------------------------------------------
+#
+# Each test below corresponds to a bypass that was demonstrated against an
+# earlier revision of this module.
+
+
+def test_alternate_data_stream_path_rejected(tmp_path: Path) -> None:
+    """`payload.exe:hidden.csv` presents a .csv suffix but reads a stream on an exe."""
+    payload = tmp_path / "payload.exe"
+    payload.write_bytes(b"MZ")
+    assert Path(f"{payload}:hidden.csv").suffix == ".csv"  # what a naive check sees
+    with pytest.raises(SecurityError, match="alternate data stream"):
+        safe_resolve_path(f"{payload}:hidden.csv", allowed_extensions=[".csv"])
+
+
+def test_default_data_stream_suffix_rejected(tmp_path: Path) -> None:
+    target = tmp_path / "data.csv"
+    target.write_text("a\n1\n", encoding="utf-8")
+    with pytest.raises(SecurityError):
+        safe_resolve_path(f"{target}::$DATA", allowed_extensions=[".csv"])
+
+
+def test_null_byte_in_path_rejected(tmp_path: Path) -> None:
+    """A null byte must raise a domain error, not a raw ValueError from os.stat."""
+    with pytest.raises(SecurityError, match="null byte"):
+        safe_resolve_path(f"{tmp_path}/evil\x00.csv", allowed_extensions=[".csv"])
+
+
+def test_drive_letter_is_not_mistaken_for_a_stream(tmp_path: Path) -> None:
+    """The colon in a Windows drive anchor must stay legal."""
+    target = tmp_path / "fine.csv"
+    target.write_text("a\n1\n", encoding="utf-8")
+    assert safe_resolve_path(target.absolute(), allowed_extensions=[".csv"]) == target.resolve()
+
+
+@pytest.mark.parametrize("trigger", ["=", "+", "-", "@", "\t", "\r"])
+def test_every_declared_formula_trigger_is_neutralised(trigger: str) -> None:
+    assert str(neutralise_formula_injection(f"{trigger}cmd|calc")).startswith("'")

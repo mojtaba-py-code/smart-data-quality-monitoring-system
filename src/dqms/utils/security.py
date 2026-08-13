@@ -61,7 +61,14 @@ def safe_resolve_path(
     pathlib.Path
         The fully resolved, validated path.
     """
-    raw = Path(candidate).expanduser()
+    text = str(candidate)
+    if "\x00" in text:
+        raise SecurityError(
+            "path contains a null byte", details={"path": text.replace("\x00", "\\x00")}
+        )
+
+    raw = Path(text).expanduser()
+    _reject_alternate_data_stream(raw)
 
     if not allow_symlinks and raw.is_symlink():
         raise SecurityError(
@@ -101,6 +108,26 @@ def safe_resolve_path(
             )
 
     return resolved
+
+
+def _reject_alternate_data_stream(path: Path) -> None:
+    """Refuse NTFS alternate-data-stream syntax such as ``file.exe:hidden.csv``.
+
+    On NTFS a colon attaches a named stream to a file. The syntax defeats an
+    extension allow-list, because ``Path("payload.exe:hidden.csv").suffix`` is
+    ``".csv"`` while the bytes actually read belong to a stream on an executable.
+    A legitimate path only ever carries a colon in its drive anchor (``C:\\``),
+    so a colon anywhere else is rejected outright.
+    """
+    for part in path.parts:
+        # Skip the anchor, which legitimately contains the drive colon.
+        if part == path.anchor or (len(part) == 2 and part.endswith(":")):
+            continue
+        if ":" in part:
+            raise SecurityError(
+                "path contains an alternate data stream or a stray colon",
+                details={"path": str(path), "component": part},
+            )
 
 
 def _is_relative_to(path: Path, base: Path) -> bool:

@@ -34,6 +34,9 @@ security:
     - .pq
   restrict_to_input_dir: false     # if true, only files under input_dir load
   sanitize_exports: true           # neutralise CSV/Excel formula injection
+  max_frame_memory_mb: 1024        # reject a dataset larger than this once parsed
+                                   # (a compressed file can dwarf its size on disk;
+                                   #  null disables the check)
 
 loader:
   chunk_size: 100000               # rows per chunk when streaming large files

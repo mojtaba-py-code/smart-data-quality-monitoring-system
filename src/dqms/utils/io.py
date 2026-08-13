@@ -27,13 +27,23 @@ _INJECTION_SENSITIVE = {FileFormat.CSV, FileFormat.EXCEL}
 def _sanitize_frame(frame: pd.DataFrame) -> pd.DataFrame:
     """Return a copy of ``frame`` with formula triggers neutralised.
 
-    Only object/string columns are scanned; numeric and datetime columns can
-    never carry a formula prefix, so they are left untouched for performance.
+    Both the **cell values** and the **column headers** are treated. Headers
+    matter just as much as values: a hostile source dataset controls its own
+    column names, those names survive loading and cleaning unchanged, and a
+    spreadsheet evaluates the first row exactly like any other. Excel writers in
+    particular will store a header beginning with ``=`` as a live formula.
+
+    Only object/string columns are scanned for values; numeric and datetime
+    columns can never carry a formula prefix, so they are left untouched for
+    performance.
     """
     sanitized = frame.copy()
     object_columns = sanitized.select_dtypes(include=["object", "string"]).columns
     for column in object_columns:
         sanitized[column] = sanitized[column].map(neutralise_formula_injection)
+    sanitized.columns = pd.Index(
+        [neutralise_formula_injection(label) for label in sanitized.columns]
+    )
     return sanitized
 
 

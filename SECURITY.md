@@ -55,7 +55,10 @@ These are enforced by default and covered by the test suite:
 | Control | Where |
 | --- | --- |
 | Path resolution, base-directory containment, symlink refusal, extension allow-list, size cap | `src/dqms/utils/security.py`, applied by `services/loader.py` |
-| Spreadsheet formula-injection neutralisation on CSV/Excel export | `src/dqms/utils/io.py` |
+| Rejection of NTFS alternate-data-stream paths (`file.exe:hidden.csv` reads a stream on an executable while presenting a `.csv` suffix to an allow-list) and of paths containing a null byte | `src/dqms/utils/security.py` |
+| In-memory size budget, so a small compressed file cannot expand into an unbounded frame | `security.max_frame_memory_mb`, enforced in `services/loader.py` |
+| Spreadsheet formula-injection neutralisation on CSV/Excel export, applied to **cell values and column headers alike** - a hostile dataset controls its own column names, and a spreadsheet evaluates the header row like any other | `src/dqms/utils/io.py` |
+| Log-forging defence: line breaks in untrusted text are escaped, so one event can never become two log lines | `src/dqms/utils/logging.py` |
 | Unicode-normalised, separator-stripped output file names | `sanitize_filename` |
 | HTML autoescaping in report rendering | `src/dqms/reports/generator.py` |
 | YAML parsed through Pydantic settings, never `yaml.load` with an unsafe loader | `src/dqms/config/settings.py` |
@@ -72,7 +75,8 @@ server, a scheduled job, or behind any kind of service - change these:
 ```yaml
 security:
   restrict_to_input_dir: true   # confine every read to paths.input_dir
-  max_file_size_mb: 64          # match the memory you are willing to spend
+  max_file_size_mb: 64          # bytes on disk
+  max_frame_memory_mb: 256      # bytes once parsed - the limit that matters
   allowed_extensions: [.csv]    # narrow to the formats you actually ingest
 
 loader:
@@ -86,9 +90,11 @@ authenticating reverse proxy) rather than binding it to a public interface.
 
 Stated plainly so operators can judge the residual risk:
 
-- **The size limit counts bytes on disk, not in memory.** A compressed container such as `.xlsx` or
-  `.parquet` can expand well beyond its file size once parsed. Set `loader.sample_rows` when the
-  source is untrusted.
+- **`max_frame_memory_mb` bounds retention, not peak allocation.** A compressed container such as
+  `.xlsx` or `.parquet` can expand far beyond its size on disk - a 50 KB Parquet file that becomes a
+  400 MB frame is easy to construct. The budget rejects the dataset, but only after the parser has
+  already materialised it, so the peak still occurs. For genuinely untrusted input, combine it with
+  `loader.sample_rows` and a small `security.max_file_size_mb`.
 - **The dashboard has no authentication or authorisation.** It is safe because it is loopback-only
   by default, not because it can defend itself.
 - **Dependencies are declared with lower bounds only.** There is no lockfile, so a reproducible

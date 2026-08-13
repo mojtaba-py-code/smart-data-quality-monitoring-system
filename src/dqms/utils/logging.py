@@ -27,8 +27,21 @@ _CONFIGURED = False
 
 
 def _patch_component(record: Any) -> None:
-    """Ensure every record has a ``component`` field for the console format."""
+    """Prepare each record: attach a component and defuse log forging.
+
+    Untrusted text reaches the log - file names, column labels, and values all
+    originate in the dataset. A newline inside one of those would let an
+    attacker append a fabricated, perfectly formatted log line ("2099-01-01 |
+    CRITICAL | ..."), poisoning an audit trail or an alert that parses the log.
+    Line breaks and carriage returns are therefore escaped, so one logged event
+    can never become two lines.
+    """
     record["extra"].setdefault("component", record["name"])
+    message = record["message"]
+    if "\n" in message or "\r" in message:
+        record["message"] = message.replace("\r\n", "\\n").replace("\n", "\\n").replace(
+            "\r", "\\r"
+        )
 
 
 def _console_sink(message: Any) -> None:

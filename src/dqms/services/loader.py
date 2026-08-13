@@ -15,7 +15,7 @@ import pandas as pd
 
 from dqms.config.settings import Settings, get_settings
 from dqms.core.constants import EXTENSION_TO_FORMAT, FileFormat
-from dqms.core.exceptions import FileAccessError, UnsupportedFormatError
+from dqms.core.exceptions import FileAccessError, FileTooLargeError, UnsupportedFormatError
 from dqms.utils.logging import get_logger
 from dqms.utils.security import safe_resolve_path
 from dqms.utils.timing import Stopwatch
@@ -95,6 +95,7 @@ class FileLoader:
             frame = self._dispatch(resolved, fmt, options)
 
         frame = self._apply_row_sampling(frame)
+        self._enforce_memory_budget(frame, resolved)
         _logger.success(
             "Loaded {} rows x {} columns from {}",
             len(frame),
@@ -222,6 +223,33 @@ class FileLoader:
         except Exception as exc:
             _logger.debug("Encoding detection failed ({}); defaulting to utf-8", exc)
         return "utf-8"
+
+    def _enforce_memory_budget(self, frame: pd.DataFrame, path: Path) -> None:
+        """Refuse a dataset whose in-memory size exceeds the configured budget.
+
+        The on-disk size limit cannot see through compression: a ``.parquet`` or
+        ``.xlsx`` of a few hundred kilobytes can expand to hundreds of megabytes
+        once parsed. This check bounds what the *pipeline* will go on to work
+        with. It is deliberately described as a budget rather than a guarantee -
+        the frame has already been materialised by the time it runs, so it caps
+        retention and downstream cost, not the peak allocation during parsing.
+        Combine it with ``loader.sample_rows`` when the source is untrusted.
+        """
+        limit_mb = self._settings.security.max_frame_memory_mb
+        if limit_mb is None:
+            return
+        used_bytes = int(frame.memory_usage(deep=True).sum())
+        limit_bytes = limit_mb * 1024 * 1024
+        if used_bytes > limit_bytes:
+            raise FileTooLargeError(
+                "dataset exceeds the maximum permitted in-memory size",
+                details={
+                    "path": str(path),
+                    "memory_bytes": used_bytes,
+                    "limit_bytes": limit_bytes,
+                    "hint": "raise security.max_frame_memory_mb or set loader.sample_rows",
+                },
+            )
 
     def _apply_row_sampling(self, frame: pd.DataFrame) -> pd.DataFrame:
         """Optionally cap the number of rows, per the loader configuration."""

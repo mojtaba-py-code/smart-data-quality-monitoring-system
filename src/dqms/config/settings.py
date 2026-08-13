@@ -101,6 +101,7 @@ class SecurityConfig(BaseModel):
     )
     restrict_to_input_dir: bool = False
     sanitize_exports: bool = True
+    max_frame_memory_mb: int | None = Field(default=1024, ge=1)
 
     @field_validator("allowed_extensions")
     @classmethod
