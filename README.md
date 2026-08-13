@@ -95,8 +95,10 @@ prioritised recommendations](docs/screenshots/dashboard.png)
 ### Interfaces
 
 - A Typer-based CLI with nine commands and process-wide exit codes suitable for CI gating.
-- A Streamlit dashboard that reuses the exact same pipeline as the CLI, guaranteeing consistent
-  results between the two.
+- A Streamlit dashboard with three modes - analyse a dataset, compare two for drift, or review a
+  dataset's recorded quality timeline - reusing the exact same pipeline as the CLI, guaranteeing
+  consistent results between the two.
+- A container image for running scheduled checks without installing Python on the host.
 
 ## Security
 
@@ -209,6 +211,26 @@ dqms validate data/customers.csv --strict
 dqms analyze data/customers.csv          # records the run and reports the movement
 dqms trend customers                     # how the score has moved across runs
 ```
+
+## Running in a container
+
+For scheduled checks - a cron entry, a Kubernetes CronJob, a CI step - without installing Python on
+the host:
+
+```bash
+docker build -t dqms:latest .
+
+docker run --rm \
+  -v "$PWD/data:/data:ro" \
+  -v "$PWD/output:/output" \
+  dqms:latest analyze /data/customers.csv --strict
+```
+
+The image runs as an unprivileged user, mounts its input read-only, and contains no secrets: the
+alert webhook URL, if used, is passed at run time with `-e DQMS_ALERTS__WEBHOOK_URL=...` so it never
+enters an image layer. The run history and reports are written to `/output`, so mount a volume there
+to keep a timeline across runs. CI builds this image on every push and verifies it starts, runs
+unprivileged, and analyses a dataset end to end.
 
 ## Configuration
 

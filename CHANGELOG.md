@@ -4,6 +4,39 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] - 2026-08-13
+
+### Added
+
+**A History view in the dashboard.** Pick any dataset with recorded runs and see its score plotted
+over time against the pass threshold, the net movement since the first run, and a table of every
+recorded run. The timeline is the same one the CLI writes, so runs from a scheduled `dqms analyze`
+appear here. An analysis performed in the dashboard now also reports its movement against the
+previous run.
+
+**A container image.** A multi-stage `Dockerfile` for running scheduled checks without installing
+Python on the host. CI builds it on every push and verifies that it starts, runs as a non-root user,
+and analyses a dataset end to end.
+
+**Dashboard tests.** The dashboard had no test coverage at all; it is now exercised headlessly
+through Streamlit's AppTest harness - the three modes, the empty-history message, and a rendered
+timeline.
+
+### Changed
+
+- Coverage measurement now includes the dashboard, which was previously excluded. The headline
+  number falls from 88% to 84% as a result: untested code is counted rather than hidden.
+
+### Security
+
+- The image runs as an unprivileged user (uid 10001), holds no secrets, and expects its input mounted
+  read-only. The alert webhook URL is passed at run time so it never enters an image layer, and
+  `.dockerignore` keeps local state - `.env`, logs, output, and the history database - out of the
+  build context entirely.
+- Recording a run from the dashboard is idempotent per upload. Streamlit re-executes its script on
+  every interaction, so a naive implementation would have written a duplicate row on each click and
+  quietly corrupted the timeline the alerting thresholds are measured against.
+
 ## [1.1.0] - 2026-08-13
 
 Turns the tool into an actual monitor. Until now every run stood alone: a dataset could be scored,
@@ -108,5 +141,6 @@ The operator is trusted; every dataset file is not. Enforced by default:
 See [SECURITY.md](SECURITY.md) for the full threat model, the hardening guide for shared
 deployments, and the residual limitations.
 
+[1.2.0]: https://github.com/mojtaba-py-code/smart-data-quality-monitoring-system/releases/tag/v1.2.0
 [1.1.0]: https://github.com/mojtaba-py-code/smart-data-quality-monitoring-system/releases/tag/v1.1.0
 [1.0.0]: https://github.com/mojtaba-py-code/smart-data-quality-monitoring-system/releases/tag/v1.0.0

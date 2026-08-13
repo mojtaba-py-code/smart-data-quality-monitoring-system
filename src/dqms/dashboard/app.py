@@ -21,6 +21,7 @@ from dqms.config.settings import get_settings
 from dqms.core.exceptions import DataQualityError
 from dqms.reports.generator import ReportGenerator
 from dqms.services.data_drift import DataDriftDetector
+from dqms.services.history import RunHistory
 from dqms.services.loader import FileLoader
 from dqms.services.orchestrator import QualityPipeline
 from dqms.services.schema_drift import SchemaDriftDetector
@@ -46,15 +47,50 @@ def _load_dataframe(path_str: str) -> pd.DataFrame:
     return FileLoader(settings).load(Path(path_str))
 
 
+def _record_once(report, key: str) -> None:  # type: ignore[no-untyped-def]
+    """Record a run in the history at most once per upload, per session.
+
+    Streamlit re-executes this script from top to bottom on every interaction,
+    so recording unconditionally here would append a duplicate row each time the
+    operator switched a tab. Remembering what has already been written keeps
+    clicking around from inflating the history.
+    """
+    if not settings.history.enabled:
+        return
+    recorded: set[str] = st.session_state.setdefault("recorded_runs", set())
+    if key in recorded:
+        return
+    try:
+        RunHistory(settings).record(report)
+        recorded.add(key)
+    except DataQualityError as exc:
+        st.warning(f"This run could not be added to the history: {exc}")
+
+
 def _render_analysis(frame: pd.DataFrame, name: str, source: str | None) -> None:
     """Run the pipeline and render the full analysis view."""
     pipeline = QualityPipeline(settings)
     with st.spinner("Analysing dataset..."):
         report = pipeline.analyze(frame, dataset_name=name, source_path=source)
 
+    # Compare against the dataset's own past before recording this run, so the
+    # comparison is against the previous state rather than against itself.
+    previous = None
+    if settings.history.enabled:
+        try:
+            previous = RunHistory(settings).previous(name, before=report.generated_at)
+        except DataQualityError:
+            previous = None
+    _record_once(report, key=f"{name}:{source}:{len(frame)}:{frame.shape[1]}")
+
     quality = report.quality
     top = st.columns(5)
-    top[0].metric("Overall score", f"{quality.overall_score:.1f}%", delta=quality.grade)
+    movement = (
+        f"{quality.overall_score - previous.overall_score:+.1f} pts vs previous run"
+        if previous is not None
+        else quality.grade
+    )
+    top[0].metric("Overall score", f"{quality.overall_score:.1f}%", delta=movement)
     top[1].metric("Status", "PASS" if quality.passed else "FAIL")
     top[2].metric("Rows", f"{report.row_count:,}")
     top[3].metric("Columns", f"{report.column_count}")
@@ -163,17 +199,98 @@ def _render_compare(baseline: pd.DataFrame, current: pd.DataFrame) -> None:
         st.dataframe(drift_df, use_container_width=True, hide_index=True)
 
 
+def _render_history() -> None:
+    """Render the recorded quality timeline for one dataset."""
+    history = RunHistory(settings)
+    try:
+        names = history.datasets()
+    except DataQualityError as exc:
+        st.error(f"The run history could not be read: {exc}")
+        return
+
+    if not names:
+        st.info(
+            "No runs recorded yet. Analyse a dataset here, or run 'dqms analyze' from the "
+            "command line, and its score will appear on this timeline."
+        )
+        return
+
+    dataset = st.selectbox("Dataset", names)
+    timeline = history.trend(str(dataset), limit=200)
+    if not timeline.points:
+        st.info("This dataset has no recorded runs.")
+        return
+
+    frame = pd.DataFrame(
+        {
+            "Run": [point.run_at for point in timeline.points],
+            "Score": [point.overall_score for point in timeline.points],
+            "Status": ["PASS" if point.passed else "FAIL" for point in timeline.points],
+        }
+    )
+
+    latest = timeline.latest
+    columns = st.columns(4)
+    columns[0].metric("Runs recorded", f"{len(timeline.points):,}")
+    if latest is not None:
+        columns[1].metric("Latest score", f"{latest.overall_score:.1f}%")
+        columns[2].metric("Latest status", "PASS" if latest.passed else "FAIL")
+    change = timeline.change
+    columns[3].metric(
+        "Since first run",
+        "n/a" if change is None else f"{change:+.1f} pts",
+        delta=None if change is None else f"{change:+.1f}",
+    )
+
+    figure = px.line(frame, x="Run", y="Score", markers=True, range_y=[0, 100])
+    figure.update_traces(line_color="#1565c0")
+    figure.add_hline(
+        y=settings.scoring.pass_threshold,
+        line_dash="dash",
+        line_color="#c62828",
+        annotation_text="Pass threshold",
+    )
+    st.plotly_chart(figure, use_container_width=True)
+
+    st.subheader("Recorded runs")
+    records = history.recent(str(dataset), limit=100)
+    st.dataframe(
+        pd.DataFrame(
+            [
+                {
+                    "Run (UTC)": r.run_at.strftime("%Y-%m-%d %H:%M"),
+                    "Score": round(r.overall_score, 1),
+                    "Grade": r.grade,
+                    "Status": "PASS" if r.passed else "FAIL",
+                    "Rows": r.row_count,
+                    "Columns": r.column_count,
+                    "Issues": r.validation_issues,
+                    "Version": r.dqms_version,
+                }
+                for r in records
+            ]
+        ),
+        use_container_width=True,
+        hide_index=True,
+    )
+
+
 def render() -> None:
     """Top-level dashboard entry point."""
     st.set_page_config(page_title=settings.dashboard.title, page_icon="", layout="wide")
     st.title(settings.dashboard.title)
-    st.caption("Upload a dataset to analyse its quality, or compare two datasets for drift.")
+    st.caption(
+        "Analyse a dataset's quality, compare two datasets for drift, or track how a "
+        "dataset's quality has moved over time."
+    )
 
-    mode = st.sidebar.radio("Mode", ["Analyse", "Compare"])
+    mode = st.sidebar.radio("Mode", ["Analyse", "Compare", "History"])
     st.sidebar.markdown("---")
     st.sidebar.write(f"Pass threshold: **{settings.scoring.pass_threshold:.0f}%**")
 
-    if mode == "Analyse":
+    if mode == "History":
+        _render_history()
+    elif mode == "Analyse":
         uploaded = st.file_uploader("Dataset", type=["csv", "xlsx", "xls", "json", "parquet"])
         if uploaded is not None:
             try:

@@ -1,0 +1,40 @@
+# Keep the build context small, and keep anything local or sensitive out of it.
+# Everything here would otherwise be uploaded to the daemon and could end up in
+# an image layer.
+
+.git/
+.github/
+.venv/
+venv/
+env/
+
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local runtime state and secrets.
+.env
+.env.*
+!.env.example
+logs/
+output/
+*.log
+*.db
+*.db-journal
+*.db-wal
+.streamlit/secrets.toml
+
+# Local datasets; mount them at run time instead of baking them in.
+data/raw/
+data/private/
+
+docs/
+tests/

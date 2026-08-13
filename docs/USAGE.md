@@ -334,14 +334,46 @@ Or run the Streamlit app directly:
 streamlit run src/dqms/dashboard/app.py
 ```
 
-The dashboard offers two modes in the sidebar:
+The dashboard offers three modes in the sidebar (Analyse, Compare, History):
 
 - **Analyse** — upload a single dataset to see its score, quality-dimension chart, recommendations,
   validation issues, column profile, interactive charts, and a downloadable HTML report.
 - **Compare** — upload a baseline and a current dataset to view schema and data drift.
+- **History** — pick any dataset that has recorded runs and see its score plotted over time against
+  the pass threshold, with the net movement since the first run and a table of every recorded run.
+  The timeline is shared with the CLI, so runs recorded by a scheduled `dqms analyze` appear here.
+
+An analysis performed in the dashboard is recorded once per uploaded file. Streamlit re-executes its
+script on every interaction, so the run is remembered for the session; clicking between tabs does not
+add duplicate rows.
 
 Uploaded files are written to a private temporary directory and loaded through the same secure
 loader the CLI uses, so the dashboard enforces the identical security policy.
+
+## Running in a container
+
+```bash
+docker build -t dqms:latest .
+
+docker run --rm \
+  -v "$PWD/data:/data:ro" \
+  -v "$PWD/output:/output" \
+  dqms:latest analyze /data/customers.csv --strict
+```
+
+The image runs as an unprivileged user (uid 10001) and contains no secrets. Pass the alert webhook at
+run time so it never enters an image layer:
+
+```bash
+docker run --rm \
+  -e DQMS_ALERTS__ENABLED=true \
+  -e DQMS_ALERTS__WEBHOOK_URL="https://hooks.example.com/services/..." \
+  -v "$PWD/data:/data:ro" -v "$PWD/output:/output" \
+  dqms:latest analyze /data/customers.csv
+```
+
+Inside the image, `/data` is the input directory and `/output` holds reports, logs, and the run
+history database. Mount a persistent volume at `/output` to keep a timeline across scheduled runs.
 
 ## Overriding configuration
 

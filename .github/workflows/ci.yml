@@ -54,8 +54,12 @@ jobs:
       - name: Type check (mypy)
         run: mypy
 
+      # The floor counts the Streamlit dashboard, which was previously excluded
+      # from measurement. Its upload-driven paths cannot be driven by Streamlit's
+      # AppTest harness, so including it lowers the headline number while making
+      # it honest - untested code is now counted rather than hidden.
       - name: Test with coverage
-        run: pytest --cov=src/dqms --cov-report=term-missing --cov-fail-under=85
+        run: pytest --cov=src/dqms --cov-report=term-missing --cov-fail-under=80
 
       - name: Smoke test the CLI end to end
         run: |
@@ -64,6 +68,35 @@ jobs:
           dqms analyze data/samples/customers.csv --no-report
           dqms report data/samples/customers.csv -o "${RUNNER_TEMP}/report" -f html -f summary
           test -f "${RUNNER_TEMP}/report/customers_report.html"
+
+  container:
+    name: Container image
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@fbc6f3992d24b796d5a048ff273f7fcc4a7b6c09 # v5
+        with:
+          persist-credentials: false
+
+      # Built with the runner's own Docker rather than a third-party action:
+      # this needs no extra trust in the supply chain, and the image is never
+      # pushed anywhere.
+      - name: Build the image
+        run: docker build --tag dqms:ci .
+
+      - name: Verify the image runs, and runs unprivileged
+        run: |
+          test "$(docker run --rm --entrypoint id dqms:ci -u)" != "0"
+          docker run --rm dqms:ci --version
+          mkdir -p sample out
+          cp data/samples/customers.csv sample/
+          docker run --rm \
+            -v "$PWD/sample:/data:ro" \
+            -v "$PWD/out:/output" \
+            --user "$(id -u):$(id -g)" \
+            dqms:ci analyze /data/customers.csv --no-record
+        env:
+          DOCKER_BUILDKIT: 1
 
   audit:
     name: Dependency audit
