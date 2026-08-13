@@ -13,6 +13,9 @@ schema and distributional drift between dataset versions, then packages everythi
 and plain-text reports or an interactive dashboard. The package is built on Clean Architecture
 principles, is fully type-annotated, and treats every file it reads as an untrusted input.
 
+![The dashboard analysing a sample dataset: overall score and grade, per-dimension quality bars, and
+prioritised recommendations](docs/screenshots/dashboard.png)
+
 ## Features
 
 ### Loading

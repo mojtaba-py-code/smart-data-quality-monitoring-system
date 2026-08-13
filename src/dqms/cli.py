@@ -304,6 +304,9 @@ def dashboard(
         "--host",
         help="Interface to bind. Defaults to loopback; use 0.0.0.0 to expose on the network.",
     ),
+    open_browser: bool = typer.Option(
+        True, "--open/--no-open", help="Open the dashboard in the default browser once it starts."
+    ),
 ) -> None:
     """Launch the interactive Streamlit dashboard.
 
@@ -313,12 +316,22 @@ def dashboard(
     """
     import subprocess
     import sys
+    import threading
+    import webbrowser
 
     settings: Settings = ctx.obj
     app_path = Path(__file__).resolve().parent / "dashboard" / "app.py"
     if not app_path.is_file():
         _fail("dashboard application not found")
-    console.print(f"Starting dashboard at http://{host}:{port} ...")
+
+    url = f"http://{host}:{port}"
+    console.print(f"Starting dashboard at {url} ...")
+    if open_browser:
+        # Streamlit's own browser launcher is tied to its interactive mode, which
+        # also triggers a first-run e-mail prompt on stdin. That prompt hangs any
+        # non-interactive caller (a scheduled job, a container, a CI step), so the
+        # server is always started headless and the browser is opened from here.
+        threading.Timer(2.5, webbrowser.open, args=[url]).start()
     # nosec B603 - fixed argument vector, no shell, no untrusted input.
     subprocess.run(
         [
@@ -332,6 +345,9 @@ def dashboard(
             # Loopback by default: uploaded datasets stay on this machine.
             "--server.address",
             host,
+            # Headless: never block on Streamlit's interactive first-run prompt.
+            "--server.headless",
+            "true",
             # Do not phone home from a tool that handles the operator's data.
             "--browser.gatherUsageStats",
             "false",
