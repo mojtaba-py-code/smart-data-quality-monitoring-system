@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Data Quality Report - {{ report.dataset_name }}</title>
+  <style>
+    :root {
+      --bg: #ffffff; --fg: #1f2933; --muted: #616e7c; --border: #e4e7eb;
+      --card: #f7f9fc; --accent: #1565c0; --pass: #2e7d32; --warn: #f9a825; --fail: #c62828;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+           color: var(--fg); background: var(--bg); line-height: 1.5; }
+    .wrap { max-width: 1040px; margin: 0 auto; padding: 32px 24px 64px; }
+    header { border-bottom: 3px solid var(--accent); padding-bottom: 16px; margin-bottom: 24px; }
+    h1 { margin: 0 0 4px; font-size: 26px; }
+    h2 { font-size: 19px; margin: 32px 0 12px; border-left: 4px solid var(--accent); padding-left: 10px; }
+    .muted { color: var(--muted); font-size: 13px; }
+    .cards { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 18px; }
+    .card { flex: 1 1 150px; background: var(--card); border: 1px solid var(--border);
+            border-radius: 10px; padding: 14px 16px; }
+    .card .label { font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+    .card .value { font-size: 24px; font-weight: 600; margin-top: 4px; }
+    .grade { display: inline-block; min-width: 34px; text-align: center; padding: 2px 8px;
+             border-radius: 6px; color: #fff; font-weight: 700; }
+    .g-A,.g-B { background: var(--pass); } .g-C,.g-D { background: var(--warn); } .g-F { background: var(--fail); }
+    table { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 13px; }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); }
+    th { background: var(--card); font-weight: 600; }
+    tbody tr:hover { background: #fafbfd; }
+    .sev-critical { color: var(--fail); font-weight: 600; }
+    .sev-error { color: var(--fail); }
+    .sev-warning { color: #b26a00; }
+    .sev-info { color: var(--muted); }
+    .bar { background: var(--border); border-radius: 6px; height: 10px; overflow: hidden; }
+    .bar > span { display: block; height: 100%; }
+    figure { margin: 18px 0; }
+    figure img { max-width: 100%; border: 1px solid var(--border); border-radius: 8px; }
+    footer { margin-top: 40px; color: var(--muted); font-size: 12px; border-top: 1px solid var(--border);
+             padding-top: 12px; }
+    @media (prefers-color-scheme: dark) {
+      :root { --bg:#12151a; --fg:#e4e7eb; --muted:#9aa5b1; --border:#2b313b; --card:#1b1f27; }
+      figure img { filter: brightness(.95); }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Data Quality Report</h1>
+      <div class="muted">
+        Dataset: <strong>{{ report.dataset_name }}</strong>
+        {% if report.source_path %} &middot; Source: {{ report.source_path }}{% endif %}
+        &middot; Generated {{ report.generated_at.strftime('%Y-%m-%d %H:%M UTC') }}
+        &middot; {{ company_name }}
+      </div>
+      <div class="cards">
+        <div class="card"><div class="label">Overall score</div>
+          <div class="value">{{ '%.1f'|format(report.quality.overall_score) }}%</div></div>
+        <div class="card"><div class="label">Grade</div>
+          <div class="value"><span class="grade g-{{ report.quality.grade }}">{{ report.quality.grade }}</span></div></div>
+        <div class="card"><div class="label">Status</div>
+          <div class="value">{{ 'PASS' if report.quality.passed else 'FAIL' }}</div></div>
+        <div class="card"><div class="label">Rows</div>
+          <div class="value">{{ '{:,}'.format(report.row_count) }}</div></div>
+        <div class="card"><div class="label">Columns</div>
+          <div class="value">{{ report.column_count }}</div></div>
+        <div class="card"><div class="label">Issues</div>
+          <div class="value">{{ '{:,}'.format(report.validation.total_issues) }}</div></div>
+      </div>
+    </header>
+
+    <p>{{ report.quality.summary }}</p>
+
+    <h2>Quality dimensions</h2>
+    <table>
+      <thead><tr><th>Dimension</th><th>Score</th><th style="width:30%">Level</th><th>Weight</th><th>Explanation</th></tr></thead>
+      <tbody>
+      {% for dim in report.quality.dimensions %}
+        <tr>
+          <td>{{ dim.dimension.value.title() }}</td>
+          <td>{{ '%.1f'|format(dim.score) }}%</td>
+          <td><div class="bar"><span style="width: {{ dim.score }}%; background:
+            {% if dim.score >= 80 %}var(--pass){% elif dim.score >= 60 %}var(--warn){% else %}var(--fail){% endif %};"></span></div></td>
+          <td>{{ '%.0f'|format(dim.weight * 100) }}%</td>
+          <td class="muted">{{ dim.explanation }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+
+    {% if charts %}
+    <h2>Visualisations</h2>
+    {% for name, uri in charts.items() %}
+      <figure>
+        <img src="{{ uri }}" alt="{{ name }}" />
+        <figcaption class="muted">{{ name.replace('_', ' ').title() }}</figcaption>
+      </figure>
+    {% endfor %}
+    {% endif %}
+
+    <h2>Recommendations</h2>
+    <table>
+      <thead><tr><th style="width:110px">Severity</th><th>Recommendation</th><th>Detail</th></tr></thead>
+      <tbody>
+      {% for rec in report.recommendations %}
+        <tr>
+          <td class="sev-{{ rec.severity.value }}">{{ rec.severity.value.upper() }}</td>
+          <td>{{ rec.title }}</td>
+          <td class="muted">{{ rec.detail }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+
+    <h2>Validation issues</h2>
+    {% if report.validation.issues %}
+    <table>
+      <thead><tr><th>Column</th><th>Rule</th><th>Severity</th><th>Affected</th><th>Message</th></tr></thead>
+      <tbody>
+      {% for issue in report.validation.issues %}
+        <tr>
+          <td>{{ issue.column or '(dataset)' }}</td>
+          <td>{{ issue.rule }}</td>
+          <td class="sev-{{ issue.severity.value }}">{{ issue.severity.value }}</td>
+          <td>{{ '{:,}'.format(issue.affected_count) }}</td>
+          <td class="muted">{{ issue.message }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+    {% else %}
+    <p class="muted">No validation issues were detected.</p>
+    {% endif %}
+
+    <h2>Column profile</h2>
+    <table>
+      <thead><tr><th>Column</th><th>Type</th><th>Nulls</th><th>Unique</th><th>Min</th><th>Max</th><th>Mean</th><th>Std</th></tr></thead>
+      <tbody>
+      {% for col in report.profile.columns %}
+        <tr>
+          <td>{{ col.name }}</td>
+          <td>{{ col.dtype }}</td>
+          <td>{{ '%.1f'|format(col.null_ratio * 100) }}%</td>
+          <td>{{ '{:,}'.format(col.unique_count) }}</td>
+          <td>{{ '%.3g'|format(col.minimum) if col.minimum is not none else '-' }}</td>
+          <td>{{ '%.3g'|format(col.maximum) if col.maximum is not none else '-' }}</td>
+          <td>{{ '%.3g'|format(col.mean) if col.mean is not none else '-' }}</td>
+          <td>{{ '%.3g'|format(col.std_dev) if col.std_dev is not none else '-' }}</td>
+        </tr>
+      {% endfor %}
+      </tbody>
+    </table>
+
+    <footer>
+      Generated by the Smart Data Quality Monitoring System &middot; report format v1.0
+    </footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dqms"
+version = "1.0.0"
+description = "Smart Data Quality Monitoring System - enterprise-grade dataset quality analysis, validation, cleaning, and drift detection."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Mojtaba Karimi" }]
+keywords = ["data-quality", "data-profiling", "data-validation", "drift-detection", "etl", "observability"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+]
+
+dependencies = [
+    "pandas>=2.1",
+    "numpy>=1.26",
+    "scikit-learn>=1.3",
+    "scipy>=1.11",
+    "plotly>=5.18",
+    "matplotlib>=3.8",
+    "streamlit>=1.30",
+    "loguru>=0.7",
+    "typer>=0.12",
+    "pydantic>=2.5",
+    "pydantic-settings>=2.1",
+    "pyyaml>=6.0",
+    "openpyxl>=3.1",
+    "pyarrow>=14.0",
+    "jinja2>=3.1",
+    "fpdf2>=2.7",
+    "chardet>=5.2",
+    "rich>=13.7",
+]
+
+[project.optional-dependencies]
+# Legacy BIFF .xls workbooks; openpyxl only reads the modern zip-based formats.
+xls = ["xlrd>=2.0"]
+dev = [
+    "pytest>=7.4",
+    "pytest-cov>=4.1",
+    "ruff>=0.4",
+    "mypy>=1.8",
+    "pandas-stubs",
+    "types-PyYAML",
+]
+
+[project.scripts]
+dqms = "dqms.cli:app"
+
+[project.urls]
+Homepage = "https://github.com/mojtaba-py-code/smart-data-quality-monitoring-system"
+Repository = "https://github.com/mojtaba-py-code/smart-data-quality-monitoring-system"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+dqms = ["py.typed", "reports/templates/*.html"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["tests"]
+addopts = "-ra -q --strict-markers"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+]
+
+[tool.coverage.run]
+branch = true
+source = ["src/dqms"]
+omit = ["*/dashboard/*", "*/__main__.py"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "C4", "SIM", "PTH", "RUF"]
+ignore = ["N803", "N806"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["S101"]
+# Typer expresses CLI parameters via calls (typer.Option/Argument) in argument
+# defaults; this is the framework's intended, documented pattern.
+"src/dqms/cli.py" = ["B008"]
+
+[tool.mypy]
+# Matches the interpreter used for type-checking. The runtime code itself
+# remains compatible with Python 3.11+ (see project.requires-python); this only
+# governs how mypy parses third-party stubs such as numpy's.
+python_version = "3.12"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+ignore_missing_imports = true
+plugins = ["pydantic.mypy"]
+mypy_path = "src"
+packages = ["dqms"]

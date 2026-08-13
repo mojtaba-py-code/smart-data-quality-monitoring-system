@@ -1,0 +1,94 @@
+# =====================================================================
+# Smart Data Quality Monitoring System - default configuration
+# ---------------------------------------------------------------------
+# Every value here can be overridden by an environment variable using the
+# DQMS_ prefix and __ as the nesting separator, e.g.:
+#   DQMS_LOGGING__LEVEL=DEBUG
+#   DQMS_SECURITY__MAX_FILE_SIZE_MB=1024
+# Environment variables always win over this file.
+# =====================================================================
+
+paths:
+  input_dir: ./data/input          # where datasets are read from
+  output_dir: ./output             # where reports and exports are written
+  log_dir: ./logs                  # rotating log files live here
+
+logging:
+  level: INFO                      # TRACE|DEBUG|INFO|SUCCESS|WARNING|ERROR|CRITICAL
+  json_logs: false                 # emit structured JSON logs to file
+  rotation: "10 MB"                # rotate the log file at this size
+  retention: "14 days"             # keep rotated logs for this long
+
+security:
+  max_file_size_mb: 512            # reject files larger than this
+  allow_symlinks: false            # refuse to follow symlinked dataset files
+  allowed_extensions:              # only these extensions may be loaded
+    - .csv
+    - .tsv
+    - .txt
+    - .xlsx
+    - .xlsm
+    - .xls
+    - .json
+    - .parquet
+    - .pq
+  restrict_to_input_dir: false     # if true, only files under input_dir load
+  sanitize_exports: true           # neutralise CSV/Excel formula injection
+
+loader:
+  chunk_size: 100000               # rows per chunk when streaming large files
+  large_file_threshold_mb: 100     # switch to chunked reading above this size
+  sample_rows: null                # optionally cap rows loaded (null = all)
+  csv_delimiter: null              # null = auto-detect
+  encoding: null                   # null = auto-detect via chardet
+
+validation:
+  email_column_hints: [email, e_mail, mail]
+  phone_column_hints: [phone, mobile, tel, telephone, cell]
+  date_column_hints: [date, dob, created, updated, timestamp, time]
+  max_string_length: 10000         # flag abnormally long strings
+  numeric_min: null                # optional global lower bound
+  numeric_max: null                # optional global upper bound
+  treat_negative_as_invalid: false # for columns that must be non-negative
+
+cleaning:
+  trim_whitespace: true
+  collapse_internal_whitespace: true
+  standardize_column_names: true   # snake_case, ascii, deduplicated
+  drop_duplicate_rows: true
+  missing_numeric_strategy: median # mean|median|zero|drop|none
+  missing_categorical_strategy: mode  # mode|constant|drop|none
+  missing_fill_constant: "UNKNOWN"
+  normalize_text_case: none        # lower|upper|title|none
+
+scoring:
+  weights:                         # must sum to 1.0 (validated at load time)
+    completeness: 0.25
+    validity: 0.25
+    uniqueness: 0.20
+    consistency: 0.15
+    accuracy: 0.15
+  pass_threshold: 80.0             # overall score at/above this is "healthy"
+
+anomaly:
+  methods: [zscore, iqr]           # any of: zscore, iqr, isolation_forest
+  zscore_threshold: 3.0
+  iqr_multiplier: 1.5
+  isolation_forest_contamination: 0.05
+  random_state: 42
+
+drift:
+  psi_warning: 0.1                 # population stability index warning band
+  psi_critical: 0.25               # PSI critical band
+  ks_pvalue_alpha: 0.05            # KS test significance level
+  numeric_bins: 10                 # bins used for distribution comparison
+
+dashboard:
+  title: "Smart Data Quality Monitoring System"
+  theme: light
+  max_upload_mb: 200
+
+report:
+  company_name: "Data Engineering"
+  include_charts: true
+  formats: [html, pdf]             # any of: html, pdf, summary

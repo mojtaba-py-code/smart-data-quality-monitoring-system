@@ -1,0 +1,4574 @@
+[
+  {
+    "Customer ID":1,
+    "Email":"customer0@example.com",
+    "Phone":"+1 (555) 010-5071",
+    "Purchase Amount":229.66,
+    "Signup Date":"31\/31\/2023",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":2,
+    "Email":"customer1@example.com",
+    "Phone":"+1 (555) 010-3090",
+    "Purchase Amount":312.32,
+    "Signup Date":"2023-01-01 06:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":3,
+    "Email":"customer2@example.com",
+    "Phone":"+1 (555) 010-6863",
+    "Purchase Amount":216.99,
+    "Signup Date":"2023-01-01 12:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":4,
+    "Email":"customer3@example.com",
+    "Phone":"+1 (555) 010-8452",
+    "Purchase Amount":292.63,
+    "Signup Date":"2023-01-01 18:00:00",
+    "Country":"FR",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":5,
+    "Email":"customer4@example.com",
+    "Phone":"+1 (555) 010-1510",
+    "Purchase Amount":204.43,
+    "Signup Date":"2023-01-02 00:00:00",
+    "Country":"GB",
+    "Notes":""
+  },
+  {
+    "Customer ID":6,
+    "Email":"customer5@example.com",
+    "Phone":"+1 (555) 010-5751",
+    "Purchase Amount":312.5,
+    "Signup Date":"2023-01-02 06:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":7,
+    "Email":"customer6@example.com",
+    "Phone":"+1 (555) 010-5220",
+    "Purchase Amount":176.29,
+    "Signup Date":"2023-01-02 12:00:00",
+    "Country":"JP",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":8,
+    "Email":"customer7@example.com",
+    "Phone":"+1 (555) 010-9149",
+    "Purchase Amount":324.33,
+    "Signup Date":"2023-01-02 18:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":9,
+    "Email":"customer8@example.com",
+    "Phone":"+1 (555) 010-4489",
+    "Purchase Amount":295.67,
+    "Signup Date":"2023-01-03 00:00:00",
+    "Country":"GB",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":10,
+    "Email":"customer9@example.com",
+    "Phone":"+1 (555) 010-2507",
+    "Purchase Amount":236.95,
+    "Signup Date":"2023-01-03 06:00:00",
+    "Country":"GB",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":11,
+    "Email":"customer10@example.com",
+    "Phone":"+1 (555) 010-3659",
+    "Purchase Amount":241.46,
+    "Signup Date":"2023-01-03 12:00:00",
+    "Country":"FR",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":12,
+    "Email":"customer11@example.com",
+    "Phone":"+1 (555) 010-7621",
+    "Purchase Amount":313.91,
+    "Signup Date":"2023-01-03 18:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":13,
+    "Email":"customer12@example.com",
+    "Phone":"+1 (555) 010-1099",
+    "Purchase Amount":241.56,
+    "Signup Date":"2023-01-04 00:00:00",
+    "Country":"DE",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":14,
+    "Email":"customer13@example.com",
+    "Phone":"+1 (555) 010-9146",
+    "Purchase Amount":254.99,
+    "Signup Date":"2023-01-04 06:00:00",
+    "Country":"DE",
+    "Notes":""
+  },
+  {
+    "Customer ID":15,
+    "Email":"customer14@example.com",
+    "Phone":"+1 (555) 010-9908",
+    "Purchase Amount":213.0,
+    "Signup Date":"2023-01-04 12:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":16,
+    "Email":"customer15@example.com",
+    "Phone":"+1 (555) 010-4200",
+    "Purchase Amount":411.72,
+    "Signup Date":"2023-01-04 18:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":17,
+    "Email":"customer16@example.com",
+    "Phone":"+1 (555) 010-8839",
+    "Purchase Amount":317.96,
+    "Signup Date":"2023-01-05 00:00:00",
+    "Country":"FR",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":18,
+    "Email":"customer17@example.com",
+    "Phone":"+1 (555) 010-8332",
+    "Purchase Amount":190.64,
+    "Signup Date":"2023-01-05 06:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":19,
+    "Email":"customer18@example.com",
+    "Phone":"+1 (555) 010-1527",
+    "Purchase Amount":null,
+    "Signup Date":"2023-01-05 12:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":20,
+    "Email":"customer19@example.com",
+    "Phone":"+1 (555) 010-6991",
+    "Purchase Amount":237.87,
+    "Signup Date":"2023-01-05 18:00:00",
+    "Country":"GB",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":21,
+    "Email":"customer20@example.com",
+    "Phone":"+1 (555) 010-8386",
+    "Purchase Amount":340.44,
+    "Signup Date":"2023-01-06 00:00:00",
+    "Country":"FR",
+    "Notes":""
+  },
+  {
+    "Customer ID":22,
+    "Email":"customer21@example.com",
+    "Phone":"+1 (555) 010-3186",
+    "Purchase Amount":185.27,
+    "Signup Date":"2023-01-06 06:00:00",
+    "Country":"DE",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":23,
+    "Email":"customer22@example.com",
+    "Phone":"N\/A",
+    "Purchase Amount":162.6,
+    "Signup Date":"2023-01-06 12:00:00",
+    "Country":"GB",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":24,
+    "Email":"not-an-email",
+    "Phone":"+1 (555) 010-8058",
+    "Purchase Amount":194.37,
+    "Signup Date":"2023-01-06 18:00:00",
+    "Country":"GB",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":25,
+    "Email":"customer24@example.com",
+    "Phone":"+1 (555) 010-5494",
+    "Purchase Amount":228.22,
+    "Signup Date":"2023-01-07 00:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":26,
+    "Email":"customer25@example.com",
+    "Phone":"+1 (555) 010-7995",
+    "Purchase Amount":225.69,
+    "Signup Date":"2023-01-07 06:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":27,
+    "Email":"customer26@example.com",
+    "Phone":"+1 (555) 010-7427",
+    "Purchase Amount":208.83,
+    "Signup Date":"2023-01-07 12:00:00",
+    "Country":"FR",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":28,
+    "Email":"customer27@example.com",
+    "Phone":"+1 (555) 010-5441",
+    "Purchase Amount":401.33,
+    "Signup Date":"2023-01-07 18:00:00",
+    "Country":"JP",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":29,
+    "Email":"customer28@example.com",
+    "Phone":"+1 (555) 010-8876",
+    "Purchase Amount":237.95,
+    "Signup Date":"2023-01-08 00:00:00",
+    "Country":"FR",
+    "Notes":""
+  },
+  {
+    "Customer ID":30,
+    "Email":"customer29@example.com",
+    "Phone":"+1 (555) 010-6272",
+    "Purchase Amount":135.68,
+    "Signup Date":"2023-01-08 06:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":31,
+    "Email":"customer30@example.com",
+    "Phone":"+1 (555) 010-3289",
+    "Purchase Amount":235.47,
+    "Signup Date":"2023-01-08 12:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":32,
+    "Email":"customer31@example.com",
+    "Phone":"+1 (555) 010-6659",
+    "Purchase Amount":158.47,
+    "Signup Date":"2023-01-08 18:00:00",
+    "Country":"FR",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":33,
+    "Email":"customer32@example.com",
+    "Phone":"+1 (555) 010-1004",
+    "Purchase Amount":280.46,
+    "Signup Date":"2023-01-09 00:00:00",
+    "Country":"JP",
+    "Notes":""
+  },
+  {
+    "Customer ID":34,
+    "Email":"customer33@example.com",
+    "Phone":"+1 (555) 010-5613",
+    "Purchase Amount":135.41,
+    "Signup Date":"2023-01-09 06:00:00",
+    "Country":"JP",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":35,
+    "Email":"customer34@example.com",
+    "Phone":"+1 (555) 010-4607",
+    "Purchase Amount":null,
+    "Signup Date":"2023-01-09 12:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":36,
+    "Email":"customer35@example.com",
+    "Phone":"+1 (555) 010-5141",
+    "Purchase Amount":188.73,
+    "Signup Date":"2023-01-09 18:00:00",
+    "Country":"GB",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":37,
+    "Email":"customer36@example.com",
+    "Phone":"+1 (555) 010-4433",
+    "Purchase Amount":264.53,
+    "Signup Date":"2023-01-10 00:00:00",
+    "Country":"JP",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":38,
+    "Email":"customer37@example.com",
+    "Phone":"+1 (555) 010-8045",
+    "Purchase Amount":332.47,
+    "Signup Date":"2023-01-10 06:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":39,
+    "Email":"customer38@example.com",
+    "Phone":"+1 (555) 010-5102",
+    "Purchase Amount":309.02,
+    "Signup Date":"2023-01-10 12:00:00",
+    "Country":"GB",
+    "Notes":""
+  },
+  {
+    "Customer ID":40,
+    "Email":"customer39@example.com",
+    "Phone":"N\/A",
+    "Purchase Amount":149.06,
+    "Signup Date":"2023-01-10 18:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":41,
+    "Email":"customer40@example.com",
+    "Phone":"+1 (555) 010-1394",
+    "Purchase Amount":232.49,
+    "Signup Date":"2023-01-11 00:00:00",
+    "Country":"GB",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":42,
+    "Email":"customer41@example.com",
+    "Phone":"+1 (555) 010-3987",
+    "Purchase Amount":186.12,
+    "Signup Date":"2023-01-11 06:00:00",
+    "Country":"GB",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":43,
+    "Email":"customer42@example.com",
+    "Phone":"+1 (555) 010-6880",
+    "Purchase Amount":229.52,
+    "Signup Date":"2023-01-11 12:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":44,
+    "Email":"customer43@example.com",
+    "Phone":"+1 (555) 010-6490",
+    "Purchase Amount":177.73,
+    "Signup Date":"2023-01-11 18:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":45,
+    "Email":"customer44@example.com",
+    "Phone":"+1 (555) 010-5290",
+    "Purchase Amount":280.87,
+    "Signup Date":"2023-01-12 00:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":46,
+    "Email":"customer45@example.com",
+    "Phone":"+1 (555) 010-7000",
+    "Purchase Amount":262.81,
+    "Signup Date":"2023-01-12 06:00:00",
+    "Country":"GB",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":47,
+    "Email":"customer46@example.com",
+    "Phone":"+1 (555) 010-7860",
+    "Purchase Amount":278.71,
+    "Signup Date":"2023-01-12 12:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":48,
+    "Email":"customer47@example.com",
+    "Phone":"+1 (555) 010-3362",
+    "Purchase Amount":131.15,
+    "Signup Date":"2023-01-12 18:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":49,
+    "Email":"customer48@example.com",
+    "Phone":"+1 (555) 010-7577",
+    "Purchase Amount":273.81,
+    "Signup Date":"2023-01-13 00:00:00",
+    "Country":"FR",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":50,
+    "Email":"customer49@example.com",
+    "Phone":"+1 (555) 010-4909",
+    "Purchase Amount":251.15,
+    "Signup Date":"2023-01-13 06:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":51,
+    "Email":"customer50@example.com",
+    "Phone":"+1 (555) 010-1458",
+    "Purchase Amount":224.62,
+    "Signup Date":"2023-01-13 12:00:00",
+    "Country":"FR",
+    "Notes":""
+  },
+  {
+    "Customer ID":52,
+    "Email":"customer51@example.com",
+    "Phone":"+1 (555) 010-2517",
+    "Purchase Amount":199.0,
+    "Signup Date":"2023-01-13 18:00:00",
+    "Country":"GB",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":53,
+    "Email":"customer52@example.com",
+    "Phone":"+1 (555) 010-3864",
+    "Purchase Amount":165.58,
+    "Signup Date":"2023-01-14 00:00:00",
+    "Country":"DE",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":54,
+    "Email":"customer53@example.com",
+    "Phone":"+1 (555) 010-2670",
+    "Purchase Amount":373.7,
+    "Signup Date":"2023-01-14 06:00:00",
+    "Country":"JP",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":55,
+    "Email":"customer54@example.com",
+    "Phone":"+1 (555) 010-4339",
+    "Purchase Amount":261.03,
+    "Signup Date":"2023-01-14 12:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":56,
+    "Email":"customer55@example.com",
+    "Phone":"+1 (555) 010-9627",
+    "Purchase Amount":189.41,
+    "Signup Date":"2023-01-14 18:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":57,
+    "Email":"customer56@example.com",
+    "Phone":"+1 (555) 010-1611",
+    "Purchase Amount":223.58,
+    "Signup Date":"2023-01-15 00:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":58,
+    "Email":"customer57@example.com",
+    "Phone":"+1 (555) 010-8706",
+    "Purchase Amount":368.49,
+    "Signup Date":"2023-01-15 06:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":59,
+    "Email":"customer58@example.com",
+    "Phone":"+1 (555) 010-1330",
+    "Purchase Amount":268.9,
+    "Signup Date":"2023-01-15 12:00:00",
+    "Country":"GB",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":60,
+    "Email":"customer59@example.com",
+    "Phone":"+1 (555) 010-9478",
+    "Purchase Amount":176.36,
+    "Signup Date":"2023-01-15 18:00:00",
+    "Country":"JP",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":61,
+    "Email":"customer60@example.com",
+    "Phone":"+1 (555) 010-7064",
+    "Purchase Amount":303.2,
+    "Signup Date":"2023-01-16 00:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":62,
+    "Email":"not-an-email",
+    "Phone":"+1 (555) 010-6262",
+    "Purchase Amount":null,
+    "Signup Date":"2023-01-16 06:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":63,
+    "Email":"customer62@example.com",
+    "Phone":"+1 (555) 010-4704",
+    "Purchase Amount":239.16,
+    "Signup Date":"2023-01-16 12:00:00",
+    "Country":"GB",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":64,
+    "Email":"customer63@example.com",
+    "Phone":"+1 (555) 010-4993",
+    "Purchase Amount":null,
+    "Signup Date":"2023-01-16 18:00:00",
+    "Country":"JP",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":65,
+    "Email":"customer64@example.com",
+    "Phone":"+1 (555) 010-2205",
+    "Purchase Amount":154.13,
+    "Signup Date":"2023-01-17 00:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":66,
+    "Email":"customer65@example.com",
+    "Phone":"+1 (555) 010-2193",
+    "Purchase Amount":291.49,
+    "Signup Date":"2023-01-17 06:00:00",
+    "Country":"JP",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":67,
+    "Email":"customer66@example.com",
+    "Phone":"N\/A",
+    "Purchase Amount":196.51,
+    "Signup Date":"2023-01-17 12:00:00",
+    "Country":"GB",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":68,
+    "Email":"customer67@example.com",
+    "Phone":"+1 (555) 010-6110",
+    "Purchase Amount":216.35,
+    "Signup Date":"2023-01-17 18:00:00",
+    "Country":"GB",
+    "Notes":""
+  },
+  {
+    "Customer ID":69,
+    "Email":"customer68@example.com",
+    "Phone":"+1 (555) 010-4999",
+    "Purchase Amount":223.94,
+    "Signup Date":"2023-01-18 00:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":70,
+    "Email":"not-an-email",
+    "Phone":"+1 (555) 010-3658",
+    "Purchase Amount":245.49,
+    "Signup Date":"2023-01-18 06:00:00",
+    "Country":"GB",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":71,
+    "Email":"customer70@example.com",
+    "Phone":"+1 (555) 010-1399",
+    "Purchase Amount":265.12,
+    "Signup Date":"2023-01-18 12:00:00",
+    "Country":"GB",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":72,
+    "Email":"customer71@example.com",
+    "Phone":"+1 (555) 010-4550",
+    "Purchase Amount":256.2,
+    "Signup Date":"2023-01-18 18:00:00",
+    "Country":"JP",
+    "Notes":""
+  },
+  {
+    "Customer ID":73,
+    "Email":"customer72@example.com",
+    "Phone":"+1 (555) 010-1954",
+    "Purchase Amount":264.38,
+    "Signup Date":"2023-01-19 00:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":74,
+    "Email":"customer73@example.com",
+    "Phone":"+1 (555) 010-8826",
+    "Purchase Amount":99999.0,
+    "Signup Date":"2023-01-19 06:00:00",
+    "Country":"DE",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":75,
+    "Email":"customer74@example.com",
+    "Phone":"+1 (555) 010-8536",
+    "Purchase Amount":275.33,
+    "Signup Date":"2023-01-19 12:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":76,
+    "Email":"customer75@example.com",
+    "Phone":"+1 (555) 010-8771",
+    "Purchase Amount":null,
+    "Signup Date":"2023-01-19 18:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":77,
+    "Email":"customer76@example.com",
+    "Phone":"+1 (555) 010-4819",
+    "Purchase Amount":353.66,
+    "Signup Date":"2023-01-20 00:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":78,
+    "Email":"customer77@example.com",
+    "Phone":"+1 (555) 010-1022",
+    "Purchase Amount":200.36,
+    "Signup Date":"2023-01-20 06:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":79,
+    "Email":"customer78@example.com",
+    "Phone":"+1 (555) 010-9527",
+    "Purchase Amount":233.39,
+    "Signup Date":"2023-01-20 12:00:00",
+    "Country":"GB",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":80,
+    "Email":"customer79@example.com",
+    "Phone":"+1 (555) 010-9207",
+    "Purchase Amount":296.31,
+    "Signup Date":"2023-01-20 18:00:00",
+    "Country":"JP",
+    "Notes":""
+  },
+  {
+    "Customer ID":81,
+    "Email":"customer80@example.com",
+    "Phone":"+1 (555) 010-6320",
+    "Purchase Amount":149.19,
+    "Signup Date":"2023-01-21 00:00:00",
+    "Country":"FR",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":82,
+    "Email":"customer81@example.com",
+    "Phone":"+1 (555) 010-8103",
+    "Purchase Amount":284.92,
+    "Signup Date":"2023-01-21 06:00:00",
+    "Country":"DE",
+    "Notes":""
+  },
+  {
+    "Customer ID":83,
+    "Email":"customer82@example.com",
+    "Phone":"+1 (555) 010-7195",
+    "Purchase Amount":228.41,
+    "Signup Date":"2023-01-21 12:00:00",
+    "Country":"GB",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":84,
+    "Email":"customer83@example.com",
+    "Phone":"+1 (555) 010-6003",
+    "Purchase Amount":null,
+    "Signup Date":"2023-01-21 18:00:00",
+    "Country":"GB",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":85,
+    "Email":"customer84@example.com",
+    "Phone":"+1 (555) 010-9932",
+    "Purchase Amount":221.61,
+    "Signup Date":"2023-01-22 00:00:00",
+    "Country":"GB",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":86,
+    "Email":"customer85@example.com",
+    "Phone":"+1 (555) 010-5024",
+    "Purchase Amount":241.07,
+    "Signup Date":"2023-01-22 06:00:00",
+    "Country":"DE",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":87,
+    "Email":"customer86@example.com",
+    "Phone":"+1 (555) 010-8685",
+    "Purchase Amount":280.83,
+    "Signup Date":"2023-01-22 12:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":88,
+    "Email":"customer87@example.com",
+    "Phone":"+1 (555) 010-2367",
+    "Purchase Amount":253.01,
+    "Signup Date":"2023-01-22 18:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":89,
+    "Email":"customer88@example.com",
+    "Phone":"+1 (555) 010-6749",
+    "Purchase Amount":362.64,
+    "Signup Date":"2023-01-23 00:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":90,
+    "Email":"customer89@example.com",
+    "Phone":"+1 (555) 010-6138",
+    "Purchase Amount":133.72,
+    "Signup Date":"2023-01-23 06:00:00",
+    "Country":"JP",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":91,
+    "Email":"customer90@example.com",
+    "Phone":"+1 (555) 010-1992",
+    "Purchase Amount":278.12,
+    "Signup Date":"2023-01-23 12:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":92,
+    "Email":"customer91@example.com",
+    "Phone":"+1 (555) 010-6543",
+    "Purchase Amount":198.01,
+    "Signup Date":"2023-01-23 18:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":93,
+    "Email":"customer92@example.com",
+    "Phone":"+1 (555) 010-1519",
+    "Purchase Amount":290.8,
+    "Signup Date":"31\/31\/2023",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":94,
+    "Email":"customer93@example.com",
+    "Phone":"N\/A",
+    "Purchase Amount":177.14,
+    "Signup Date":"2023-01-24 06:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":95,
+    "Email":"customer94@example.com",
+    "Phone":"+1 (555) 010-4166",
+    "Purchase Amount":311.94,
+    "Signup Date":"2023-01-24 12:00:00",
+    "Country":"GB",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":96,
+    "Email":"customer95@example.com",
+    "Phone":"+1 (555) 010-5719",
+    "Purchase Amount":328.43,
+    "Signup Date":"2023-01-24 18:00:00",
+    "Country":"GB",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":97,
+    "Email":"customer96@example.com",
+    "Phone":"+1 (555) 010-2720",
+    "Purchase Amount":296.59,
+    "Signup Date":"2023-01-25 00:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":98,
+    "Email":"customer97@example.com",
+    "Phone":"+1 (555) 010-2703",
+    "Purchase Amount":281.74,
+    "Signup Date":"2023-01-25 06:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":99,
+    "Email":"customer98@example.com",
+    "Phone":"+1 (555) 010-3600",
+    "Purchase Amount":279.67,
+    "Signup Date":"2023-01-25 12:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":100,
+    "Email":"customer99@example.com",
+    "Phone":"+1 (555) 010-2037",
+    "Purchase Amount":165.02,
+    "Signup Date":"2023-01-25 18:00:00",
+    "Country":"GB",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":101,
+    "Email":"customer100@example.com",
+    "Phone":"+1 (555) 010-4477",
+    "Purchase Amount":276.38,
+    "Signup Date":"2023-01-26 00:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":102,
+    "Email":"customer101@example.com",
+    "Phone":"+1 (555) 010-8633",
+    "Purchase Amount":null,
+    "Signup Date":"2023-01-26 06:00:00",
+    "Country":"FR",
+    "Notes":""
+  },
+  {
+    "Customer ID":103,
+    "Email":"customer102@example.com",
+    "Phone":"+1 (555) 010-2904",
+    "Purchase Amount":null,
+    "Signup Date":"2023-01-26 12:00:00",
+    "Country":"DE",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":104,
+    "Email":"customer103@example.com",
+    "Phone":"+1 (555) 010-9893",
+    "Purchase Amount":196.89,
+    "Signup Date":"2023-01-26 18:00:00",
+    "Country":"JP",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":105,
+    "Email":"customer104@example.com",
+    "Phone":"+1 (555) 010-6702",
+    "Purchase Amount":292.74,
+    "Signup Date":"2023-01-27 00:00:00",
+    "Country":"GB",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":106,
+    "Email":"customer105@example.com",
+    "Phone":"+1 (555) 010-9627",
+    "Purchase Amount":290.86,
+    "Signup Date":"2023-01-27 06:00:00",
+    "Country":"JP",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":107,
+    "Email":"customer106@example.com",
+    "Phone":"+1 (555) 010-9571",
+    "Purchase Amount":292.01,
+    "Signup Date":"2023-01-27 12:00:00",
+    "Country":"DE",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":108,
+    "Email":"customer107@example.com",
+    "Phone":"+1 (555) 010-4356",
+    "Purchase Amount":220.59,
+    "Signup Date":"2023-01-27 18:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":109,
+    "Email":"customer108@example.com",
+    "Phone":"+1 (555) 010-6822",
+    "Purchase Amount":282.74,
+    "Signup Date":"2023-01-28 00:00:00",
+    "Country":"GB",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":110,
+    "Email":"customer109@example.com",
+    "Phone":"+1 (555) 010-1343",
+    "Purchase Amount":208.61,
+    "Signup Date":"2023-01-28 06:00:00",
+    "Country":"GB",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":111,
+    "Email":"customer110@example.com",
+    "Phone":"+1 (555) 010-5012",
+    "Purchase Amount":198.06,
+    "Signup Date":"2023-01-28 12:00:00",
+    "Country":"JP",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":112,
+    "Email":"customer111@example.com",
+    "Phone":"+1 (555) 010-9662",
+    "Purchase Amount":null,
+    "Signup Date":"2023-01-28 18:00:00",
+    "Country":"GB",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":113,
+    "Email":"customer112@example.com",
+    "Phone":"+1 (555) 010-8752",
+    "Purchase Amount":248.49,
+    "Signup Date":"2023-01-29 00:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":114,
+    "Email":"customer113@example.com",
+    "Phone":"+1 (555) 010-8416",
+    "Purchase Amount":178.44,
+    "Signup Date":"2023-01-29 06:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":115,
+    "Email":"customer114@example.com",
+    "Phone":"+1 (555) 010-5721",
+    "Purchase Amount":252.88,
+    "Signup Date":"2023-01-29 12:00:00",
+    "Country":"DE",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":116,
+    "Email":"customer115@example.com",
+    "Phone":"+1 (555) 010-4377",
+    "Purchase Amount":92.53,
+    "Signup Date":"2023-01-29 18:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":117,
+    "Email":"customer116@example.com",
+    "Phone":"N\/A",
+    "Purchase Amount":239.53,
+    "Signup Date":"2023-01-30 00:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":118,
+    "Email":"customer117@example.com",
+    "Phone":"+1 (555) 010-2625",
+    "Purchase Amount":341.79,
+    "Signup Date":"2023-01-30 06:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":119,
+    "Email":"customer118@example.com",
+    "Phone":"+1 (555) 010-9175",
+    "Purchase Amount":257.96,
+    "Signup Date":"2023-01-30 12:00:00",
+    "Country":"DE",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":120,
+    "Email":"customer119@example.com",
+    "Phone":"+1 (555) 010-3783",
+    "Purchase Amount":null,
+    "Signup Date":"2023-01-30 18:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":121,
+    "Email":"customer120@example.com",
+    "Phone":"+1 (555) 010-8125",
+    "Purchase Amount":243.34,
+    "Signup Date":"2023-01-31 00:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":122,
+    "Email":"customer121@example.com",
+    "Phone":"+1 (555) 010-4484",
+    "Purchase Amount":130.21,
+    "Signup Date":"2023-01-31 06:00:00",
+    "Country":"JP",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":123,
+    "Email":"customer122@example.com",
+    "Phone":"+1 (555) 010-1628",
+    "Purchase Amount":215.61,
+    "Signup Date":"2023-01-31 12:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":124,
+    "Email":"customer123@example.com",
+    "Phone":"+1 (555) 010-8930",
+    "Purchase Amount":252.9,
+    "Signup Date":"2023-01-31 18:00:00",
+    "Country":"GB",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":125,
+    "Email":"customer124@example.com",
+    "Phone":"+1 (555) 010-3908",
+    "Purchase Amount":186.65,
+    "Signup Date":"2023-02-01 00:00:00",
+    "Country":"GB",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":126,
+    "Email":"customer125@example.com",
+    "Phone":"+1 (555) 010-6021",
+    "Purchase Amount":248.47,
+    "Signup Date":"2023-02-01 06:00:00",
+    "Country":"FR",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":127,
+    "Email":"customer126@example.com",
+    "Phone":"+1 (555) 010-8714",
+    "Purchase Amount":234.62,
+    "Signup Date":"2023-02-01 12:00:00",
+    "Country":"DE",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":128,
+    "Email":"customer127@example.com",
+    "Phone":"+1 (555) 010-7839",
+    "Purchase Amount":307.46,
+    "Signup Date":"2023-02-01 18:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":129,
+    "Email":"customer128@example.com",
+    "Phone":"+1 (555) 010-8165",
+    "Purchase Amount":231.96,
+    "Signup Date":"2023-02-02 00:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":130,
+    "Email":"customer129@example.com",
+    "Phone":"+1 (555) 010-4404",
+    "Purchase Amount":271.23,
+    "Signup Date":"2023-02-02 06:00:00",
+    "Country":"FR",
+    "Notes":""
+  },
+  {
+    "Customer ID":131,
+    "Email":"customer130@example.com",
+    "Phone":"+1 (555) 010-4647",
+    "Purchase Amount":251.17,
+    "Signup Date":"2023-02-02 12:00:00",
+    "Country":"GB",
+    "Notes":""
+  },
+  {
+    "Customer ID":132,
+    "Email":"customer131@example.com",
+    "Phone":"+1 (555) 010-9328",
+    "Purchase Amount":236.52,
+    "Signup Date":"2023-02-02 18:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":133,
+    "Email":"customer132@example.com",
+    "Phone":"+1 (555) 010-1547",
+    "Purchase Amount":341.11,
+    "Signup Date":"2023-02-03 00:00:00",
+    "Country":"DE",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":134,
+    "Email":"customer133@example.com",
+    "Phone":"+1 (555) 010-9791",
+    "Purchase Amount":217.4,
+    "Signup Date":"2023-02-03 06:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":135,
+    "Email":"customer134@example.com",
+    "Phone":"+1 (555) 010-1679",
+    "Purchase Amount":214.18,
+    "Signup Date":"2023-02-03 12:00:00",
+    "Country":"FR",
+    "Notes":""
+  },
+  {
+    "Customer ID":136,
+    "Email":"customer135@example.com",
+    "Phone":"+1 (555) 010-1416",
+    "Purchase Amount":276.82,
+    "Signup Date":"2023-02-03 18:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":137,
+    "Email":"customer136@example.com",
+    "Phone":"+1 (555) 010-5660",
+    "Purchase Amount":311.03,
+    "Signup Date":"2023-02-04 00:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":138,
+    "Email":"customer137@example.com",
+    "Phone":"+1 (555) 010-7292",
+    "Purchase Amount":229.81,
+    "Signup Date":"2023-02-04 06:00:00",
+    "Country":"GB",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":139,
+    "Email":"customer138@example.com",
+    "Phone":"+1 (555) 010-9461",
+    "Purchase Amount":263.54,
+    "Signup Date":"2023-02-04 12:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":140,
+    "Email":"customer139@example.com",
+    "Phone":"+1 (555) 010-7106",
+    "Purchase Amount":344.67,
+    "Signup Date":"2023-02-04 18:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":141,
+    "Email":"customer140@example.com",
+    "Phone":"+1 (555) 010-5619",
+    "Purchase Amount":99999.0,
+    "Signup Date":"2023-02-05 00:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":142,
+    "Email":"customer141@example.com",
+    "Phone":"+1 (555) 010-6233",
+    "Purchase Amount":261.9,
+    "Signup Date":"2023-02-05 06:00:00",
+    "Country":"GB",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":143,
+    "Email":"customer142@example.com",
+    "Phone":"+1 (555) 010-7327",
+    "Purchase Amount":359.86,
+    "Signup Date":"2023-02-05 12:00:00",
+    "Country":"JP",
+    "Notes":""
+  },
+  {
+    "Customer ID":144,
+    "Email":"customer143@example.com",
+    "Phone":"+1 (555) 010-6185",
+    "Purchase Amount":230.04,
+    "Signup Date":"2023-02-05 18:00:00",
+    "Country":"DE",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":145,
+    "Email":"customer144@example.com",
+    "Phone":"+1 (555) 010-2863",
+    "Purchase Amount":310.85,
+    "Signup Date":"2023-02-06 00:00:00",
+    "Country":"GB",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":146,
+    "Email":"customer145@example.com",
+    "Phone":"+1 (555) 010-9304",
+    "Purchase Amount":251.21,
+    "Signup Date":"2023-02-06 06:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":147,
+    "Email":"customer146@example.com",
+    "Phone":"+1 (555) 010-5139",
+    "Purchase Amount":268.53,
+    "Signup Date":"2023-02-06 12:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":148,
+    "Email":"customer147@example.com",
+    "Phone":"+1 (555) 010-5318",
+    "Purchase Amount":245.26,
+    "Signup Date":"2023-02-06 18:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":149,
+    "Email":"customer148@example.com",
+    "Phone":"+1 (555) 010-4921",
+    "Purchase Amount":190.57,
+    "Signup Date":"2023-02-07 00:00:00",
+    "Country":"GB",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":150,
+    "Email":"customer149@example.com",
+    "Phone":"N\/A",
+    "Purchase Amount":245.18,
+    "Signup Date":"2023-02-07 06:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":151,
+    "Email":"customer150@example.com",
+    "Phone":"+1 (555) 010-5821",
+    "Purchase Amount":230.31,
+    "Signup Date":"2023-02-07 12:00:00",
+    "Country":"FR",
+    "Notes":""
+  },
+  {
+    "Customer ID":152,
+    "Email":"customer151@example.com",
+    "Phone":"+1 (555) 010-1385",
+    "Purchase Amount":253.69,
+    "Signup Date":"2023-02-07 18:00:00",
+    "Country":"JP",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":153,
+    "Email":"customer152@example.com",
+    "Phone":"+1 (555) 010-8406",
+    "Purchase Amount":203.22,
+    "Signup Date":"2023-02-08 00:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":154,
+    "Email":"customer153@example.com",
+    "Phone":"+1 (555) 010-2796",
+    "Purchase Amount":358.4,
+    "Signup Date":"2023-02-08 06:00:00",
+    "Country":"GB",
+    "Notes":""
+  },
+  {
+    "Customer ID":155,
+    "Email":"customer154@example.com",
+    "Phone":"+1 (555) 010-8704",
+    "Purchase Amount":266.9,
+    "Signup Date":"2023-02-08 12:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":156,
+    "Email":"customer155@example.com",
+    "Phone":"+1 (555) 010-9653",
+    "Purchase Amount":339.74,
+    "Signup Date":"2023-02-08 18:00:00",
+    "Country":"GB",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":157,
+    "Email":"customer156@example.com",
+    "Phone":"+1 (555) 010-2882",
+    "Purchase Amount":252.3,
+    "Signup Date":"2023-02-09 00:00:00",
+    "Country":"DE",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":158,
+    "Email":"customer157@example.com",
+    "Phone":"+1 (555) 010-9904",
+    "Purchase Amount":281.18,
+    "Signup Date":"2023-02-09 06:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":159,
+    "Email":"customer158@example.com",
+    "Phone":"+1 (555) 010-3991",
+    "Purchase Amount":309.79,
+    "Signup Date":"2023-02-09 12:00:00",
+    "Country":"JP",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":160,
+    "Email":"customer159@example.com",
+    "Phone":"+1 (555) 010-8616",
+    "Purchase Amount":311.32,
+    "Signup Date":"2023-02-09 18:00:00",
+    "Country":"DE",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":161,
+    "Email":"customer160@example.com",
+    "Phone":"+1 (555) 010-8751",
+    "Purchase Amount":337.15,
+    "Signup Date":"2023-02-10 00:00:00",
+    "Country":"DE",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":162,
+    "Email":"customer161@example.com",
+    "Phone":"+1 (555) 010-2878",
+    "Purchase Amount":null,
+    "Signup Date":"2023-02-10 06:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":163,
+    "Email":"customer162@example.com",
+    "Phone":"N\/A",
+    "Purchase Amount":null,
+    "Signup Date":"2023-02-10 12:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":164,
+    "Email":"customer163@example.com",
+    "Phone":"+1 (555) 010-8841",
+    "Purchase Amount":null,
+    "Signup Date":"2023-02-10 18:00:00",
+    "Country":"GB",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":165,
+    "Email":"customer164@example.com",
+    "Phone":"+1 (555) 010-4923",
+    "Purchase Amount":356.92,
+    "Signup Date":"2023-02-11 00:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":166,
+    "Email":"customer165@example.com",
+    "Phone":"+1 (555) 010-9935",
+    "Purchase Amount":239.91,
+    "Signup Date":"2023-02-11 06:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":167,
+    "Email":"customer166@example.com",
+    "Phone":"+1 (555) 010-7652",
+    "Purchase Amount":307.29,
+    "Signup Date":"2023-02-11 12:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":168,
+    "Email":"customer167@example.com",
+    "Phone":"+1 (555) 010-5958",
+    "Purchase Amount":237.13,
+    "Signup Date":"2023-02-11 18:00:00",
+    "Country":"GB",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":169,
+    "Email":"customer168@example.com",
+    "Phone":"+1 (555) 010-4503",
+    "Purchase Amount":235.75,
+    "Signup Date":"2023-02-12 00:00:00",
+    "Country":"DE",
+    "Notes":""
+  },
+  {
+    "Customer ID":170,
+    "Email":"not-an-email",
+    "Phone":"+1 (555) 010-2731",
+    "Purchase Amount":288.17,
+    "Signup Date":"2023-02-12 06:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":171,
+    "Email":"customer170@example.com",
+    "Phone":"+1 (555) 010-3449",
+    "Purchase Amount":343.94,
+    "Signup Date":"2023-02-12 12:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":172,
+    "Email":"customer171@example.com",
+    "Phone":"+1 (555) 010-3166",
+    "Purchase Amount":343.65,
+    "Signup Date":"2023-02-12 18:00:00",
+    "Country":"GB",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":173,
+    "Email":"customer172@example.com",
+    "Phone":"+1 (555) 010-5219",
+    "Purchase Amount":256.34,
+    "Signup Date":"2023-02-13 00:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":174,
+    "Email":"customer173@example.com",
+    "Phone":"+1 (555) 010-7271",
+    "Purchase Amount":294.51,
+    "Signup Date":"2023-02-13 06:00:00",
+    "Country":"JP",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":175,
+    "Email":"customer174@example.com",
+    "Phone":"+1 (555) 010-2970",
+    "Purchase Amount":216.37,
+    "Signup Date":"2023-02-13 12:00:00",
+    "Country":"GB",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":176,
+    "Email":"customer175@example.com",
+    "Phone":"+1 (555) 010-4619",
+    "Purchase Amount":318.3,
+    "Signup Date":"2023-02-13 18:00:00",
+    "Country":"FR",
+    "Notes":""
+  },
+  {
+    "Customer ID":177,
+    "Email":"customer176@example.com",
+    "Phone":"+1 (555) 010-7867",
+    "Purchase Amount":248.14,
+    "Signup Date":"2023-02-14 00:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":178,
+    "Email":"customer177@example.com",
+    "Phone":"+1 (555) 010-7690",
+    "Purchase Amount":269.58,
+    "Signup Date":"2023-02-14 06:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":179,
+    "Email":"customer178@example.com",
+    "Phone":"+1 (555) 010-2755",
+    "Purchase Amount":251.28,
+    "Signup Date":"2023-02-14 12:00:00",
+    "Country":"FR",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":180,
+    "Email":"customer179@example.com",
+    "Phone":"+1 (555) 010-8417",
+    "Purchase Amount":189.31,
+    "Signup Date":"2023-02-14 18:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":181,
+    "Email":"customer180@example.com",
+    "Phone":"+1 (555) 010-2812",
+    "Purchase Amount":347.88,
+    "Signup Date":"2023-02-15 00:00:00",
+    "Country":"GB",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":182,
+    "Email":"customer181@example.com",
+    "Phone":"+1 (555) 010-7906",
+    "Purchase Amount":269.26,
+    "Signup Date":"2023-02-15 06:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":183,
+    "Email":"customer182@example.com",
+    "Phone":"+1 (555) 010-9751",
+    "Purchase Amount":275.79,
+    "Signup Date":"2023-02-15 12:00:00",
+    "Country":"DE",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":184,
+    "Email":"customer183@example.com",
+    "Phone":"+1 (555) 010-2904",
+    "Purchase Amount":267.16,
+    "Signup Date":"2023-02-15 18:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":185,
+    "Email":"customer184@example.com",
+    "Phone":"+1 (555) 010-1290",
+    "Purchase Amount":236.41,
+    "Signup Date":"2023-02-16 00:00:00",
+    "Country":"GB",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":186,
+    "Email":"customer185@example.com",
+    "Phone":"+1 (555) 010-5590",
+    "Purchase Amount":240.61,
+    "Signup Date":"2023-02-16 06:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":187,
+    "Email":"customer186@example.com",
+    "Phone":"+1 (555) 010-7688",
+    "Purchase Amount":null,
+    "Signup Date":"2023-02-16 12:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":188,
+    "Email":"customer187@example.com",
+    "Phone":"+1 (555) 010-2178",
+    "Purchase Amount":223.41,
+    "Signup Date":"2023-02-16 18:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":189,
+    "Email":"customer188@example.com",
+    "Phone":"+1 (555) 010-8109",
+    "Purchase Amount":124.59,
+    "Signup Date":"2023-02-17 00:00:00",
+    "Country":"JP",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":190,
+    "Email":"customer189@example.com",
+    "Phone":"+1 (555) 010-2669",
+    "Purchase Amount":293.53,
+    "Signup Date":"2023-02-17 06:00:00",
+    "Country":"DE",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":191,
+    "Email":"customer190@example.com",
+    "Phone":"+1 (555) 010-7082",
+    "Purchase Amount":181.98,
+    "Signup Date":"2023-02-17 12:00:00",
+    "Country":"GB",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":192,
+    "Email":"customer191@example.com",
+    "Phone":"+1 (555) 010-1474",
+    "Purchase Amount":165.21,
+    "Signup Date":"2023-02-17 18:00:00",
+    "Country":"FR",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":193,
+    "Email":"customer192@example.com",
+    "Phone":"+1 (555) 010-4627",
+    "Purchase Amount":251.98,
+    "Signup Date":"2023-02-18 00:00:00",
+    "Country":"GB",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":194,
+    "Email":"customer193@example.com",
+    "Phone":"+1 (555) 010-2132",
+    "Purchase Amount":279.24,
+    "Signup Date":"2023-02-18 06:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":195,
+    "Email":"customer194@example.com",
+    "Phone":"+1 (555) 010-8288",
+    "Purchase Amount":334.75,
+    "Signup Date":"2023-02-18 12:00:00",
+    "Country":"DE",
+    "Notes":""
+  },
+  {
+    "Customer ID":196,
+    "Email":"customer195@example.com",
+    "Phone":"+1 (555) 010-9417",
+    "Purchase Amount":208.9,
+    "Signup Date":"2023-02-18 18:00:00",
+    "Country":"DE",
+    "Notes":""
+  },
+  {
+    "Customer ID":197,
+    "Email":"customer196@example.com",
+    "Phone":"+1 (555) 010-3334",
+    "Purchase Amount":304.81,
+    "Signup Date":"2023-02-19 00:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":198,
+    "Email":"customer197@example.com",
+    "Phone":"+1 (555) 010-7334",
+    "Purchase Amount":270.4,
+    "Signup Date":"2023-02-19 06:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":199,
+    "Email":"customer198@example.com",
+    "Phone":"+1 (555) 010-9765",
+    "Purchase Amount":236.0,
+    "Signup Date":"2023-02-19 12:00:00",
+    "Country":"GB",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":200,
+    "Email":"customer199@example.com",
+    "Phone":"+1 (555) 010-2055",
+    "Purchase Amount":254.67,
+    "Signup Date":"2023-02-19 18:00:00",
+    "Country":"DE",
+    "Notes":""
+  },
+  {
+    "Customer ID":201,
+    "Email":"customer200@example.com",
+    "Phone":"+1 (555) 010-9564",
+    "Purchase Amount":223.72,
+    "Signup Date":"2023-02-20 00:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":202,
+    "Email":"customer201@example.com",
+    "Phone":"+1 (555) 010-2355",
+    "Purchase Amount":99999.0,
+    "Signup Date":"2023-02-20 06:00:00",
+    "Country":"DE",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":203,
+    "Email":"customer202@example.com",
+    "Phone":"+1 (555) 010-1744",
+    "Purchase Amount":319.58,
+    "Signup Date":"2023-02-20 12:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":204,
+    "Email":"customer203@example.com",
+    "Phone":"+1 (555) 010-7467",
+    "Purchase Amount":226.15,
+    "Signup Date":"2023-02-20 18:00:00",
+    "Country":"JP",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":205,
+    "Email":"customer204@example.com",
+    "Phone":"+1 (555) 010-9757",
+    "Purchase Amount":396.12,
+    "Signup Date":"2023-02-21 00:00:00",
+    "Country":"DE",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":206,
+    "Email":"customer205@example.com",
+    "Phone":"+1 (555) 010-2827",
+    "Purchase Amount":356.61,
+    "Signup Date":"2023-02-21 06:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":207,
+    "Email":"customer206@example.com",
+    "Phone":"N\/A",
+    "Purchase Amount":287.97,
+    "Signup Date":"2023-02-21 12:00:00",
+    "Country":"FR",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":208,
+    "Email":"customer207@example.com",
+    "Phone":"+1 (555) 010-2331",
+    "Purchase Amount":176.23,
+    "Signup Date":"2023-02-21 18:00:00",
+    "Country":"JP",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":209,
+    "Email":"customer208@example.com",
+    "Phone":"+1 (555) 010-5065",
+    "Purchase Amount":215.09,
+    "Signup Date":"2023-02-22 00:00:00",
+    "Country":"DE",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":210,
+    "Email":"customer209@example.com",
+    "Phone":"+1 (555) 010-8362",
+    "Purchase Amount":223.45,
+    "Signup Date":"2023-02-22 06:00:00",
+    "Country":"DE",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":211,
+    "Email":"customer210@example.com",
+    "Phone":"+1 (555) 010-7131",
+    "Purchase Amount":260.76,
+    "Signup Date":"2023-02-22 12:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":212,
+    "Email":"customer211@example.com",
+    "Phone":"+1 (555) 010-5730",
+    "Purchase Amount":245.5,
+    "Signup Date":"2023-02-22 18:00:00",
+    "Country":"GB",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":213,
+    "Email":"customer212@example.com",
+    "Phone":"+1 (555) 010-4247",
+    "Purchase Amount":223.52,
+    "Signup Date":"2023-02-23 00:00:00",
+    "Country":"JP",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":214,
+    "Email":"customer213@example.com",
+    "Phone":"+1 (555) 010-2957",
+    "Purchase Amount":null,
+    "Signup Date":"2023-02-23 06:00:00",
+    "Country":"JP",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":215,
+    "Email":"customer214@example.com",
+    "Phone":"+1 (555) 010-3573",
+    "Purchase Amount":296.55,
+    "Signup Date":"31\/31\/2023",
+    "Country":"FR",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":216,
+    "Email":"customer215@example.com",
+    "Phone":"+1 (555) 010-4022",
+    "Purchase Amount":349.59,
+    "Signup Date":"2023-02-23 18:00:00",
+    "Country":"JP",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":217,
+    "Email":"customer216@example.com",
+    "Phone":"+1 (555) 010-2468",
+    "Purchase Amount":290.69,
+    "Signup Date":"2023-02-24 00:00:00",
+    "Country":"FR",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":218,
+    "Email":"customer217@example.com",
+    "Phone":"+1 (555) 010-5237",
+    "Purchase Amount":294.19,
+    "Signup Date":"2023-02-24 06:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":219,
+    "Email":"customer218@example.com",
+    "Phone":"+1 (555) 010-2884",
+    "Purchase Amount":333.35,
+    "Signup Date":"2023-02-24 12:00:00",
+    "Country":"GB",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":220,
+    "Email":"customer219@example.com",
+    "Phone":"+1 (555) 010-6966",
+    "Purchase Amount":230.12,
+    "Signup Date":"2023-02-24 18:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":221,
+    "Email":"customer220@example.com",
+    "Phone":"+1 (555) 010-7109",
+    "Purchase Amount":269.8,
+    "Signup Date":"2023-02-25 00:00:00",
+    "Country":"GB",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":222,
+    "Email":"customer221@example.com",
+    "Phone":"+1 (555) 010-7383",
+    "Purchase Amount":271.85,
+    "Signup Date":"2023-02-25 06:00:00",
+    "Country":"FR",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":223,
+    "Email":"customer222@example.com",
+    "Phone":"+1 (555) 010-7701",
+    "Purchase Amount":191.78,
+    "Signup Date":"2023-02-25 12:00:00",
+    "Country":"JP",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":224,
+    "Email":"customer223@example.com",
+    "Phone":"+1 (555) 010-1711",
+    "Purchase Amount":260.99,
+    "Signup Date":"2023-02-25 18:00:00",
+    "Country":"GB",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":225,
+    "Email":"customer224@example.com",
+    "Phone":"+1 (555) 010-7163",
+    "Purchase Amount":268.98,
+    "Signup Date":"2023-02-26 00:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":226,
+    "Email":"customer225@example.com",
+    "Phone":"+1 (555) 010-4933",
+    "Purchase Amount":212.41,
+    "Signup Date":"2023-02-26 06:00:00",
+    "Country":"JP",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":227,
+    "Email":"customer226@example.com",
+    "Phone":"+1 (555) 010-1723",
+    "Purchase Amount":330.43,
+    "Signup Date":"31\/31\/2023",
+    "Country":"FR",
+    "Notes":""
+  },
+  {
+    "Customer ID":228,
+    "Email":"customer227@example.com",
+    "Phone":"+1 (555) 010-8192",
+    "Purchase Amount":229.82,
+    "Signup Date":"2023-02-26 18:00:00",
+    "Country":"GB",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":229,
+    "Email":"customer228@example.com",
+    "Phone":"+1 (555) 010-6499",
+    "Purchase Amount":244.63,
+    "Signup Date":"2023-02-27 00:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":230,
+    "Email":"customer229@example.com",
+    "Phone":"+1 (555) 010-5910",
+    "Purchase Amount":277.58,
+    "Signup Date":"2023-02-27 06:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":231,
+    "Email":"customer230@example.com",
+    "Phone":"+1 (555) 010-4213",
+    "Purchase Amount":211.27,
+    "Signup Date":"2023-02-27 12:00:00",
+    "Country":"FR",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":232,
+    "Email":"customer231@example.com",
+    "Phone":"+1 (555) 010-6660",
+    "Purchase Amount":210.48,
+    "Signup Date":"2023-02-27 18:00:00",
+    "Country":"GB",
+    "Notes":""
+  },
+  {
+    "Customer ID":233,
+    "Email":"customer232@example.com",
+    "Phone":"+1 (555) 010-1076",
+    "Purchase Amount":357.32,
+    "Signup Date":"2023-02-28 00:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":234,
+    "Email":"customer233@example.com",
+    "Phone":"+1 (555) 010-7306",
+    "Purchase Amount":142.97,
+    "Signup Date":"2023-02-28 06:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":235,
+    "Email":"customer234@example.com",
+    "Phone":"+1 (555) 010-8411",
+    "Purchase Amount":null,
+    "Signup Date":"2023-02-28 12:00:00",
+    "Country":"FR",
+    "Notes":""
+  },
+  {
+    "Customer ID":236,
+    "Email":"customer235@example.com",
+    "Phone":"+1 (555) 010-3108",
+    "Purchase Amount":266.31,
+    "Signup Date":"2023-02-28 18:00:00",
+    "Country":"DE",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":237,
+    "Email":"customer236@example.com",
+    "Phone":"+1 (555) 010-1822",
+    "Purchase Amount":333.38,
+    "Signup Date":"2023-03-01 00:00:00",
+    "Country":"FR",
+    "Notes":""
+  },
+  {
+    "Customer ID":238,
+    "Email":"customer237@example.com",
+    "Phone":"+1 (555) 010-3098",
+    "Purchase Amount":315.07,
+    "Signup Date":"2023-03-01 06:00:00",
+    "Country":"GB",
+    "Notes":""
+  },
+  {
+    "Customer ID":239,
+    "Email":"customer238@example.com",
+    "Phone":"+1 (555) 010-2997",
+    "Purchase Amount":330.38,
+    "Signup Date":"2023-03-01 12:00:00",
+    "Country":"DE",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":240,
+    "Email":"customer239@example.com",
+    "Phone":"+1 (555) 010-9903",
+    "Purchase Amount":173.81,
+    "Signup Date":"2023-03-01 18:00:00",
+    "Country":"JP",
+    "Notes":""
+  },
+  {
+    "Customer ID":241,
+    "Email":"customer240@example.com",
+    "Phone":"+1 (555) 010-4558",
+    "Purchase Amount":188.3,
+    "Signup Date":"2023-03-02 00:00:00",
+    "Country":"GB",
+    "Notes":""
+  },
+  {
+    "Customer ID":242,
+    "Email":"customer241@example.com",
+    "Phone":"+1 (555) 010-4721",
+    "Purchase Amount":190.79,
+    "Signup Date":"2023-03-02 06:00:00",
+    "Country":"DE",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":243,
+    "Email":"customer242@example.com",
+    "Phone":"+1 (555) 010-5235",
+    "Purchase Amount":99999.0,
+    "Signup Date":"2023-03-02 12:00:00",
+    "Country":"FR",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":244,
+    "Email":"customer243@example.com",
+    "Phone":"+1 (555) 010-6504",
+    "Purchase Amount":253.1,
+    "Signup Date":"2023-03-02 18:00:00",
+    "Country":"FR",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":245,
+    "Email":"customer244@example.com",
+    "Phone":"+1 (555) 010-9206",
+    "Purchase Amount":287.7,
+    "Signup Date":"2023-03-03 00:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":246,
+    "Email":"customer245@example.com",
+    "Phone":"+1 (555) 010-8927",
+    "Purchase Amount":190.1,
+    "Signup Date":"2023-03-03 06:00:00",
+    "Country":"GB",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":247,
+    "Email":"customer246@example.com",
+    "Phone":"+1 (555) 010-1866",
+    "Purchase Amount":386.02,
+    "Signup Date":"2023-03-03 12:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":248,
+    "Email":"customer247@example.com",
+    "Phone":"+1 (555) 010-8767",
+    "Purchase Amount":236.53,
+    "Signup Date":"2023-03-03 18:00:00",
+    "Country":"DE",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":249,
+    "Email":"customer248@example.com",
+    "Phone":"+1 (555) 010-4286",
+    "Purchase Amount":286.23,
+    "Signup Date":"2023-03-04 00:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":250,
+    "Email":"customer249@example.com",
+    "Phone":"+1 (555) 010-6256",
+    "Purchase Amount":239.46,
+    "Signup Date":"2023-03-04 06:00:00",
+    "Country":"DE",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":251,
+    "Email":"customer250@example.com",
+    "Phone":"+1 (555) 010-2538",
+    "Purchase Amount":191.79,
+    "Signup Date":"2023-03-04 12:00:00",
+    "Country":"JP",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":252,
+    "Email":"customer251@example.com",
+    "Phone":"+1 (555) 010-8322",
+    "Purchase Amount":295.06,
+    "Signup Date":"2023-03-04 18:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":253,
+    "Email":"customer252@example.com",
+    "Phone":"+1 (555) 010-9135",
+    "Purchase Amount":144.71,
+    "Signup Date":"2023-03-05 00:00:00",
+    "Country":"GB",
+    "Notes":""
+  },
+  {
+    "Customer ID":254,
+    "Email":"customer253@example.com",
+    "Phone":"+1 (555) 010-4962",
+    "Purchase Amount":331.1,
+    "Signup Date":"2023-03-05 06:00:00",
+    "Country":"GB",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":255,
+    "Email":"customer254@example.com",
+    "Phone":"+1 (555) 010-6944",
+    "Purchase Amount":184.31,
+    "Signup Date":"2023-03-05 12:00:00",
+    "Country":"FR",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":256,
+    "Email":"customer255@example.com",
+    "Phone":"+1 (555) 010-6243",
+    "Purchase Amount":193.08,
+    "Signup Date":"2023-03-05 18:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":257,
+    "Email":"customer256@example.com",
+    "Phone":"+1 (555) 010-4004",
+    "Purchase Amount":293.34,
+    "Signup Date":"2023-03-06 00:00:00",
+    "Country":"DE",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":258,
+    "Email":"customer257@example.com",
+    "Phone":"+1 (555) 010-1756",
+    "Purchase Amount":263.85,
+    "Signup Date":"2023-03-06 06:00:00",
+    "Country":"DE",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":259,
+    "Email":"customer258@example.com",
+    "Phone":"+1 (555) 010-3184",
+    "Purchase Amount":133.33,
+    "Signup Date":"2023-03-06 12:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":260,
+    "Email":"customer259@example.com",
+    "Phone":"+1 (555) 010-2797",
+    "Purchase Amount":255.81,
+    "Signup Date":"2023-03-06 18:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":261,
+    "Email":"customer260@example.com",
+    "Phone":"+1 (555) 010-1891",
+    "Purchase Amount":240.75,
+    "Signup Date":"2023-03-07 00:00:00",
+    "Country":"DE",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":262,
+    "Email":"customer261@example.com",
+    "Phone":"+1 (555) 010-7751",
+    "Purchase Amount":285.49,
+    "Signup Date":"2023-03-07 06:00:00",
+    "Country":"DE",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":263,
+    "Email":"customer262@example.com",
+    "Phone":"+1 (555) 010-7705",
+    "Purchase Amount":311.99,
+    "Signup Date":"2023-03-07 12:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":264,
+    "Email":"customer263@example.com",
+    "Phone":"+1 (555) 010-4071",
+    "Purchase Amount":364.33,
+    "Signup Date":"2023-03-07 18:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":265,
+    "Email":"customer264@example.com",
+    "Phone":"+1 (555) 010-3761",
+    "Purchase Amount":256.02,
+    "Signup Date":"2023-03-08 00:00:00",
+    "Country":"DE",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":266,
+    "Email":"customer265@example.com",
+    "Phone":"+1 (555) 010-8336",
+    "Purchase Amount":205.04,
+    "Signup Date":"2023-03-08 06:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":267,
+    "Email":"customer266@example.com",
+    "Phone":"+1 (555) 010-2580",
+    "Purchase Amount":180.11,
+    "Signup Date":"2023-03-08 12:00:00",
+    "Country":"DE",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":268,
+    "Email":"customer267@example.com",
+    "Phone":"+1 (555) 010-2353",
+    "Purchase Amount":361.21,
+    "Signup Date":"2023-03-08 18:00:00",
+    "Country":"JP",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":269,
+    "Email":"customer268@example.com",
+    "Phone":"+1 (555) 010-7709",
+    "Purchase Amount":224.43,
+    "Signup Date":"2023-03-09 00:00:00",
+    "Country":"GB",
+    "Notes":""
+  },
+  {
+    "Customer ID":270,
+    "Email":"customer269@example.com",
+    "Phone":"+1 (555) 010-3008",
+    "Purchase Amount":215.94,
+    "Signup Date":"2023-03-09 06:00:00",
+    "Country":"JP",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":271,
+    "Email":"customer270@example.com",
+    "Phone":"+1 (555) 010-6184",
+    "Purchase Amount":303.59,
+    "Signup Date":"2023-03-09 12:00:00",
+    "Country":"JP",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":272,
+    "Email":"customer271@example.com",
+    "Phone":"+1 (555) 010-4253",
+    "Purchase Amount":248.77,
+    "Signup Date":"2023-03-09 18:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":273,
+    "Email":"customer272@example.com",
+    "Phone":"+1 (555) 010-1429",
+    "Purchase Amount":315.48,
+    "Signup Date":"2023-03-10 00:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":274,
+    "Email":"customer273@example.com",
+    "Phone":"+1 (555) 010-4669",
+    "Purchase Amount":252.07,
+    "Signup Date":"2023-03-10 06:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":275,
+    "Email":"customer274@example.com",
+    "Phone":"+1 (555) 010-6266",
+    "Purchase Amount":228.1,
+    "Signup Date":"2023-03-10 12:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":276,
+    "Email":"customer275@example.com",
+    "Phone":"N\/A",
+    "Purchase Amount":223.92,
+    "Signup Date":"2023-03-10 18:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":277,
+    "Email":"customer276@example.com",
+    "Phone":"+1 (555) 010-9586",
+    "Purchase Amount":317.6,
+    "Signup Date":"2023-03-11 00:00:00",
+    "Country":"DE",
+    "Notes":""
+  },
+  {
+    "Customer ID":278,
+    "Email":"customer277@example.com",
+    "Phone":"+1 (555) 010-2912",
+    "Purchase Amount":275.35,
+    "Signup Date":"2023-03-11 06:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":279,
+    "Email":"customer278@example.com",
+    "Phone":"+1 (555) 010-1011",
+    "Purchase Amount":273.33,
+    "Signup Date":"2023-03-11 12:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":280,
+    "Email":"customer279@example.com",
+    "Phone":"+1 (555) 010-2336",
+    "Purchase Amount":280.64,
+    "Signup Date":"2023-03-11 18:00:00",
+    "Country":"GB",
+    "Notes":""
+  },
+  {
+    "Customer ID":281,
+    "Email":"customer280@example.com",
+    "Phone":"+1 (555) 010-3969",
+    "Purchase Amount":210.21,
+    "Signup Date":"2023-03-12 00:00:00",
+    "Country":"FR",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":282,
+    "Email":"customer281@example.com",
+    "Phone":"+1 (555) 010-5575",
+    "Purchase Amount":305.53,
+    "Signup Date":"2023-03-12 06:00:00",
+    "Country":"DE",
+    "Notes":""
+  },
+  {
+    "Customer ID":283,
+    "Email":"customer282@example.com",
+    "Phone":"+1 (555) 010-9332",
+    "Purchase Amount":366.53,
+    "Signup Date":"2023-03-12 12:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":284,
+    "Email":"not-an-email",
+    "Phone":"+1 (555) 010-8707",
+    "Purchase Amount":159.72,
+    "Signup Date":"2023-03-12 18:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":285,
+    "Email":"customer284@example.com",
+    "Phone":"+1 (555) 010-7103",
+    "Purchase Amount":302.82,
+    "Signup Date":"2023-03-13 00:00:00",
+    "Country":"FR",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":286,
+    "Email":"customer285@example.com",
+    "Phone":"+1 (555) 010-8313",
+    "Purchase Amount":108.6,
+    "Signup Date":"2023-03-13 06:00:00",
+    "Country":"DE",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":287,
+    "Email":"customer286@example.com",
+    "Phone":"+1 (555) 010-3579",
+    "Purchase Amount":null,
+    "Signup Date":"2023-03-13 12:00:00",
+    "Country":"FR",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":288,
+    "Email":"customer287@example.com",
+    "Phone":"+1 (555) 010-7116",
+    "Purchase Amount":255.86,
+    "Signup Date":"2023-03-13 18:00:00",
+    "Country":"JP",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":289,
+    "Email":"customer288@example.com",
+    "Phone":"+1 (555) 010-9542",
+    "Purchase Amount":275.41,
+    "Signup Date":"2023-03-14 00:00:00",
+    "Country":"DE",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":290,
+    "Email":"customer289@example.com",
+    "Phone":"+1 (555) 010-6042",
+    "Purchase Amount":378.61,
+    "Signup Date":"2023-03-14 06:00:00",
+    "Country":"FR",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":291,
+    "Email":"customer290@example.com",
+    "Phone":"N\/A",
+    "Purchase Amount":286.02,
+    "Signup Date":"2023-03-14 12:00:00",
+    "Country":"JP",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":292,
+    "Email":"customer291@example.com",
+    "Phone":"+1 (555) 010-2682",
+    "Purchase Amount":274.35,
+    "Signup Date":"2023-03-14 18:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":293,
+    "Email":"customer292@example.com",
+    "Phone":"+1 (555) 010-2242",
+    "Purchase Amount":310.08,
+    "Signup Date":"2023-03-15 00:00:00",
+    "Country":"GB",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":294,
+    "Email":"customer293@example.com",
+    "Phone":"+1 (555) 010-1373",
+    "Purchase Amount":296.94,
+    "Signup Date":"2023-03-15 06:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":295,
+    "Email":"customer294@example.com",
+    "Phone":"+1 (555) 010-7765",
+    "Purchase Amount":266.8,
+    "Signup Date":"2023-03-15 12:00:00",
+    "Country":"GB",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":296,
+    "Email":"customer295@example.com",
+    "Phone":"+1 (555) 010-3656",
+    "Purchase Amount":298.84,
+    "Signup Date":"2023-03-15 18:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":297,
+    "Email":"customer296@example.com",
+    "Phone":"+1 (555) 010-6859",
+    "Purchase Amount":317.95,
+    "Signup Date":"2023-03-16 00:00:00",
+    "Country":"GB",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":298,
+    "Email":"customer297@example.com",
+    "Phone":"+1 (555) 010-4017",
+    "Purchase Amount":313.88,
+    "Signup Date":"2023-03-16 06:00:00",
+    "Country":"GB",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":299,
+    "Email":"not-an-email",
+    "Phone":"+1 (555) 010-4001",
+    "Purchase Amount":338.56,
+    "Signup Date":"2023-03-16 12:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":300,
+    "Email":"not-an-email",
+    "Phone":"+1 (555) 010-9851",
+    "Purchase Amount":364.79,
+    "Signup Date":"2023-03-16 18:00:00",
+    "Country":"FR",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":301,
+    "Email":"customer300@example.com",
+    "Phone":"+1 (555) 010-3164",
+    "Purchase Amount":196.58,
+    "Signup Date":"2023-03-17 00:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":302,
+    "Email":"customer301@example.com",
+    "Phone":"+1 (555) 010-2403",
+    "Purchase Amount":237.89,
+    "Signup Date":"2023-03-17 06:00:00",
+    "Country":"GB",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":303,
+    "Email":"customer302@example.com",
+    "Phone":"+1 (555) 010-6397",
+    "Purchase Amount":215.58,
+    "Signup Date":"2023-03-17 12:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":304,
+    "Email":"customer303@example.com",
+    "Phone":"+1 (555) 010-2214",
+    "Purchase Amount":168.12,
+    "Signup Date":"2023-03-17 18:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":305,
+    "Email":"customer304@example.com",
+    "Phone":"+1 (555) 010-5574",
+    "Purchase Amount":452.84,
+    "Signup Date":"2023-03-18 00:00:00",
+    "Country":"JP",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":306,
+    "Email":"customer305@example.com",
+    "Phone":"N\/A",
+    "Purchase Amount":347.54,
+    "Signup Date":"2023-03-18 06:00:00",
+    "Country":"GB",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":307,
+    "Email":"customer306@example.com",
+    "Phone":"+1 (555) 010-4363",
+    "Purchase Amount":213.72,
+    "Signup Date":"2023-03-18 12:00:00",
+    "Country":"FR",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":308,
+    "Email":"customer307@example.com",
+    "Phone":"+1 (555) 010-3515",
+    "Purchase Amount":286.28,
+    "Signup Date":"2023-03-18 18:00:00",
+    "Country":"DE",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":309,
+    "Email":"customer308@example.com",
+    "Phone":"+1 (555) 010-7116",
+    "Purchase Amount":305.73,
+    "Signup Date":"2023-03-19 00:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":310,
+    "Email":"customer309@example.com",
+    "Phone":"+1 (555) 010-7894",
+    "Purchase Amount":190.06,
+    "Signup Date":"2023-03-19 06:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":311,
+    "Email":"customer310@example.com",
+    "Phone":"+1 (555) 010-3540",
+    "Purchase Amount":354.21,
+    "Signup Date":"2023-03-19 12:00:00",
+    "Country":"JP",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":312,
+    "Email":"customer311@example.com",
+    "Phone":"+1 (555) 010-7517",
+    "Purchase Amount":99999.0,
+    "Signup Date":"2023-03-19 18:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":313,
+    "Email":"customer312@example.com",
+    "Phone":"+1 (555) 010-7717",
+    "Purchase Amount":339.18,
+    "Signup Date":"2023-03-20 00:00:00",
+    "Country":"JP",
+    "Notes":""
+  },
+  {
+    "Customer ID":314,
+    "Email":"customer313@example.com",
+    "Phone":"+1 (555) 010-1586",
+    "Purchase Amount":284.59,
+    "Signup Date":"2023-03-20 06:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":315,
+    "Email":"customer314@example.com",
+    "Phone":"+1 (555) 010-1881",
+    "Purchase Amount":233.19,
+    "Signup Date":"2023-03-20 12:00:00",
+    "Country":"FR",
+    "Notes":""
+  },
+  {
+    "Customer ID":316,
+    "Email":"customer315@example.com",
+    "Phone":"+1 (555) 010-2217",
+    "Purchase Amount":206.08,
+    "Signup Date":"2023-03-20 18:00:00",
+    "Country":"GB",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":317,
+    "Email":"customer316@example.com",
+    "Phone":"+1 (555) 010-1102",
+    "Purchase Amount":325.73,
+    "Signup Date":"2023-03-21 00:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":318,
+    "Email":"customer317@example.com",
+    "Phone":"+1 (555) 010-7007",
+    "Purchase Amount":332.61,
+    "Signup Date":"2023-03-21 06:00:00",
+    "Country":"DE",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":319,
+    "Email":"customer318@example.com",
+    "Phone":"+1 (555) 010-1397",
+    "Purchase Amount":300.97,
+    "Signup Date":"2023-03-21 12:00:00",
+    "Country":"DE",
+    "Notes":""
+  },
+  {
+    "Customer ID":320,
+    "Email":"customer319@example.com",
+    "Phone":"+1 (555) 010-4988",
+    "Purchase Amount":132.03,
+    "Signup Date":"2023-03-21 18:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":321,
+    "Email":"customer320@example.com",
+    "Phone":"+1 (555) 010-2008",
+    "Purchase Amount":266.6,
+    "Signup Date":"31\/31\/2023",
+    "Country":"DE",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":322,
+    "Email":"customer321@example.com",
+    "Phone":"+1 (555) 010-5807",
+    "Purchase Amount":230.0,
+    "Signup Date":"31\/31\/2023",
+    "Country":"JP",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":323,
+    "Email":"customer322@example.com",
+    "Phone":"+1 (555) 010-8696",
+    "Purchase Amount":261.77,
+    "Signup Date":"2023-03-22 12:00:00",
+    "Country":"DE",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":324,
+    "Email":"customer323@example.com",
+    "Phone":"+1 (555) 010-2984",
+    "Purchase Amount":254.32,
+    "Signup Date":"2023-03-22 18:00:00",
+    "Country":"FR",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":325,
+    "Email":"customer324@example.com",
+    "Phone":"+1 (555) 010-9290",
+    "Purchase Amount":347.69,
+    "Signup Date":"2023-03-23 00:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":326,
+    "Email":"not-an-email",
+    "Phone":"+1 (555) 010-3805",
+    "Purchase Amount":187.61,
+    "Signup Date":"2023-03-23 06:00:00",
+    "Country":"FR",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":327,
+    "Email":"customer326@example.com",
+    "Phone":"+1 (555) 010-9272",
+    "Purchase Amount":280.79,
+    "Signup Date":"2023-03-23 12:00:00",
+    "Country":"FR",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":328,
+    "Email":"customer327@example.com",
+    "Phone":"+1 (555) 010-7456",
+    "Purchase Amount":260.57,
+    "Signup Date":"2023-03-23 18:00:00",
+    "Country":"GB",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":329,
+    "Email":"customer328@example.com",
+    "Phone":"+1 (555) 010-5998",
+    "Purchase Amount":153.06,
+    "Signup Date":"31\/31\/2023",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":330,
+    "Email":"customer329@example.com",
+    "Phone":"+1 (555) 010-9894",
+    "Purchase Amount":211.85,
+    "Signup Date":"2023-03-24 06:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":331,
+    "Email":"customer330@example.com",
+    "Phone":"+1 (555) 010-3806",
+    "Purchase Amount":229.51,
+    "Signup Date":"2023-03-24 12:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":332,
+    "Email":"customer331@example.com",
+    "Phone":"+1 (555) 010-9190",
+    "Purchase Amount":225.75,
+    "Signup Date":"2023-03-24 18:00:00",
+    "Country":"FR",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":333,
+    "Email":"not-an-email",
+    "Phone":"+1 (555) 010-4018",
+    "Purchase Amount":230.78,
+    "Signup Date":"2023-03-25 00:00:00",
+    "Country":"JP",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":334,
+    "Email":"customer333@example.com",
+    "Phone":"+1 (555) 010-6693",
+    "Purchase Amount":305.85,
+    "Signup Date":"2023-03-25 06:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":335,
+    "Email":"customer334@example.com",
+    "Phone":"+1 (555) 010-5111",
+    "Purchase Amount":108.89,
+    "Signup Date":"2023-03-25 12:00:00",
+    "Country":"GB",
+    "Notes":""
+  },
+  {
+    "Customer ID":336,
+    "Email":"customer335@example.com",
+    "Phone":"+1 (555) 010-6413",
+    "Purchase Amount":241.81,
+    "Signup Date":"2023-03-25 18:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":337,
+    "Email":"customer336@example.com",
+    "Phone":"+1 (555) 010-9848",
+    "Purchase Amount":324.8,
+    "Signup Date":"2023-03-26 00:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":338,
+    "Email":"customer337@example.com",
+    "Phone":"+1 (555) 010-3745",
+    "Purchase Amount":314.62,
+    "Signup Date":"2023-03-26 06:00:00",
+    "Country":"DE",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":339,
+    "Email":"customer338@example.com",
+    "Phone":"+1 (555) 010-4824",
+    "Purchase Amount":273.03,
+    "Signup Date":"2023-03-26 12:00:00",
+    "Country":"JP",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":340,
+    "Email":"not-an-email",
+    "Phone":"+1 (555) 010-6230",
+    "Purchase Amount":314.97,
+    "Signup Date":"2023-03-26 18:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":341,
+    "Email":"customer340@example.com",
+    "Phone":"+1 (555) 010-7778",
+    "Purchase Amount":239.19,
+    "Signup Date":"2023-03-27 00:00:00",
+    "Country":"FR",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":342,
+    "Email":"customer341@example.com",
+    "Phone":"+1 (555) 010-4892",
+    "Purchase Amount":345.03,
+    "Signup Date":"2023-03-27 06:00:00",
+    "Country":"DE",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":343,
+    "Email":"customer342@example.com",
+    "Phone":"N\/A",
+    "Purchase Amount":258.95,
+    "Signup Date":"2023-03-27 12:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":344,
+    "Email":"customer343@example.com",
+    "Phone":"+1 (555) 010-9877",
+    "Purchase Amount":211.32,
+    "Signup Date":"2023-03-27 18:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":345,
+    "Email":"customer344@example.com",
+    "Phone":"+1 (555) 010-4766",
+    "Purchase Amount":257.97,
+    "Signup Date":"2023-03-28 00:00:00",
+    "Country":"GB",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":346,
+    "Email":"customer345@example.com",
+    "Phone":"+1 (555) 010-6915",
+    "Purchase Amount":226.54,
+    "Signup Date":"2023-03-28 06:00:00",
+    "Country":"FR",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":347,
+    "Email":"customer346@example.com",
+    "Phone":"+1 (555) 010-8718",
+    "Purchase Amount":276.72,
+    "Signup Date":"2023-03-28 12:00:00",
+    "Country":"GB",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":348,
+    "Email":"customer347@example.com",
+    "Phone":"+1 (555) 010-5440",
+    "Purchase Amount":225.59,
+    "Signup Date":"2023-03-28 18:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":349,
+    "Email":"not-an-email",
+    "Phone":"+1 (555) 010-8788",
+    "Purchase Amount":242.96,
+    "Signup Date":"2023-03-29 00:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":350,
+    "Email":"customer349@example.com",
+    "Phone":"+1 (555) 010-3758",
+    "Purchase Amount":262.22,
+    "Signup Date":"2023-03-29 06:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":351,
+    "Email":"customer350@example.com",
+    "Phone":"+1 (555) 010-3769",
+    "Purchase Amount":267.46,
+    "Signup Date":"2023-03-29 12:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":352,
+    "Email":"customer351@example.com",
+    "Phone":"+1 (555) 010-3567",
+    "Purchase Amount":232.71,
+    "Signup Date":"2023-03-29 18:00:00",
+    "Country":"JP",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":353,
+    "Email":"customer352@example.com",
+    "Phone":"+1 (555) 010-9377",
+    "Purchase Amount":334.41,
+    "Signup Date":"2023-03-30 00:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":354,
+    "Email":"customer353@example.com",
+    "Phone":"+1 (555) 010-5122",
+    "Purchase Amount":285.25,
+    "Signup Date":"2023-03-30 06:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":355,
+    "Email":"customer354@example.com",
+    "Phone":"+1 (555) 010-4352",
+    "Purchase Amount":174.06,
+    "Signup Date":"2023-03-30 12:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":356,
+    "Email":"customer355@example.com",
+    "Phone":"+1 (555) 010-6274",
+    "Purchase Amount":287.65,
+    "Signup Date":"2023-03-30 18:00:00",
+    "Country":"DE",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":357,
+    "Email":"customer356@example.com",
+    "Phone":"+1 (555) 010-4705",
+    "Purchase Amount":240.03,
+    "Signup Date":"2023-03-31 00:00:00",
+    "Country":"FR",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":358,
+    "Email":"customer357@example.com",
+    "Phone":"+1 (555) 010-9354",
+    "Purchase Amount":316.33,
+    "Signup Date":"2023-03-31 06:00:00",
+    "Country":"GB",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":359,
+    "Email":"customer358@example.com",
+    "Phone":"+1 (555) 010-3785",
+    "Purchase Amount":185.72,
+    "Signup Date":"2023-03-31 12:00:00",
+    "Country":"GB",
+    "Notes":""
+  },
+  {
+    "Customer ID":360,
+    "Email":"customer359@example.com",
+    "Phone":"+1 (555) 010-4695",
+    "Purchase Amount":247.39,
+    "Signup Date":"2023-03-31 18:00:00",
+    "Country":"GB",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":361,
+    "Email":"customer360@example.com",
+    "Phone":"+1 (555) 010-9637",
+    "Purchase Amount":117.62,
+    "Signup Date":"2023-04-01 00:00:00",
+    "Country":"FR",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":362,
+    "Email":"customer361@example.com",
+    "Phone":"+1 (555) 010-8693",
+    "Purchase Amount":219.81,
+    "Signup Date":"2023-04-01 06:00:00",
+    "Country":"JP",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":363,
+    "Email":"customer362@example.com",
+    "Phone":"+1 (555) 010-3740",
+    "Purchase Amount":283.65,
+    "Signup Date":"2023-04-01 12:00:00",
+    "Country":"GB",
+    "Notes":""
+  },
+  {
+    "Customer ID":364,
+    "Email":"customer363@example.com",
+    "Phone":"+1 (555) 010-2949",
+    "Purchase Amount":null,
+    "Signup Date":"2023-04-01 18:00:00",
+    "Country":"GB",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":365,
+    "Email":"customer364@example.com",
+    "Phone":"+1 (555) 010-9404",
+    "Purchase Amount":213.97,
+    "Signup Date":"2023-04-02 00:00:00",
+    "Country":"DE",
+    "Notes":""
+  },
+  {
+    "Customer ID":366,
+    "Email":"customer365@example.com",
+    "Phone":"+1 (555) 010-6140",
+    "Purchase Amount":202.08,
+    "Signup Date":"2023-04-02 06:00:00",
+    "Country":"DE",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":367,
+    "Email":"customer366@example.com",
+    "Phone":"+1 (555) 010-8075",
+    "Purchase Amount":330.93,
+    "Signup Date":"2023-04-02 12:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":368,
+    "Email":"customer367@example.com",
+    "Phone":"+1 (555) 010-4019",
+    "Purchase Amount":273.12,
+    "Signup Date":"2023-04-02 18:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":369,
+    "Email":"customer368@example.com",
+    "Phone":"+1 (555) 010-4202",
+    "Purchase Amount":285.98,
+    "Signup Date":"2023-04-03 00:00:00",
+    "Country":"DE",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":370,
+    "Email":"customer369@example.com",
+    "Phone":"+1 (555) 010-4056",
+    "Purchase Amount":143.37,
+    "Signup Date":"2023-04-03 06:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":371,
+    "Email":"customer370@example.com",
+    "Phone":"+1 (555) 010-8471",
+    "Purchase Amount":243.55,
+    "Signup Date":"2023-04-03 12:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":372,
+    "Email":"customer371@example.com",
+    "Phone":"+1 (555) 010-5826",
+    "Purchase Amount":240.85,
+    "Signup Date":"2023-04-03 18:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":373,
+    "Email":"customer372@example.com",
+    "Phone":"+1 (555) 010-2388",
+    "Purchase Amount":null,
+    "Signup Date":"2023-04-04 00:00:00",
+    "Country":"DE",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":374,
+    "Email":"customer373@example.com",
+    "Phone":"+1 (555) 010-3906",
+    "Purchase Amount":335.95,
+    "Signup Date":"2023-04-04 06:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":375,
+    "Email":"customer374@example.com",
+    "Phone":"+1 (555) 010-2465",
+    "Purchase Amount":154.57,
+    "Signup Date":"2023-04-04 12:00:00",
+    "Country":"GB",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":376,
+    "Email":"customer375@example.com",
+    "Phone":"+1 (555) 010-7256",
+    "Purchase Amount":195.29,
+    "Signup Date":"2023-04-04 18:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":377,
+    "Email":"customer376@example.com",
+    "Phone":"+1 (555) 010-6308",
+    "Purchase Amount":260.98,
+    "Signup Date":"2023-04-05 00:00:00",
+    "Country":"GB",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":378,
+    "Email":"customer377@example.com",
+    "Phone":"+1 (555) 010-9556",
+    "Purchase Amount":201.44,
+    "Signup Date":"2023-04-05 06:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":379,
+    "Email":"customer378@example.com",
+    "Phone":"+1 (555) 010-7622",
+    "Purchase Amount":269.53,
+    "Signup Date":"2023-04-05 12:00:00",
+    "Country":"DE",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":380,
+    "Email":"customer379@example.com",
+    "Phone":"+1 (555) 010-2086",
+    "Purchase Amount":339.95,
+    "Signup Date":"2023-04-05 18:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":381,
+    "Email":"customer380@example.com",
+    "Phone":"N\/A",
+    "Purchase Amount":282.37,
+    "Signup Date":"2023-04-06 00:00:00",
+    "Country":"FR",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":382,
+    "Email":"customer381@example.com",
+    "Phone":"+1 (555) 010-5226",
+    "Purchase Amount":320.67,
+    "Signup Date":"2023-04-06 06:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":383,
+    "Email":"customer382@example.com",
+    "Phone":"+1 (555) 010-7545",
+    "Purchase Amount":321.83,
+    "Signup Date":"2023-04-06 12:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":384,
+    "Email":"not-an-email",
+    "Phone":"+1 (555) 010-4055",
+    "Purchase Amount":311.42,
+    "Signup Date":"2023-04-06 18:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":385,
+    "Email":"customer384@example.com",
+    "Phone":"+1 (555) 010-8985",
+    "Purchase Amount":95.74,
+    "Signup Date":"2023-04-07 00:00:00",
+    "Country":"GB",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":386,
+    "Email":"customer385@example.com",
+    "Phone":"+1 (555) 010-5377",
+    "Purchase Amount":292.91,
+    "Signup Date":"31\/31\/2023",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":387,
+    "Email":"customer386@example.com",
+    "Phone":"+1 (555) 010-6145",
+    "Purchase Amount":169.41,
+    "Signup Date":"2023-04-07 12:00:00",
+    "Country":"DE",
+    "Notes":""
+  },
+  {
+    "Customer ID":388,
+    "Email":"customer387@example.com",
+    "Phone":"+1 (555) 010-4883",
+    "Purchase Amount":156.8,
+    "Signup Date":"2023-04-07 18:00:00",
+    "Country":"GB",
+    "Notes":""
+  },
+  {
+    "Customer ID":389,
+    "Email":"customer388@example.com",
+    "Phone":"+1 (555) 010-5467",
+    "Purchase Amount":239.56,
+    "Signup Date":"2023-04-08 00:00:00",
+    "Country":"DE",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":390,
+    "Email":"customer389@example.com",
+    "Phone":"+1 (555) 010-2829",
+    "Purchase Amount":245.22,
+    "Signup Date":"2023-04-08 06:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":391,
+    "Email":"customer390@example.com",
+    "Phone":"+1 (555) 010-6427",
+    "Purchase Amount":255.38,
+    "Signup Date":"2023-04-08 12:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":392,
+    "Email":"customer391@example.com",
+    "Phone":"+1 (555) 010-8417",
+    "Purchase Amount":189.3,
+    "Signup Date":"2023-04-08 18:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":393,
+    "Email":"not-an-email",
+    "Phone":"+1 (555) 010-3782",
+    "Purchase Amount":236.1,
+    "Signup Date":"2023-04-09 00:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":394,
+    "Email":"customer393@example.com",
+    "Phone":"+1 (555) 010-5833",
+    "Purchase Amount":209.67,
+    "Signup Date":"2023-04-09 06:00:00",
+    "Country":"FR",
+    "Notes":""
+  },
+  {
+    "Customer ID":395,
+    "Email":"not-an-email",
+    "Phone":"+1 (555) 010-9401",
+    "Purchase Amount":226.73,
+    "Signup Date":"2023-04-09 12:00:00",
+    "Country":"FR",
+    "Notes":""
+  },
+  {
+    "Customer ID":396,
+    "Email":"not-an-email",
+    "Phone":"+1 (555) 010-3081",
+    "Purchase Amount":234.96,
+    "Signup Date":"2023-04-09 18:00:00",
+    "Country":"DE",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":397,
+    "Email":"customer396@example.com",
+    "Phone":"+1 (555) 010-1758",
+    "Purchase Amount":303.54,
+    "Signup Date":"31\/31\/2023",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":398,
+    "Email":"customer397@example.com",
+    "Phone":"+1 (555) 010-8670",
+    "Purchase Amount":175.55,
+    "Signup Date":"2023-04-10 06:00:00",
+    "Country":"JP",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":399,
+    "Email":"customer398@example.com",
+    "Phone":"+1 (555) 010-7001",
+    "Purchase Amount":256.15,
+    "Signup Date":"2023-04-10 12:00:00",
+    "Country":"JP",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":400,
+    "Email":"customer399@example.com",
+    "Phone":"+1 (555) 010-3098",
+    "Purchase Amount":233.34,
+    "Signup Date":"2023-04-10 18:00:00",
+    "Country":"JP",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":401,
+    "Email":"customer400@example.com",
+    "Phone":"+1 (555) 010-7271",
+    "Purchase Amount":292.31,
+    "Signup Date":"2023-04-11 00:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":402,
+    "Email":"customer401@example.com",
+    "Phone":"+1 (555) 010-2031",
+    "Purchase Amount":null,
+    "Signup Date":"2023-04-11 06:00:00",
+    "Country":"GB",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":403,
+    "Email":"customer402@example.com",
+    "Phone":"+1 (555) 010-4106",
+    "Purchase Amount":224.5,
+    "Signup Date":"2023-04-11 12:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":404,
+    "Email":"customer403@example.com",
+    "Phone":"+1 (555) 010-4246",
+    "Purchase Amount":204.91,
+    "Signup Date":"2023-04-11 18:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":405,
+    "Email":"customer404@example.com",
+    "Phone":"+1 (555) 010-1774",
+    "Purchase Amount":264.83,
+    "Signup Date":"2023-04-12 00:00:00",
+    "Country":"JP",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":406,
+    "Email":"customer405@example.com",
+    "Phone":"+1 (555) 010-3656",
+    "Purchase Amount":312.69,
+    "Signup Date":"2023-04-12 06:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":407,
+    "Email":"customer406@example.com",
+    "Phone":"+1 (555) 010-5377",
+    "Purchase Amount":287.71,
+    "Signup Date":"2023-04-12 12:00:00",
+    "Country":"GB",
+    "Notes":""
+  },
+  {
+    "Customer ID":408,
+    "Email":"customer407@example.com",
+    "Phone":"+1 (555) 010-7336",
+    "Purchase Amount":395.49,
+    "Signup Date":"2023-04-12 18:00:00",
+    "Country":"FR",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":409,
+    "Email":"customer408@example.com",
+    "Phone":"+1 (555) 010-4202",
+    "Purchase Amount":225.05,
+    "Signup Date":"2023-04-13 00:00:00",
+    "Country":"GB",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":410,
+    "Email":"customer409@example.com",
+    "Phone":"+1 (555) 010-9934",
+    "Purchase Amount":179.25,
+    "Signup Date":"2023-04-13 06:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":411,
+    "Email":"customer410@example.com",
+    "Phone":"+1 (555) 010-5389",
+    "Purchase Amount":317.62,
+    "Signup Date":"2023-04-13 12:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":412,
+    "Email":"customer411@example.com",
+    "Phone":"+1 (555) 010-1430",
+    "Purchase Amount":287.86,
+    "Signup Date":"2023-04-13 18:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":413,
+    "Email":"customer412@example.com",
+    "Phone":"+1 (555) 010-7647",
+    "Purchase Amount":276.6,
+    "Signup Date":"2023-04-14 00:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":414,
+    "Email":"customer413@example.com",
+    "Phone":"+1 (555) 010-6125",
+    "Purchase Amount":179.03,
+    "Signup Date":"2023-04-14 06:00:00",
+    "Country":"FR",
+    "Notes":""
+  },
+  {
+    "Customer ID":415,
+    "Email":"not-an-email",
+    "Phone":"+1 (555) 010-5622",
+    "Purchase Amount":228.4,
+    "Signup Date":"2023-04-14 12:00:00",
+    "Country":"GB",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":416,
+    "Email":"customer415@example.com",
+    "Phone":"+1 (555) 010-7635",
+    "Purchase Amount":201.31,
+    "Signup Date":"2023-04-14 18:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":417,
+    "Email":"customer416@example.com",
+    "Phone":"+1 (555) 010-4558",
+    "Purchase Amount":null,
+    "Signup Date":"2023-04-15 00:00:00",
+    "Country":"DE",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":418,
+    "Email":"customer417@example.com",
+    "Phone":"+1 (555) 010-2168",
+    "Purchase Amount":217.03,
+    "Signup Date":"2023-04-15 06:00:00",
+    "Country":"GB",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":419,
+    "Email":"customer418@example.com",
+    "Phone":"+1 (555) 010-3725",
+    "Purchase Amount":261.41,
+    "Signup Date":"2023-04-15 12:00:00",
+    "Country":"JP",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":420,
+    "Email":"customer419@example.com",
+    "Phone":"+1 (555) 010-4510",
+    "Purchase Amount":201.15,
+    "Signup Date":"2023-04-15 18:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":421,
+    "Email":"customer420@example.com",
+    "Phone":"+1 (555) 010-3138",
+    "Purchase Amount":323.87,
+    "Signup Date":"2023-04-16 00:00:00",
+    "Country":"JP",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":422,
+    "Email":"customer421@example.com",
+    "Phone":"+1 (555) 010-4666",
+    "Purchase Amount":183.67,
+    "Signup Date":"2023-04-16 06:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":423,
+    "Email":"customer422@example.com",
+    "Phone":"+1 (555) 010-9071",
+    "Purchase Amount":305.45,
+    "Signup Date":"2023-04-16 12:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":424,
+    "Email":"customer423@example.com",
+    "Phone":"+1 (555) 010-9579",
+    "Purchase Amount":177.57,
+    "Signup Date":"2023-04-16 18:00:00",
+    "Country":"DE",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":425,
+    "Email":"customer424@example.com",
+    "Phone":"+1 (555) 010-1228",
+    "Purchase Amount":286.64,
+    "Signup Date":"2023-04-17 00:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":426,
+    "Email":"customer425@example.com",
+    "Phone":"+1 (555) 010-5176",
+    "Purchase Amount":332.97,
+    "Signup Date":"2023-04-17 06:00:00",
+    "Country":"DE",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":427,
+    "Email":"customer426@example.com",
+    "Phone":"+1 (555) 010-2231",
+    "Purchase Amount":280.39,
+    "Signup Date":"2023-04-17 12:00:00",
+    "Country":"GB",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":428,
+    "Email":"not-an-email",
+    "Phone":"+1 (555) 010-1103",
+    "Purchase Amount":281.64,
+    "Signup Date":"2023-04-17 18:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":429,
+    "Email":"customer428@example.com",
+    "Phone":"+1 (555) 010-9482",
+    "Purchase Amount":296.41,
+    "Signup Date":"2023-04-18 00:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":430,
+    "Email":"customer429@example.com",
+    "Phone":"+1 (555) 010-8621",
+    "Purchase Amount":339.69,
+    "Signup Date":"2023-04-18 06:00:00",
+    "Country":"GB",
+    "Notes":""
+  },
+  {
+    "Customer ID":431,
+    "Email":"customer430@example.com",
+    "Phone":"+1 (555) 010-1416",
+    "Purchase Amount":269.45,
+    "Signup Date":"2023-04-18 12:00:00",
+    "Country":"DE",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":432,
+    "Email":"customer431@example.com",
+    "Phone":"+1 (555) 010-3488",
+    "Purchase Amount":231.59,
+    "Signup Date":"2023-04-18 18:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":433,
+    "Email":"customer432@example.com",
+    "Phone":"+1 (555) 010-5938",
+    "Purchase Amount":179.6,
+    "Signup Date":"2023-04-19 00:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":434,
+    "Email":"customer433@example.com",
+    "Phone":"N\/A",
+    "Purchase Amount":348.65,
+    "Signup Date":"2023-04-19 06:00:00",
+    "Country":"FR",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":435,
+    "Email":"customer434@example.com",
+    "Phone":"+1 (555) 010-4612",
+    "Purchase Amount":332.91,
+    "Signup Date":"2023-04-19 12:00:00",
+    "Country":"FR",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":436,
+    "Email":"customer435@example.com",
+    "Phone":"+1 (555) 010-2251",
+    "Purchase Amount":null,
+    "Signup Date":"2023-04-19 18:00:00",
+    "Country":"DE",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":437,
+    "Email":"not-an-email",
+    "Phone":"+1 (555) 010-6909",
+    "Purchase Amount":301.33,
+    "Signup Date":"2023-04-20 00:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":438,
+    "Email":"customer437@example.com",
+    "Phone":"+1 (555) 010-2314",
+    "Purchase Amount":284.99,
+    "Signup Date":"2023-04-20 06:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":439,
+    "Email":"customer438@example.com",
+    "Phone":"+1 (555) 010-6689",
+    "Purchase Amount":243.38,
+    "Signup Date":"2023-04-20 12:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":440,
+    "Email":"customer439@example.com",
+    "Phone":"+1 (555) 010-6204",
+    "Purchase Amount":234.23,
+    "Signup Date":"2023-04-20 18:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":441,
+    "Email":"customer440@example.com",
+    "Phone":"+1 (555) 010-7077",
+    "Purchase Amount":null,
+    "Signup Date":"2023-04-21 00:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":442,
+    "Email":"customer441@example.com",
+    "Phone":"+1 (555) 010-8556",
+    "Purchase Amount":357.59,
+    "Signup Date":"2023-04-21 06:00:00",
+    "Country":"DE",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":443,
+    "Email":"customer442@example.com",
+    "Phone":"+1 (555) 010-2674",
+    "Purchase Amount":221.43,
+    "Signup Date":"2023-04-21 12:00:00",
+    "Country":"GB",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":444,
+    "Email":"customer443@example.com",
+    "Phone":"+1 (555) 010-6720",
+    "Purchase Amount":345.49,
+    "Signup Date":"2023-04-21 18:00:00",
+    "Country":"JP",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":445,
+    "Email":"customer444@example.com",
+    "Phone":"+1 (555) 010-5375",
+    "Purchase Amount":229.62,
+    "Signup Date":"2023-04-22 00:00:00",
+    "Country":"FR",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":446,
+    "Email":"customer445@example.com",
+    "Phone":"+1 (555) 010-5875",
+    "Purchase Amount":184.29,
+    "Signup Date":"2023-04-22 06:00:00",
+    "Country":"GB",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":447,
+    "Email":"customer446@example.com",
+    "Phone":"+1 (555) 010-6200",
+    "Purchase Amount":267.26,
+    "Signup Date":"2023-04-22 12:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":448,
+    "Email":"customer447@example.com",
+    "Phone":"+1 (555) 010-3271",
+    "Purchase Amount":271.84,
+    "Signup Date":"2023-04-22 18:00:00",
+    "Country":"JP",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":449,
+    "Email":"customer448@example.com",
+    "Phone":"+1 (555) 010-6774",
+    "Purchase Amount":275.81,
+    "Signup Date":"2023-04-23 00:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":450,
+    "Email":"customer449@example.com",
+    "Phone":"+1 (555) 010-3850",
+    "Purchase Amount":280.64,
+    "Signup Date":"2023-04-23 06:00:00",
+    "Country":"FR",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":451,
+    "Email":"customer450@example.com",
+    "Phone":"+1 (555) 010-1935",
+    "Purchase Amount":195.92,
+    "Signup Date":"2023-04-23 12:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":452,
+    "Email":"customer451@example.com",
+    "Phone":"+1 (555) 010-3254",
+    "Purchase Amount":281.41,
+    "Signup Date":"2023-04-23 18:00:00",
+    "Country":"GB",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":453,
+    "Email":"customer452@example.com",
+    "Phone":"+1 (555) 010-2247",
+    "Purchase Amount":232.57,
+    "Signup Date":"2023-04-24 00:00:00",
+    "Country":"JP",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":454,
+    "Email":"customer453@example.com",
+    "Phone":"+1 (555) 010-3870",
+    "Purchase Amount":null,
+    "Signup Date":"2023-04-24 06:00:00",
+    "Country":"GB",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":455,
+    "Email":"customer454@example.com",
+    "Phone":"+1 (555) 010-1156",
+    "Purchase Amount":230.02,
+    "Signup Date":"2023-04-24 12:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":456,
+    "Email":"customer455@example.com",
+    "Phone":"+1 (555) 010-4448",
+    "Purchase Amount":230.92,
+    "Signup Date":"2023-04-24 18:00:00",
+    "Country":"DE",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":457,
+    "Email":"customer456@example.com",
+    "Phone":"+1 (555) 010-6717",
+    "Purchase Amount":171.61,
+    "Signup Date":"2023-04-25 00:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":458,
+    "Email":"customer457@example.com",
+    "Phone":"+1 (555) 010-6978",
+    "Purchase Amount":236.11,
+    "Signup Date":"2023-04-25 06:00:00",
+    "Country":"GB",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":459,
+    "Email":"customer458@example.com",
+    "Phone":"+1 (555) 010-7036",
+    "Purchase Amount":233.64,
+    "Signup Date":"2023-04-25 12:00:00",
+    "Country":"FR",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":460,
+    "Email":"customer459@example.com",
+    "Phone":"+1 (555) 010-2222",
+    "Purchase Amount":306.72,
+    "Signup Date":"2023-04-25 18:00:00",
+    "Country":"GB",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":461,
+    "Email":"customer460@example.com",
+    "Phone":"+1 (555) 010-2372",
+    "Purchase Amount":193.03,
+    "Signup Date":"2023-04-26 00:00:00",
+    "Country":"DE",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":462,
+    "Email":"customer461@example.com",
+    "Phone":"+1 (555) 010-2455",
+    "Purchase Amount":240.23,
+    "Signup Date":"2023-04-26 06:00:00",
+    "Country":"GB",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":463,
+    "Email":"customer462@example.com",
+    "Phone":"+1 (555) 010-8403",
+    "Purchase Amount":388.69,
+    "Signup Date":"2023-04-26 12:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":464,
+    "Email":"customer463@example.com",
+    "Phone":"+1 (555) 010-1547",
+    "Purchase Amount":319.83,
+    "Signup Date":"2023-04-26 18:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":465,
+    "Email":"customer464@example.com",
+    "Phone":"+1 (555) 010-7339",
+    "Purchase Amount":290.89,
+    "Signup Date":"2023-04-27 00:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":466,
+    "Email":"customer465@example.com",
+    "Phone":"+1 (555) 010-8413",
+    "Purchase Amount":275.98,
+    "Signup Date":"2023-04-27 06:00:00",
+    "Country":"GB",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":467,
+    "Email":"customer466@example.com",
+    "Phone":"+1 (555) 010-6183",
+    "Purchase Amount":304.09,
+    "Signup Date":"31\/31\/2023",
+    "Country":"JP",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":468,
+    "Email":"customer467@example.com",
+    "Phone":"+1 (555) 010-6289",
+    "Purchase Amount":300.58,
+    "Signup Date":"2023-04-27 18:00:00",
+    "Country":"GB",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":469,
+    "Email":"customer468@example.com",
+    "Phone":"+1 (555) 010-6242",
+    "Purchase Amount":311.96,
+    "Signup Date":"2023-04-28 00:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":470,
+    "Email":"customer469@example.com",
+    "Phone":"+1 (555) 010-1415",
+    "Purchase Amount":258.02,
+    "Signup Date":"2023-04-28 06:00:00",
+    "Country":"FR",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":471,
+    "Email":"customer470@example.com",
+    "Phone":"+1 (555) 010-7397",
+    "Purchase Amount":202.89,
+    "Signup Date":"2023-04-28 12:00:00",
+    "Country":"FR",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":472,
+    "Email":"customer471@example.com",
+    "Phone":"+1 (555) 010-9471",
+    "Purchase Amount":305.5,
+    "Signup Date":"2023-04-28 18:00:00",
+    "Country":"JP",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":473,
+    "Email":"customer472@example.com",
+    "Phone":"+1 (555) 010-6687",
+    "Purchase Amount":222.76,
+    "Signup Date":"2023-04-29 00:00:00",
+    "Country":"DE",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":474,
+    "Email":"customer473@example.com",
+    "Phone":"+1 (555) 010-7788",
+    "Purchase Amount":276.86,
+    "Signup Date":"2023-04-29 06:00:00",
+    "Country":"FR",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":475,
+    "Email":"customer474@example.com",
+    "Phone":"+1 (555) 010-2308",
+    "Purchase Amount":205.78,
+    "Signup Date":"2023-04-29 12:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":476,
+    "Email":"customer475@example.com",
+    "Phone":"+1 (555) 010-1032",
+    "Purchase Amount":217.67,
+    "Signup Date":"2023-04-29 18:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":477,
+    "Email":"customer476@example.com",
+    "Phone":"+1 (555) 010-1690",
+    "Purchase Amount":241.94,
+    "Signup Date":"2023-04-30 00:00:00",
+    "Country":"US",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":478,
+    "Email":"customer477@example.com",
+    "Phone":"+1 (555) 010-4684",
+    "Purchase Amount":265.93,
+    "Signup Date":"2023-04-30 06:00:00",
+    "Country":"FR",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":479,
+    "Email":"customer478@example.com",
+    "Phone":"+1 (555) 010-1719",
+    "Purchase Amount":238.36,
+    "Signup Date":"2023-04-30 12:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":480,
+    "Email":"customer479@example.com",
+    "Phone":"+1 (555) 010-6807",
+    "Purchase Amount":271.58,
+    "Signup Date":"2023-04-30 18:00:00",
+    "Country":"GB",
+    "Notes":""
+  },
+  {
+    "Customer ID":481,
+    "Email":"customer480@example.com",
+    "Phone":"+1 (555) 010-5373",
+    "Purchase Amount":335.23,
+    "Signup Date":"2023-05-01 00:00:00",
+    "Country":"DE",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":482,
+    "Email":"customer481@example.com",
+    "Phone":"N\/A",
+    "Purchase Amount":168.41,
+    "Signup Date":"2023-05-01 06:00:00",
+    "Country":"GB",
+    "Notes":""
+  },
+  {
+    "Customer ID":483,
+    "Email":"customer482@example.com",
+    "Phone":"+1 (555) 010-8078",
+    "Purchase Amount":242.01,
+    "Signup Date":"2023-05-01 12:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":484,
+    "Email":"customer483@example.com",
+    "Phone":"+1 (555) 010-8127",
+    "Purchase Amount":280.92,
+    "Signup Date":"2023-05-01 18:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":485,
+    "Email":"customer484@example.com",
+    "Phone":"+1 (555) 010-6911",
+    "Purchase Amount":218.09,
+    "Signup Date":"2023-05-02 00:00:00",
+    "Country":"GB",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":486,
+    "Email":"customer485@example.com",
+    "Phone":"+1 (555) 010-2930",
+    "Purchase Amount":340.74,
+    "Signup Date":"2023-05-02 06:00:00",
+    "Country":"GB",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":487,
+    "Email":"customer486@example.com",
+    "Phone":"+1 (555) 010-2990",
+    "Purchase Amount":223.41,
+    "Signup Date":"2023-05-02 12:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":488,
+    "Email":"not-an-email",
+    "Phone":"+1 (555) 010-4571",
+    "Purchase Amount":232.86,
+    "Signup Date":"2023-05-02 18:00:00",
+    "Country":"DE",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":489,
+    "Email":"customer488@example.com",
+    "Phone":"+1 (555) 010-2555",
+    "Purchase Amount":235.93,
+    "Signup Date":"2023-05-03 00:00:00",
+    "Country":"GB",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":490,
+    "Email":"customer489@example.com",
+    "Phone":"+1 (555) 010-2839",
+    "Purchase Amount":null,
+    "Signup Date":"2023-05-03 06:00:00",
+    "Country":"GB",
+    "Notes":""
+  },
+  {
+    "Customer ID":491,
+    "Email":"customer490@example.com",
+    "Phone":"+1 (555) 010-1171",
+    "Purchase Amount":254.89,
+    "Signup Date":"2023-05-03 12:00:00",
+    "Country":"GB",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":492,
+    "Email":"customer491@example.com",
+    "Phone":"+1 (555) 010-5779",
+    "Purchase Amount":323.3,
+    "Signup Date":"2023-05-03 18:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":493,
+    "Email":"customer492@example.com",
+    "Phone":"+1 (555) 010-1189",
+    "Purchase Amount":417.64,
+    "Signup Date":"2023-05-04 00:00:00",
+    "Country":"GB",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":494,
+    "Email":"customer493@example.com",
+    "Phone":"+1 (555) 010-4953",
+    "Purchase Amount":331.42,
+    "Signup Date":"2023-05-04 06:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":495,
+    "Email":"customer494@example.com",
+    "Phone":"+1 (555) 010-8586",
+    "Purchase Amount":297.11,
+    "Signup Date":"2023-05-04 12:00:00",
+    "Country":"DE",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":496,
+    "Email":"customer495@example.com",
+    "Phone":"+1 (555) 010-2067",
+    "Purchase Amount":275.66,
+    "Signup Date":"2023-05-04 18:00:00",
+    "Country":"US",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":497,
+    "Email":"customer496@example.com",
+    "Phone":"+1 (555) 010-6107",
+    "Purchase Amount":369.38,
+    "Signup Date":"2023-05-05 00:00:00",
+    "Country":"DE",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":498,
+    "Email":"customer497@example.com",
+    "Phone":"+1 (555) 010-5952",
+    "Purchase Amount":229.2,
+    "Signup Date":"2023-05-05 06:00:00",
+    "Country":"GB",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":499,
+    "Email":"not-an-email",
+    "Phone":"+1 (555) 010-4748",
+    "Purchase Amount":306.53,
+    "Signup Date":"2023-05-05 12:00:00",
+    "Country":"GB",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":500,
+    "Email":"customer499@example.com",
+    "Phone":"+1 (555) 010-6673",
+    "Purchase Amount":253.11,
+    "Signup Date":"2023-05-05 18:00:00",
+    "Country":"DE",
+    "Notes":"  premium "
+  },
+  {
+    "Customer ID":134,
+    "Email":"customer133@example.com",
+    "Phone":"+1 (555) 010-9791",
+    "Purchase Amount":217.4,
+    "Signup Date":"2023-02-03 06:00:00",
+    "Country":"US",
+    "Notes":""
+  },
+  {
+    "Customer ID":182,
+    "Email":"customer181@example.com",
+    "Phone":"+1 (555) 010-7906",
+    "Purchase Amount":269.26,
+    "Signup Date":"2023-02-15 06:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":366,
+    "Email":"customer365@example.com",
+    "Phone":"+1 (555) 010-6140",
+    "Purchase Amount":202.08,
+    "Signup Date":"2023-04-02 06:00:00",
+    "Country":"DE",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":154,
+    "Email":"customer153@example.com",
+    "Phone":"+1 (555) 010-2796",
+    "Purchase Amount":358.4,
+    "Signup Date":"2023-02-08 06:00:00",
+    "Country":"GB",
+    "Notes":""
+  },
+  {
+    "Customer ID":233,
+    "Email":"customer232@example.com",
+    "Phone":"+1 (555) 010-1076",
+    "Purchase Amount":357.32,
+    "Signup Date":"2023-02-28 00:00:00",
+    "Country":"US",
+    "Notes":"vip"
+  },
+  {
+    "Customer ID":427,
+    "Email":"customer426@example.com",
+    "Phone":"+1 (555) 010-2231",
+    "Purchase Amount":280.39,
+    "Signup Date":"2023-04-17 12:00:00",
+    "Country":"GB",
+    "Notes":"  "
+  },
+  {
+    "Customer ID":223,
+    "Email":"customer222@example.com",
+    "Phone":"+1 (555) 010-7701",
+    "Purchase Amount":191.78,
+    "Signup Date":"2023-02-25 12:00:00",
+    "Country":"JP",
+    "Notes":"standard"
+  },
+  {
+    "Customer ID":433,
+    "Email":"customer432@example.com",
+    "Phone":"+1 (555) 010-5938",
+    "Purchase Amount":179.6,
+    "Signup Date":"2023-04-19 00:00:00",
+    "Country":"US",
+    "Notes":"standard"
+  }
+]

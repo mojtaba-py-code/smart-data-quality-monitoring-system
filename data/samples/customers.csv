@@ -1,0 +1,509 @@
+Customer ID,Email,Phone,Purchase Amount,Signup Date,Country,Notes
+1,customer0@example.com,+1 (555) 010-5071,229.66,31/31/2023,US,standard
+2,customer1@example.com,+1 (555) 010-3090,312.32,2023-01-01 06:00:00,US,vip
+3,customer2@example.com,+1 (555) 010-6863,216.99,2023-01-01 12:00:00,US,
+4,customer3@example.com,+1 (555) 010-8452,292.63,2023-01-01 18:00:00,FR,standard
+5,customer4@example.com,+1 (555) 010-1510,204.43,2023-01-02 00:00:00,GB,
+6,customer5@example.com,+1 (555) 010-5751,312.5,2023-01-02 06:00:00,US,vip
+7,customer6@example.com,+1 (555) 010-5220,176.29,2023-01-02 12:00:00,JP,vip
+8,customer7@example.com,+1 (555) 010-9149,324.33,2023-01-02 18:00:00,US,  
+9,customer8@example.com,+1 (555) 010-4489,295.67,2023-01-03 00:00:00,GB,  premium 
+10,customer9@example.com,+1 (555) 010-2507,236.95,2023-01-03 06:00:00,GB,standard
+11,customer10@example.com,+1 (555) 010-3659,241.46,2023-01-03 12:00:00,FR,  
+12,customer11@example.com,+1 (555) 010-7621,313.91,2023-01-03 18:00:00,US,standard
+13,customer12@example.com,+1 (555) 010-1099,241.56,2023-01-04 00:00:00,DE,vip
+14,customer13@example.com,+1 (555) 010-9146,254.99,2023-01-04 06:00:00,DE,
+15,customer14@example.com,+1 (555) 010-9908,213.0,2023-01-04 12:00:00,US,standard
+16,customer15@example.com,+1 (555) 010-4200,411.72,2023-01-04 18:00:00,US,
+17,customer16@example.com,+1 (555) 010-8839,317.96,2023-01-05 00:00:00,FR,  premium 
+18,customer17@example.com,+1 (555) 010-8332,190.64,2023-01-05 06:00:00,US,  premium 
+19,customer18@example.com,+1 (555) 010-1527,,2023-01-05 12:00:00,US,vip
+20,customer19@example.com,+1 (555) 010-6991,237.87,2023-01-05 18:00:00,GB,  premium 
+21,customer20@example.com,+1 (555) 010-8386,340.44,2023-01-06 00:00:00,FR,
+22,customer21@example.com,+1 (555) 010-3186,185.27,2023-01-06 06:00:00,DE,  premium 
+23,customer22@example.com,N/A,162.6,2023-01-06 12:00:00,GB,  premium 
+24,not-an-email,+1 (555) 010-8058,194.37,2023-01-06 18:00:00,GB,vip
+25,customer24@example.com,+1 (555) 010-5494,228.22,2023-01-07 00:00:00,US,  
+26,customer25@example.com,+1 (555) 010-7995,225.69,2023-01-07 06:00:00,US,  
+27,customer26@example.com,+1 (555) 010-7427,208.83,2023-01-07 12:00:00,FR,  premium 
+28,customer27@example.com,+1 (555) 010-5441,401.33,2023-01-07 18:00:00,JP,standard
+29,customer28@example.com,+1 (555) 010-8876,237.95,2023-01-08 00:00:00,FR,
+30,customer29@example.com,+1 (555) 010-6272,135.68,2023-01-08 06:00:00,US,  premium 
+31,customer30@example.com,+1 (555) 010-3289,235.47,2023-01-08 12:00:00,US,
+32,customer31@example.com,+1 (555) 010-6659,158.47,2023-01-08 18:00:00,FR,  premium 
+33,customer32@example.com,+1 (555) 010-1004,280.46,2023-01-09 00:00:00,JP,
+34,customer33@example.com,+1 (555) 010-5613,135.41,2023-01-09 06:00:00,JP,  premium 
+35,customer34@example.com,+1 (555) 010-4607,,2023-01-09 12:00:00,US,
+36,customer35@example.com,+1 (555) 010-5141,188.73,2023-01-09 18:00:00,GB,vip
+37,customer36@example.com,+1 (555) 010-4433,264.53,2023-01-10 00:00:00,JP,  premium 
+38,customer37@example.com,+1 (555) 010-8045,332.47,2023-01-10 06:00:00,US,standard
+39,customer38@example.com,+1 (555) 010-5102,309.02,2023-01-10 12:00:00,GB,
+40,customer39@example.com,N/A,149.06,2023-01-10 18:00:00,US,  
+41,customer40@example.com,+1 (555) 010-1394,232.49,2023-01-11 00:00:00,GB,  
+42,customer41@example.com,+1 (555) 010-3987,186.12,2023-01-11 06:00:00,GB,vip
+43,customer42@example.com,+1 (555) 010-6880,229.52,2023-01-11 12:00:00,US,  
+44,customer43@example.com,+1 (555) 010-6490,177.73,2023-01-11 18:00:00,US,  premium 
+45,customer44@example.com,+1 (555) 010-5290,280.87,2023-01-12 00:00:00,US,vip
+46,customer45@example.com,+1 (555) 010-7000,262.81,2023-01-12 06:00:00,GB,  
+47,customer46@example.com,+1 (555) 010-7860,278.71,2023-01-12 12:00:00,US,standard
+48,customer47@example.com,+1 (555) 010-3362,131.15,2023-01-12 18:00:00,US,standard
+49,customer48@example.com,+1 (555) 010-7577,273.81,2023-01-13 00:00:00,FR,vip
+50,customer49@example.com,+1 (555) 010-4909,251.15,2023-01-13 06:00:00,US,standard
+51,customer50@example.com,+1 (555) 010-1458,224.62,2023-01-13 12:00:00,FR,
+52,customer51@example.com,+1 (555) 010-2517,199.0,2023-01-13 18:00:00,GB,vip
+53,customer52@example.com,+1 (555) 010-3864,165.58,2023-01-14 00:00:00,DE,standard
+54,customer53@example.com,+1 (555) 010-2670,373.7,2023-01-14 06:00:00,JP,  premium 
+55,customer54@example.com,+1 (555) 010-4339,261.03,2023-01-14 12:00:00,US,vip
+56,customer55@example.com,+1 (555) 010-9627,189.41,2023-01-14 18:00:00,US,
+57,customer56@example.com,+1 (555) 010-1611,223.58,2023-01-15 00:00:00,US,standard
+58,customer57@example.com,+1 (555) 010-8706,368.49,2023-01-15 06:00:00,US,  premium 
+59,customer58@example.com,+1 (555) 010-1330,268.9,2023-01-15 12:00:00,GB,  premium 
+60,customer59@example.com,+1 (555) 010-9478,176.36,2023-01-15 18:00:00,JP,standard
+61,customer60@example.com,+1 (555) 010-7064,303.2,2023-01-16 00:00:00,US,
+62,not-an-email,+1 (555) 010-6262,,2023-01-16 06:00:00,US,  
+63,customer62@example.com,+1 (555) 010-4704,239.16,2023-01-16 12:00:00,GB,standard
+64,customer63@example.com,+1 (555) 010-4993,,2023-01-16 18:00:00,JP,vip
+65,customer64@example.com,+1 (555) 010-2205,154.13,2023-01-17 00:00:00,US,standard
+66,customer65@example.com,+1 (555) 010-2193,291.49,2023-01-17 06:00:00,JP,  
+67,customer66@example.com,N/A,196.51,2023-01-17 12:00:00,GB,vip
+68,customer67@example.com,+1 (555) 010-6110,216.35,2023-01-17 18:00:00,GB,
+69,customer68@example.com,+1 (555) 010-4999,223.94,2023-01-18 00:00:00,US,
+70,not-an-email,+1 (555) 010-3658,245.49,2023-01-18 06:00:00,GB,  
+71,customer70@example.com,+1 (555) 010-1399,265.12,2023-01-18 12:00:00,GB,standard
+72,customer71@example.com,+1 (555) 010-4550,256.2,2023-01-18 18:00:00,JP,
+73,customer72@example.com,+1 (555) 010-1954,264.38,2023-01-19 00:00:00,US,  
+74,customer73@example.com,+1 (555) 010-8826,99999.0,2023-01-19 06:00:00,DE,standard
+75,customer74@example.com,+1 (555) 010-8536,275.33,2023-01-19 12:00:00,US,
+76,customer75@example.com,+1 (555) 010-8771,,2023-01-19 18:00:00,US,
+77,customer76@example.com,+1 (555) 010-4819,353.66,2023-01-20 00:00:00,US,vip
+78,customer77@example.com,+1 (555) 010-1022,200.36,2023-01-20 06:00:00,US,standard
+79,customer78@example.com,+1 (555) 010-9527,233.39,2023-01-20 12:00:00,GB,vip
+80,customer79@example.com,+1 (555) 010-9207,296.31,2023-01-20 18:00:00,JP,
+81,customer80@example.com,+1 (555) 010-6320,149.19,2023-01-21 00:00:00,FR,standard
+82,customer81@example.com,+1 (555) 010-8103,284.92,2023-01-21 06:00:00,DE,
+83,customer82@example.com,+1 (555) 010-7195,228.41,2023-01-21 12:00:00,GB,  premium 
+84,customer83@example.com,+1 (555) 010-6003,,2023-01-21 18:00:00,GB,  premium 
+85,customer84@example.com,+1 (555) 010-9932,221.61,2023-01-22 00:00:00,GB,  premium 
+86,customer85@example.com,+1 (555) 010-5024,241.07,2023-01-22 06:00:00,DE,  premium 
+87,customer86@example.com,+1 (555) 010-8685,280.83,2023-01-22 12:00:00,US,  
+88,customer87@example.com,+1 (555) 010-2367,253.01,2023-01-22 18:00:00,US,
+89,customer88@example.com,+1 (555) 010-6749,362.64,2023-01-23 00:00:00,US,  
+90,customer89@example.com,+1 (555) 010-6138,133.72,2023-01-23 06:00:00,JP,  premium 
+91,customer90@example.com,+1 (555) 010-1992,278.12,2023-01-23 12:00:00,US,vip
+92,customer91@example.com,+1 (555) 010-6543,198.01,2023-01-23 18:00:00,US,standard
+93,customer92@example.com,+1 (555) 010-1519,290.8,31/31/2023,US,  premium 
+94,customer93@example.com,N/A,177.14,2023-01-24 06:00:00,US,
+95,customer94@example.com,+1 (555) 010-4166,311.94,2023-01-24 12:00:00,GB,  
+96,customer95@example.com,+1 (555) 010-5719,328.43,2023-01-24 18:00:00,GB,  premium 
+97,customer96@example.com,+1 (555) 010-2720,296.59,2023-01-25 00:00:00,US,  premium 
+98,customer97@example.com,+1 (555) 010-2703,281.74,2023-01-25 06:00:00,US,
+99,customer98@example.com,+1 (555) 010-3600,279.67,2023-01-25 12:00:00,US,
+100,customer99@example.com,+1 (555) 010-2037,165.02,2023-01-25 18:00:00,GB,  premium 
+101,customer100@example.com,+1 (555) 010-4477,276.38,2023-01-26 00:00:00,US,vip
+102,customer101@example.com,+1 (555) 010-8633,,2023-01-26 06:00:00,FR,
+103,customer102@example.com,+1 (555) 010-2904,,2023-01-26 12:00:00,DE,  
+104,customer103@example.com,+1 (555) 010-9893,196.89,2023-01-26 18:00:00,JP,  
+105,customer104@example.com,+1 (555) 010-6702,292.74,2023-01-27 00:00:00,GB,vip
+106,customer105@example.com,+1 (555) 010-9627,290.86,2023-01-27 06:00:00,JP,  premium 
+107,customer106@example.com,+1 (555) 010-9571,292.01,2023-01-27 12:00:00,DE,  
+108,customer107@example.com,+1 (555) 010-4356,220.59,2023-01-27 18:00:00,US,  premium 
+109,customer108@example.com,+1 (555) 010-6822,282.74,2023-01-28 00:00:00,GB,  premium 
+110,customer109@example.com,+1 (555) 010-1343,208.61,2023-01-28 06:00:00,GB,standard
+111,customer110@example.com,+1 (555) 010-5012,198.06,2023-01-28 12:00:00,JP,  premium 
+112,customer111@example.com,+1 (555) 010-9662,,2023-01-28 18:00:00,GB,  
+113,customer112@example.com,+1 (555) 010-8752,248.49,2023-01-29 00:00:00,US,
+114,customer113@example.com,+1 (555) 010-8416,178.44,2023-01-29 06:00:00,US,vip
+115,customer114@example.com,+1 (555) 010-5721,252.88,2023-01-29 12:00:00,DE,standard
+116,customer115@example.com,+1 (555) 010-4377,92.53,2023-01-29 18:00:00,US,vip
+117,customer116@example.com,N/A,239.53,2023-01-30 00:00:00,US,
+118,customer117@example.com,+1 (555) 010-2625,341.79,2023-01-30 06:00:00,US,
+119,customer118@example.com,+1 (555) 010-9175,257.96,2023-01-30 12:00:00,DE,vip
+120,customer119@example.com,+1 (555) 010-3783,,2023-01-30 18:00:00,US,
+121,customer120@example.com,+1 (555) 010-8125,243.34,2023-01-31 00:00:00,US,  premium 
+122,customer121@example.com,+1 (555) 010-4484,130.21,2023-01-31 06:00:00,JP,  premium 
+123,customer122@example.com,+1 (555) 010-1628,215.61,2023-01-31 12:00:00,US,
+124,customer123@example.com,+1 (555) 010-8930,252.9,2023-01-31 18:00:00,GB,standard
+125,customer124@example.com,+1 (555) 010-3908,186.65,2023-02-01 00:00:00,GB,  premium 
+126,customer125@example.com,+1 (555) 010-6021,248.47,2023-02-01 06:00:00,FR,standard
+127,customer126@example.com,+1 (555) 010-8714,234.62,2023-02-01 12:00:00,DE,  
+128,customer127@example.com,+1 (555) 010-7839,307.46,2023-02-01 18:00:00,US,vip
+129,customer128@example.com,+1 (555) 010-8165,231.96,2023-02-02 00:00:00,US,standard
+130,customer129@example.com,+1 (555) 010-4404,271.23,2023-02-02 06:00:00,FR,
+131,customer130@example.com,+1 (555) 010-4647,251.17,2023-02-02 12:00:00,GB,
+132,customer131@example.com,+1 (555) 010-9328,236.52,2023-02-02 18:00:00,US,vip
+133,customer132@example.com,+1 (555) 010-1547,341.11,2023-02-03 00:00:00,DE,  premium 
+134,customer133@example.com,+1 (555) 010-9791,217.4,2023-02-03 06:00:00,US,
+135,customer134@example.com,+1 (555) 010-1679,214.18,2023-02-03 12:00:00,FR,
+136,customer135@example.com,+1 (555) 010-1416,276.82,2023-02-03 18:00:00,US,  premium 
+137,customer136@example.com,+1 (555) 010-5660,311.03,2023-02-04 00:00:00,US,  
+138,customer137@example.com,+1 (555) 010-7292,229.81,2023-02-04 06:00:00,GB,standard
+139,customer138@example.com,+1 (555) 010-9461,263.54,2023-02-04 12:00:00,US,standard
+140,customer139@example.com,+1 (555) 010-7106,344.67,2023-02-04 18:00:00,US,  
+141,customer140@example.com,+1 (555) 010-5619,99999.0,2023-02-05 00:00:00,US,  premium 
+142,customer141@example.com,+1 (555) 010-6233,261.9,2023-02-05 06:00:00,GB,  premium 
+143,customer142@example.com,+1 (555) 010-7327,359.86,2023-02-05 12:00:00,JP,
+144,customer143@example.com,+1 (555) 010-6185,230.04,2023-02-05 18:00:00,DE,  premium 
+145,customer144@example.com,+1 (555) 010-2863,310.85,2023-02-06 00:00:00,GB,standard
+146,customer145@example.com,+1 (555) 010-9304,251.21,2023-02-06 06:00:00,US,standard
+147,customer146@example.com,+1 (555) 010-5139,268.53,2023-02-06 12:00:00,US,
+148,customer147@example.com,+1 (555) 010-5318,245.26,2023-02-06 18:00:00,US,  
+149,customer148@example.com,+1 (555) 010-4921,190.57,2023-02-07 00:00:00,GB,  premium 
+150,customer149@example.com,N/A,245.18,2023-02-07 06:00:00,US,
+151,customer150@example.com,+1 (555) 010-5821,230.31,2023-02-07 12:00:00,FR,
+152,customer151@example.com,+1 (555) 010-1385,253.69,2023-02-07 18:00:00,JP,vip
+153,customer152@example.com,+1 (555) 010-8406,203.22,2023-02-08 00:00:00,US,vip
+154,customer153@example.com,+1 (555) 010-2796,358.4,2023-02-08 06:00:00,GB,
+155,customer154@example.com,+1 (555) 010-8704,266.9,2023-02-08 12:00:00,US,
+156,customer155@example.com,+1 (555) 010-9653,339.74,2023-02-08 18:00:00,GB,  
+157,customer156@example.com,+1 (555) 010-2882,252.3,2023-02-09 00:00:00,DE,standard
+158,customer157@example.com,+1 (555) 010-9904,281.18,2023-02-09 06:00:00,US,  premium 
+159,customer158@example.com,+1 (555) 010-3991,309.79,2023-02-09 12:00:00,JP,standard
+160,customer159@example.com,+1 (555) 010-8616,311.32,2023-02-09 18:00:00,DE,standard
+161,customer160@example.com,+1 (555) 010-8751,337.15,2023-02-10 00:00:00,DE,vip
+162,customer161@example.com,+1 (555) 010-2878,,2023-02-10 06:00:00,US,vip
+163,customer162@example.com,N/A,,2023-02-10 12:00:00,US,  premium 
+164,customer163@example.com,+1 (555) 010-8841,,2023-02-10 18:00:00,GB,  premium 
+165,customer164@example.com,+1 (555) 010-4923,356.92,2023-02-11 00:00:00,US,standard
+166,customer165@example.com,+1 (555) 010-9935,239.91,2023-02-11 06:00:00,US,vip
+167,customer166@example.com,+1 (555) 010-7652,307.29,2023-02-11 12:00:00,US,vip
+168,customer167@example.com,+1 (555) 010-5958,237.13,2023-02-11 18:00:00,GB,vip
+169,customer168@example.com,+1 (555) 010-4503,235.75,2023-02-12 00:00:00,DE,
+170,not-an-email,+1 (555) 010-2731,288.17,2023-02-12 06:00:00,US,standard
+171,customer170@example.com,+1 (555) 010-3449,343.94,2023-02-12 12:00:00,US,
+172,customer171@example.com,+1 (555) 010-3166,343.65,2023-02-12 18:00:00,GB,  
+173,customer172@example.com,+1 (555) 010-5219,256.34,2023-02-13 00:00:00,US,standard
+174,customer173@example.com,+1 (555) 010-7271,294.51,2023-02-13 06:00:00,JP,vip
+175,customer174@example.com,+1 (555) 010-2970,216.37,2023-02-13 12:00:00,GB,  premium 
+176,customer175@example.com,+1 (555) 010-4619,318.3,2023-02-13 18:00:00,FR,
+177,customer176@example.com,+1 (555) 010-7867,248.14,2023-02-14 00:00:00,US,standard
+178,customer177@example.com,+1 (555) 010-7690,269.58,2023-02-14 06:00:00,US,standard
+179,customer178@example.com,+1 (555) 010-2755,251.28,2023-02-14 12:00:00,FR,vip
+180,customer179@example.com,+1 (555) 010-8417,189.31,2023-02-14 18:00:00,US,  premium 
+181,customer180@example.com,+1 (555) 010-2812,347.88,2023-02-15 00:00:00,GB,vip
+182,customer181@example.com,+1 (555) 010-7906,269.26,2023-02-15 06:00:00,US,vip
+183,customer182@example.com,+1 (555) 010-9751,275.79,2023-02-15 12:00:00,DE,standard
+184,customer183@example.com,+1 (555) 010-2904,267.16,2023-02-15 18:00:00,US,  premium 
+185,customer184@example.com,+1 (555) 010-1290,236.41,2023-02-16 00:00:00,GB,  premium 
+186,customer185@example.com,+1 (555) 010-5590,240.61,2023-02-16 06:00:00,US,  premium 
+187,customer186@example.com,+1 (555) 010-7688,,2023-02-16 12:00:00,US,
+188,customer187@example.com,+1 (555) 010-2178,223.41,2023-02-16 18:00:00,US,  
+189,customer188@example.com,+1 (555) 010-8109,124.59,2023-02-17 00:00:00,JP,standard
+190,customer189@example.com,+1 (555) 010-2669,293.53,2023-02-17 06:00:00,DE,  premium 
+191,customer190@example.com,+1 (555) 010-7082,181.98,2023-02-17 12:00:00,GB,  premium 
+192,customer191@example.com,+1 (555) 010-1474,165.21,2023-02-17 18:00:00,FR,standard
+193,customer192@example.com,+1 (555) 010-4627,251.98,2023-02-18 00:00:00,GB,  
+194,customer193@example.com,+1 (555) 010-2132,279.24,2023-02-18 06:00:00,US,vip
+195,customer194@example.com,+1 (555) 010-8288,334.75,2023-02-18 12:00:00,DE,
+196,customer195@example.com,+1 (555) 010-9417,208.9,2023-02-18 18:00:00,DE,
+197,customer196@example.com,+1 (555) 010-3334,304.81,2023-02-19 00:00:00,US,
+198,customer197@example.com,+1 (555) 010-7334,270.4,2023-02-19 06:00:00,US,  
+199,customer198@example.com,+1 (555) 010-9765,236.0,2023-02-19 12:00:00,GB,vip
+200,customer199@example.com,+1 (555) 010-2055,254.67,2023-02-19 18:00:00,DE,
+201,customer200@example.com,+1 (555) 010-9564,223.72,2023-02-20 00:00:00,US,vip
+202,customer201@example.com,+1 (555) 010-2355,99999.0,2023-02-20 06:00:00,DE,  premium 
+203,customer202@example.com,+1 (555) 010-1744,319.58,2023-02-20 12:00:00,US,vip
+204,customer203@example.com,+1 (555) 010-7467,226.15,2023-02-20 18:00:00,JP,standard
+205,customer204@example.com,+1 (555) 010-9757,396.12,2023-02-21 00:00:00,DE,standard
+206,customer205@example.com,+1 (555) 010-2827,356.61,2023-02-21 06:00:00,US,  
+207,customer206@example.com,N/A,287.97,2023-02-21 12:00:00,FR,standard
+208,customer207@example.com,+1 (555) 010-2331,176.23,2023-02-21 18:00:00,JP,vip
+209,customer208@example.com,+1 (555) 010-5065,215.09,2023-02-22 00:00:00,DE,  premium 
+210,customer209@example.com,+1 (555) 010-8362,223.45,2023-02-22 06:00:00,DE,  
+211,customer210@example.com,+1 (555) 010-7131,260.76,2023-02-22 12:00:00,US,vip
+212,customer211@example.com,+1 (555) 010-5730,245.5,2023-02-22 18:00:00,GB,  premium 
+213,customer212@example.com,+1 (555) 010-4247,223.52,2023-02-23 00:00:00,JP,standard
+214,customer213@example.com,+1 (555) 010-2957,,2023-02-23 06:00:00,JP,  premium 
+215,customer214@example.com,+1 (555) 010-3573,296.55,31/31/2023,FR,  
+216,customer215@example.com,+1 (555) 010-4022,349.59,2023-02-23 18:00:00,JP,vip
+217,customer216@example.com,+1 (555) 010-2468,290.69,2023-02-24 00:00:00,FR,  
+218,customer217@example.com,+1 (555) 010-5237,294.19,2023-02-24 06:00:00,US,vip
+219,customer218@example.com,+1 (555) 010-2884,333.35,2023-02-24 12:00:00,GB,standard
+220,customer219@example.com,+1 (555) 010-6966,230.12,2023-02-24 18:00:00,US,  
+221,customer220@example.com,+1 (555) 010-7109,269.8,2023-02-25 00:00:00,GB,vip
+222,customer221@example.com,+1 (555) 010-7383,271.85,2023-02-25 06:00:00,FR,  
+223,customer222@example.com,+1 (555) 010-7701,191.78,2023-02-25 12:00:00,JP,standard
+224,customer223@example.com,+1 (555) 010-1711,260.99,2023-02-25 18:00:00,GB,standard
+225,customer224@example.com,+1 (555) 010-7163,268.98,2023-02-26 00:00:00,US,  
+226,customer225@example.com,+1 (555) 010-4933,212.41,2023-02-26 06:00:00,JP,  
+227,customer226@example.com,+1 (555) 010-1723,330.43,31/31/2023,FR,
+228,customer227@example.com,+1 (555) 010-8192,229.82,2023-02-26 18:00:00,GB,  
+229,customer228@example.com,+1 (555) 010-6499,244.63,2023-02-27 00:00:00,US,vip
+230,customer229@example.com,+1 (555) 010-5910,277.58,2023-02-27 06:00:00,US,vip
+231,customer230@example.com,+1 (555) 010-4213,211.27,2023-02-27 12:00:00,FR,vip
+232,customer231@example.com,+1 (555) 010-6660,210.48,2023-02-27 18:00:00,GB,
+233,customer232@example.com,+1 (555) 010-1076,357.32,2023-02-28 00:00:00,US,vip
+234,customer233@example.com,+1 (555) 010-7306,142.97,2023-02-28 06:00:00,US,vip
+235,customer234@example.com,+1 (555) 010-8411,,2023-02-28 12:00:00,FR,
+236,customer235@example.com,+1 (555) 010-3108,266.31,2023-02-28 18:00:00,DE,  premium 
+237,customer236@example.com,+1 (555) 010-1822,333.38,2023-03-01 00:00:00,FR,
+238,customer237@example.com,+1 (555) 010-3098,315.07,2023-03-01 06:00:00,GB,
+239,customer238@example.com,+1 (555) 010-2997,330.38,2023-03-01 12:00:00,DE,  
+240,customer239@example.com,+1 (555) 010-9903,173.81,2023-03-01 18:00:00,JP,
+241,customer240@example.com,+1 (555) 010-4558,188.3,2023-03-02 00:00:00,GB,
+242,customer241@example.com,+1 (555) 010-4721,190.79,2023-03-02 06:00:00,DE,  
+243,customer242@example.com,+1 (555) 010-5235,99999.0,2023-03-02 12:00:00,FR,  premium 
+244,customer243@example.com,+1 (555) 010-6504,253.1,2023-03-02 18:00:00,FR,vip
+245,customer244@example.com,+1 (555) 010-9206,287.7,2023-03-03 00:00:00,US,vip
+246,customer245@example.com,+1 (555) 010-8927,190.1,2023-03-03 06:00:00,GB,standard
+247,customer246@example.com,+1 (555) 010-1866,386.02,2023-03-03 12:00:00,US,
+248,customer247@example.com,+1 (555) 010-8767,236.53,2023-03-03 18:00:00,DE,standard
+249,customer248@example.com,+1 (555) 010-4286,286.23,2023-03-04 00:00:00,US,standard
+250,customer249@example.com,+1 (555) 010-6256,239.46,2023-03-04 06:00:00,DE,vip
+251,customer250@example.com,+1 (555) 010-2538,191.79,2023-03-04 12:00:00,JP,standard
+252,customer251@example.com,+1 (555) 010-8322,295.06,2023-03-04 18:00:00,US,  
+253,customer252@example.com,+1 (555) 010-9135,144.71,2023-03-05 00:00:00,GB,
+254,customer253@example.com,+1 (555) 010-4962,331.1,2023-03-05 06:00:00,GB,  premium 
+255,customer254@example.com,+1 (555) 010-6944,184.31,2023-03-05 12:00:00,FR,  
+256,customer255@example.com,+1 (555) 010-6243,193.08,2023-03-05 18:00:00,US,vip
+257,customer256@example.com,+1 (555) 010-4004,293.34,2023-03-06 00:00:00,DE,vip
+258,customer257@example.com,+1 (555) 010-1756,263.85,2023-03-06 06:00:00,DE,  premium 
+259,customer258@example.com,+1 (555) 010-3184,133.33,2023-03-06 12:00:00,US,vip
+260,customer259@example.com,+1 (555) 010-2797,255.81,2023-03-06 18:00:00,US,  
+261,customer260@example.com,+1 (555) 010-1891,240.75,2023-03-07 00:00:00,DE,  
+262,customer261@example.com,+1 (555) 010-7751,285.49,2023-03-07 06:00:00,DE,vip
+263,customer262@example.com,+1 (555) 010-7705,311.99,2023-03-07 12:00:00,US,standard
+264,customer263@example.com,+1 (555) 010-4071,364.33,2023-03-07 18:00:00,US,  
+265,customer264@example.com,+1 (555) 010-3761,256.02,2023-03-08 00:00:00,DE,vip
+266,customer265@example.com,+1 (555) 010-8336,205.04,2023-03-08 06:00:00,US,  premium 
+267,customer266@example.com,+1 (555) 010-2580,180.11,2023-03-08 12:00:00,DE,  
+268,customer267@example.com,+1 (555) 010-2353,361.21,2023-03-08 18:00:00,JP,  
+269,customer268@example.com,+1 (555) 010-7709,224.43,2023-03-09 00:00:00,GB,
+270,customer269@example.com,+1 (555) 010-3008,215.94,2023-03-09 06:00:00,JP,  
+271,customer270@example.com,+1 (555) 010-6184,303.59,2023-03-09 12:00:00,JP,vip
+272,customer271@example.com,+1 (555) 010-4253,248.77,2023-03-09 18:00:00,US,  
+273,customer272@example.com,+1 (555) 010-1429,315.48,2023-03-10 00:00:00,US,  
+274,customer273@example.com,+1 (555) 010-4669,252.07,2023-03-10 06:00:00,US,  
+275,customer274@example.com,+1 (555) 010-6266,228.1,2023-03-10 12:00:00,US,vip
+276,customer275@example.com,N/A,223.92,2023-03-10 18:00:00,US,  premium 
+277,customer276@example.com,+1 (555) 010-9586,317.6,2023-03-11 00:00:00,DE,
+278,customer277@example.com,+1 (555) 010-2912,275.35,2023-03-11 06:00:00,US,  
+279,customer278@example.com,+1 (555) 010-1011,273.33,2023-03-11 12:00:00,US,
+280,customer279@example.com,+1 (555) 010-2336,280.64,2023-03-11 18:00:00,GB,
+281,customer280@example.com,+1 (555) 010-3969,210.21,2023-03-12 00:00:00,FR,  
+282,customer281@example.com,+1 (555) 010-5575,305.53,2023-03-12 06:00:00,DE,
+283,customer282@example.com,+1 (555) 010-9332,366.53,2023-03-12 12:00:00,US,
+284,not-an-email,+1 (555) 010-8707,159.72,2023-03-12 18:00:00,US,standard
+285,customer284@example.com,+1 (555) 010-7103,302.82,2023-03-13 00:00:00,FR,  premium 
+286,customer285@example.com,+1 (555) 010-8313,108.6,2023-03-13 06:00:00,DE,standard
+287,customer286@example.com,+1 (555) 010-3579,,2023-03-13 12:00:00,FR,  
+288,customer287@example.com,+1 (555) 010-7116,255.86,2023-03-13 18:00:00,JP,  premium 
+289,customer288@example.com,+1 (555) 010-9542,275.41,2023-03-14 00:00:00,DE,  premium 
+290,customer289@example.com,+1 (555) 010-6042,378.61,2023-03-14 06:00:00,FR,  
+291,customer290@example.com,N/A,286.02,2023-03-14 12:00:00,JP,  
+292,customer291@example.com,+1 (555) 010-2682,274.35,2023-03-14 18:00:00,US,
+293,customer292@example.com,+1 (555) 010-2242,310.08,2023-03-15 00:00:00,GB,  
+294,customer293@example.com,+1 (555) 010-1373,296.94,2023-03-15 06:00:00,US,standard
+295,customer294@example.com,+1 (555) 010-7765,266.8,2023-03-15 12:00:00,GB,  premium 
+296,customer295@example.com,+1 (555) 010-3656,298.84,2023-03-15 18:00:00,US,
+297,customer296@example.com,+1 (555) 010-6859,317.95,2023-03-16 00:00:00,GB,standard
+298,customer297@example.com,+1 (555) 010-4017,313.88,2023-03-16 06:00:00,GB,vip
+299,not-an-email,+1 (555) 010-4001,338.56,2023-03-16 12:00:00,US,standard
+300,not-an-email,+1 (555) 010-9851,364.79,2023-03-16 18:00:00,FR,standard
+301,customer300@example.com,+1 (555) 010-3164,196.58,2023-03-17 00:00:00,US,  
+302,customer301@example.com,+1 (555) 010-2403,237.89,2023-03-17 06:00:00,GB,  premium 
+303,customer302@example.com,+1 (555) 010-6397,215.58,2023-03-17 12:00:00,US,  premium 
+304,customer303@example.com,+1 (555) 010-2214,168.12,2023-03-17 18:00:00,US,standard
+305,customer304@example.com,+1 (555) 010-5574,452.84,2023-03-18 00:00:00,JP,  
+306,customer305@example.com,N/A,347.54,2023-03-18 06:00:00,GB,  
+307,customer306@example.com,+1 (555) 010-4363,213.72,2023-03-18 12:00:00,FR,vip
+308,customer307@example.com,+1 (555) 010-3515,286.28,2023-03-18 18:00:00,DE,standard
+309,customer308@example.com,+1 (555) 010-7116,305.73,2023-03-19 00:00:00,US,
+310,customer309@example.com,+1 (555) 010-7894,190.06,2023-03-19 06:00:00,US,  
+311,customer310@example.com,+1 (555) 010-3540,354.21,2023-03-19 12:00:00,JP,  
+312,customer311@example.com,+1 (555) 010-7517,99999.0,2023-03-19 18:00:00,US,  premium 
+313,customer312@example.com,+1 (555) 010-7717,339.18,2023-03-20 00:00:00,JP,
+314,customer313@example.com,+1 (555) 010-1586,284.59,2023-03-20 06:00:00,US,vip
+315,customer314@example.com,+1 (555) 010-1881,233.19,2023-03-20 12:00:00,FR,
+316,customer315@example.com,+1 (555) 010-2217,206.08,2023-03-20 18:00:00,GB,vip
+317,customer316@example.com,+1 (555) 010-1102,325.73,2023-03-21 00:00:00,US,vip
+318,customer317@example.com,+1 (555) 010-7007,332.61,2023-03-21 06:00:00,DE,vip
+319,customer318@example.com,+1 (555) 010-1397,300.97,2023-03-21 12:00:00,DE,
+320,customer319@example.com,+1 (555) 010-4988,132.03,2023-03-21 18:00:00,US,
+321,customer320@example.com,+1 (555) 010-2008,266.6,31/31/2023,DE,vip
+322,customer321@example.com,+1 (555) 010-5807,230.0,31/31/2023,JP,standard
+323,customer322@example.com,+1 (555) 010-8696,261.77,2023-03-22 12:00:00,DE,vip
+324,customer323@example.com,+1 (555) 010-2984,254.32,2023-03-22 18:00:00,FR,vip
+325,customer324@example.com,+1 (555) 010-9290,347.69,2023-03-23 00:00:00,US,standard
+326,not-an-email,+1 (555) 010-3805,187.61,2023-03-23 06:00:00,FR,vip
+327,customer326@example.com,+1 (555) 010-9272,280.79,2023-03-23 12:00:00,FR,  premium 
+328,customer327@example.com,+1 (555) 010-7456,260.57,2023-03-23 18:00:00,GB,standard
+329,customer328@example.com,+1 (555) 010-5998,153.06,31/31/2023,US,  
+330,customer329@example.com,+1 (555) 010-9894,211.85,2023-03-24 06:00:00,US,
+331,customer330@example.com,+1 (555) 010-3806,229.51,2023-03-24 12:00:00,US,standard
+332,customer331@example.com,+1 (555) 010-9190,225.75,2023-03-24 18:00:00,FR,standard
+333,not-an-email,+1 (555) 010-4018,230.78,2023-03-25 00:00:00,JP,standard
+334,customer333@example.com,+1 (555) 010-6693,305.85,2023-03-25 06:00:00,US,standard
+335,customer334@example.com,+1 (555) 010-5111,108.89,2023-03-25 12:00:00,GB,
+336,customer335@example.com,+1 (555) 010-6413,241.81,2023-03-25 18:00:00,US,
+337,customer336@example.com,+1 (555) 010-9848,324.8,2023-03-26 00:00:00,US,standard
+338,customer337@example.com,+1 (555) 010-3745,314.62,2023-03-26 06:00:00,DE,  
+339,customer338@example.com,+1 (555) 010-4824,273.03,2023-03-26 12:00:00,JP,  premium 
+340,not-an-email,+1 (555) 010-6230,314.97,2023-03-26 18:00:00,US,
+341,customer340@example.com,+1 (555) 010-7778,239.19,2023-03-27 00:00:00,FR,vip
+342,customer341@example.com,+1 (555) 010-4892,345.03,2023-03-27 06:00:00,DE,  premium 
+343,customer342@example.com,N/A,258.95,2023-03-27 12:00:00,US,vip
+344,customer343@example.com,+1 (555) 010-9877,211.32,2023-03-27 18:00:00,US,  
+345,customer344@example.com,+1 (555) 010-4766,257.97,2023-03-28 00:00:00,GB,vip
+346,customer345@example.com,+1 (555) 010-6915,226.54,2023-03-28 06:00:00,FR,  premium 
+347,customer346@example.com,+1 (555) 010-8718,276.72,2023-03-28 12:00:00,GB,  
+348,customer347@example.com,+1 (555) 010-5440,225.59,2023-03-28 18:00:00,US,standard
+349,not-an-email,+1 (555) 010-8788,242.96,2023-03-29 00:00:00,US,  premium 
+350,customer349@example.com,+1 (555) 010-3758,262.22,2023-03-29 06:00:00,US,standard
+351,customer350@example.com,+1 (555) 010-3769,267.46,2023-03-29 12:00:00,US,vip
+352,customer351@example.com,+1 (555) 010-3567,232.71,2023-03-29 18:00:00,JP,vip
+353,customer352@example.com,+1 (555) 010-9377,334.41,2023-03-30 00:00:00,US,
+354,customer353@example.com,+1 (555) 010-5122,285.25,2023-03-30 06:00:00,US,
+355,customer354@example.com,+1 (555) 010-4352,174.06,2023-03-30 12:00:00,US,standard
+356,customer355@example.com,+1 (555) 010-6274,287.65,2023-03-30 18:00:00,DE,  
+357,customer356@example.com,+1 (555) 010-4705,240.03,2023-03-31 00:00:00,FR,vip
+358,customer357@example.com,+1 (555) 010-9354,316.33,2023-03-31 06:00:00,GB,standard
+359,customer358@example.com,+1 (555) 010-3785,185.72,2023-03-31 12:00:00,GB,
+360,customer359@example.com,+1 (555) 010-4695,247.39,2023-03-31 18:00:00,GB,vip
+361,customer360@example.com,+1 (555) 010-9637,117.62,2023-04-01 00:00:00,FR,standard
+362,customer361@example.com,+1 (555) 010-8693,219.81,2023-04-01 06:00:00,JP,  premium 
+363,customer362@example.com,+1 (555) 010-3740,283.65,2023-04-01 12:00:00,GB,
+364,customer363@example.com,+1 (555) 010-2949,,2023-04-01 18:00:00,GB,  
+365,customer364@example.com,+1 (555) 010-9404,213.97,2023-04-02 00:00:00,DE,
+366,customer365@example.com,+1 (555) 010-6140,202.08,2023-04-02 06:00:00,DE,  
+367,customer366@example.com,+1 (555) 010-8075,330.93,2023-04-02 12:00:00,US,vip
+368,customer367@example.com,+1 (555) 010-4019,273.12,2023-04-02 18:00:00,US,  
+369,customer368@example.com,+1 (555) 010-4202,285.98,2023-04-03 00:00:00,DE,standard
+370,customer369@example.com,+1 (555) 010-4056,143.37,2023-04-03 06:00:00,US,standard
+371,customer370@example.com,+1 (555) 010-8471,243.55,2023-04-03 12:00:00,US,  premium 
+372,customer371@example.com,+1 (555) 010-5826,240.85,2023-04-03 18:00:00,US,standard
+373,customer372@example.com,+1 (555) 010-2388,,2023-04-04 00:00:00,DE,vip
+374,customer373@example.com,+1 (555) 010-3906,335.95,2023-04-04 06:00:00,US,
+375,customer374@example.com,+1 (555) 010-2465,154.57,2023-04-04 12:00:00,GB,  
+376,customer375@example.com,+1 (555) 010-7256,195.29,2023-04-04 18:00:00,US,  
+377,customer376@example.com,+1 (555) 010-6308,260.98,2023-04-05 00:00:00,GB,vip
+378,customer377@example.com,+1 (555) 010-9556,201.44,2023-04-05 06:00:00,US,  
+379,customer378@example.com,+1 (555) 010-7622,269.53,2023-04-05 12:00:00,DE,  premium 
+380,customer379@example.com,+1 (555) 010-2086,339.95,2023-04-05 18:00:00,US,standard
+381,customer380@example.com,N/A,282.37,2023-04-06 00:00:00,FR,  premium 
+382,customer381@example.com,+1 (555) 010-5226,320.67,2023-04-06 06:00:00,US,vip
+383,customer382@example.com,+1 (555) 010-7545,321.83,2023-04-06 12:00:00,US,standard
+384,not-an-email,+1 (555) 010-4055,311.42,2023-04-06 18:00:00,US,  
+385,customer384@example.com,+1 (555) 010-8985,95.74,2023-04-07 00:00:00,GB,standard
+386,customer385@example.com,+1 (555) 010-5377,292.91,31/31/2023,US,
+387,customer386@example.com,+1 (555) 010-6145,169.41,2023-04-07 12:00:00,DE,
+388,customer387@example.com,+1 (555) 010-4883,156.8,2023-04-07 18:00:00,GB,
+389,customer388@example.com,+1 (555) 010-5467,239.56,2023-04-08 00:00:00,DE,standard
+390,customer389@example.com,+1 (555) 010-2829,245.22,2023-04-08 06:00:00,US,  premium 
+391,customer390@example.com,+1 (555) 010-6427,255.38,2023-04-08 12:00:00,US,  
+392,customer391@example.com,+1 (555) 010-8417,189.3,2023-04-08 18:00:00,US,  
+393,not-an-email,+1 (555) 010-3782,236.1,2023-04-09 00:00:00,US,standard
+394,customer393@example.com,+1 (555) 010-5833,209.67,2023-04-09 06:00:00,FR,
+395,not-an-email,+1 (555) 010-9401,226.73,2023-04-09 12:00:00,FR,
+396,not-an-email,+1 (555) 010-3081,234.96,2023-04-09 18:00:00,DE,standard
+397,customer396@example.com,+1 (555) 010-1758,303.54,31/31/2023,US,standard
+398,customer397@example.com,+1 (555) 010-8670,175.55,2023-04-10 06:00:00,JP,standard
+399,customer398@example.com,+1 (555) 010-7001,256.15,2023-04-10 12:00:00,JP,  premium 
+400,customer399@example.com,+1 (555) 010-3098,233.34,2023-04-10 18:00:00,JP,vip
+401,customer400@example.com,+1 (555) 010-7271,292.31,2023-04-11 00:00:00,US,standard
+402,customer401@example.com,+1 (555) 010-2031,,2023-04-11 06:00:00,GB,  premium 
+403,customer402@example.com,+1 (555) 010-4106,224.5,2023-04-11 12:00:00,US,  premium 
+404,customer403@example.com,+1 (555) 010-4246,204.91,2023-04-11 18:00:00,US,vip
+405,customer404@example.com,+1 (555) 010-1774,264.83,2023-04-12 00:00:00,JP,vip
+406,customer405@example.com,+1 (555) 010-3656,312.69,2023-04-12 06:00:00,US,vip
+407,customer406@example.com,+1 (555) 010-5377,287.71,2023-04-12 12:00:00,GB,
+408,customer407@example.com,+1 (555) 010-7336,395.49,2023-04-12 18:00:00,FR,standard
+409,customer408@example.com,+1 (555) 010-4202,225.05,2023-04-13 00:00:00,GB,standard
+410,customer409@example.com,+1 (555) 010-9934,179.25,2023-04-13 06:00:00,US,
+411,customer410@example.com,+1 (555) 010-5389,317.62,2023-04-13 12:00:00,US,standard
+412,customer411@example.com,+1 (555) 010-1430,287.86,2023-04-13 18:00:00,US,vip
+413,customer412@example.com,+1 (555) 010-7647,276.6,2023-04-14 00:00:00,US,vip
+414,customer413@example.com,+1 (555) 010-6125,179.03,2023-04-14 06:00:00,FR,
+415,not-an-email,+1 (555) 010-5622,228.4,2023-04-14 12:00:00,GB,  
+416,customer415@example.com,+1 (555) 010-7635,201.31,2023-04-14 18:00:00,US,standard
+417,customer416@example.com,+1 (555) 010-4558,,2023-04-15 00:00:00,DE,vip
+418,customer417@example.com,+1 (555) 010-2168,217.03,2023-04-15 06:00:00,GB,vip
+419,customer418@example.com,+1 (555) 010-3725,261.41,2023-04-15 12:00:00,JP,  premium 
+420,customer419@example.com,+1 (555) 010-4510,201.15,2023-04-15 18:00:00,US,  premium 
+421,customer420@example.com,+1 (555) 010-3138,323.87,2023-04-16 00:00:00,JP,standard
+422,customer421@example.com,+1 (555) 010-4666,183.67,2023-04-16 06:00:00,US,  premium 
+423,customer422@example.com,+1 (555) 010-9071,305.45,2023-04-16 12:00:00,US,standard
+424,customer423@example.com,+1 (555) 010-9579,177.57,2023-04-16 18:00:00,DE,standard
+425,customer424@example.com,+1 (555) 010-1228,286.64,2023-04-17 00:00:00,US,  
+426,customer425@example.com,+1 (555) 010-5176,332.97,2023-04-17 06:00:00,DE,vip
+427,customer426@example.com,+1 (555) 010-2231,280.39,2023-04-17 12:00:00,GB,  
+428,not-an-email,+1 (555) 010-1103,281.64,2023-04-17 18:00:00,US,  premium 
+429,customer428@example.com,+1 (555) 010-9482,296.41,2023-04-18 00:00:00,US,
+430,customer429@example.com,+1 (555) 010-8621,339.69,2023-04-18 06:00:00,GB,
+431,customer430@example.com,+1 (555) 010-1416,269.45,2023-04-18 12:00:00,DE,standard
+432,customer431@example.com,+1 (555) 010-3488,231.59,2023-04-18 18:00:00,US,  premium 
+433,customer432@example.com,+1 (555) 010-5938,179.6,2023-04-19 00:00:00,US,standard
+434,customer433@example.com,N/A,348.65,2023-04-19 06:00:00,FR,standard
+435,customer434@example.com,+1 (555) 010-4612,332.91,2023-04-19 12:00:00,FR,vip
+436,customer435@example.com,+1 (555) 010-2251,,2023-04-19 18:00:00,DE,  
+437,not-an-email,+1 (555) 010-6909,301.33,2023-04-20 00:00:00,US,standard
+438,customer437@example.com,+1 (555) 010-2314,284.99,2023-04-20 06:00:00,US,
+439,customer438@example.com,+1 (555) 010-6689,243.38,2023-04-20 12:00:00,US,  
+440,customer439@example.com,+1 (555) 010-6204,234.23,2023-04-20 18:00:00,US,  premium 
+441,customer440@example.com,+1 (555) 010-7077,,2023-04-21 00:00:00,US,vip
+442,customer441@example.com,+1 (555) 010-8556,357.59,2023-04-21 06:00:00,DE,vip
+443,customer442@example.com,+1 (555) 010-2674,221.43,2023-04-21 12:00:00,GB,  premium 
+444,customer443@example.com,+1 (555) 010-6720,345.49,2023-04-21 18:00:00,JP,vip
+445,customer444@example.com,+1 (555) 010-5375,229.62,2023-04-22 00:00:00,FR,  premium 
+446,customer445@example.com,+1 (555) 010-5875,184.29,2023-04-22 06:00:00,GB,vip
+447,customer446@example.com,+1 (555) 010-6200,267.26,2023-04-22 12:00:00,US,  premium 
+448,customer447@example.com,+1 (555) 010-3271,271.84,2023-04-22 18:00:00,JP,standard
+449,customer448@example.com,+1 (555) 010-6774,275.81,2023-04-23 00:00:00,US,
+450,customer449@example.com,+1 (555) 010-3850,280.64,2023-04-23 06:00:00,FR,vip
+451,customer450@example.com,+1 (555) 010-1935,195.92,2023-04-23 12:00:00,US,
+452,customer451@example.com,+1 (555) 010-3254,281.41,2023-04-23 18:00:00,GB,standard
+453,customer452@example.com,+1 (555) 010-2247,232.57,2023-04-24 00:00:00,JP,  premium 
+454,customer453@example.com,+1 (555) 010-3870,,2023-04-24 06:00:00,GB,  premium 
+455,customer454@example.com,+1 (555) 010-1156,230.02,2023-04-24 12:00:00,US,  premium 
+456,customer455@example.com,+1 (555) 010-4448,230.92,2023-04-24 18:00:00,DE,  premium 
+457,customer456@example.com,+1 (555) 010-6717,171.61,2023-04-25 00:00:00,US,vip
+458,customer457@example.com,+1 (555) 010-6978,236.11,2023-04-25 06:00:00,GB,vip
+459,customer458@example.com,+1 (555) 010-7036,233.64,2023-04-25 12:00:00,FR,  premium 
+460,customer459@example.com,+1 (555) 010-2222,306.72,2023-04-25 18:00:00,GB,standard
+461,customer460@example.com,+1 (555) 010-2372,193.03,2023-04-26 00:00:00,DE,vip
+462,customer461@example.com,+1 (555) 010-2455,240.23,2023-04-26 06:00:00,GB,  
+463,customer462@example.com,+1 (555) 010-8403,388.69,2023-04-26 12:00:00,US,  
+464,customer463@example.com,+1 (555) 010-1547,319.83,2023-04-26 18:00:00,US,
+465,customer464@example.com,+1 (555) 010-7339,290.89,2023-04-27 00:00:00,US,  premium 
+466,customer465@example.com,+1 (555) 010-8413,275.98,2023-04-27 06:00:00,GB,vip
+467,customer466@example.com,+1 (555) 010-6183,304.09,31/31/2023,JP,  premium 
+468,customer467@example.com,+1 (555) 010-6289,300.58,2023-04-27 18:00:00,GB,vip
+469,customer468@example.com,+1 (555) 010-6242,311.96,2023-04-28 00:00:00,US,vip
+470,customer469@example.com,+1 (555) 010-1415,258.02,2023-04-28 06:00:00,FR,  premium 
+471,customer470@example.com,+1 (555) 010-7397,202.89,2023-04-28 12:00:00,FR,vip
+472,customer471@example.com,+1 (555) 010-9471,305.5,2023-04-28 18:00:00,JP,vip
+473,customer472@example.com,+1 (555) 010-6687,222.76,2023-04-29 00:00:00,DE,  
+474,customer473@example.com,+1 (555) 010-7788,276.86,2023-04-29 06:00:00,FR,  premium 
+475,customer474@example.com,+1 (555) 010-2308,205.78,2023-04-29 12:00:00,US,
+476,customer475@example.com,+1 (555) 010-1032,217.67,2023-04-29 18:00:00,US,
+477,customer476@example.com,+1 (555) 010-1690,241.94,2023-04-30 00:00:00,US,  premium 
+478,customer477@example.com,+1 (555) 010-4684,265.93,2023-04-30 06:00:00,FR,standard
+479,customer478@example.com,+1 (555) 010-1719,238.36,2023-04-30 12:00:00,US,  
+480,customer479@example.com,+1 (555) 010-6807,271.58,2023-04-30 18:00:00,GB,
+481,customer480@example.com,+1 (555) 010-5373,335.23,2023-05-01 00:00:00,DE,  
+482,customer481@example.com,N/A,168.41,2023-05-01 06:00:00,GB,
+483,customer482@example.com,+1 (555) 010-8078,242.01,2023-05-01 12:00:00,US,vip
+484,customer483@example.com,+1 (555) 010-8127,280.92,2023-05-01 18:00:00,US,standard
+485,customer484@example.com,+1 (555) 010-6911,218.09,2023-05-02 00:00:00,GB,vip
+486,customer485@example.com,+1 (555) 010-2930,340.74,2023-05-02 06:00:00,GB,  
+487,customer486@example.com,+1 (555) 010-2990,223.41,2023-05-02 12:00:00,US,
+488,not-an-email,+1 (555) 010-4571,232.86,2023-05-02 18:00:00,DE,  
+489,customer488@example.com,+1 (555) 010-2555,235.93,2023-05-03 00:00:00,GB,vip
+490,customer489@example.com,+1 (555) 010-2839,,2023-05-03 06:00:00,GB,
+491,customer490@example.com,+1 (555) 010-1171,254.89,2023-05-03 12:00:00,GB,  premium 
+492,customer491@example.com,+1 (555) 010-5779,323.3,2023-05-03 18:00:00,US,vip
+493,customer492@example.com,+1 (555) 010-1189,417.64,2023-05-04 00:00:00,GB,vip
+494,customer493@example.com,+1 (555) 010-4953,331.42,2023-05-04 06:00:00,US,standard
+495,customer494@example.com,+1 (555) 010-8586,297.11,2023-05-04 12:00:00,DE,vip
+496,customer495@example.com,+1 (555) 010-2067,275.66,2023-05-04 18:00:00,US,  
+497,customer496@example.com,+1 (555) 010-6107,369.38,2023-05-05 00:00:00,DE,standard
+498,customer497@example.com,+1 (555) 010-5952,229.2,2023-05-05 06:00:00,GB,vip
+499,not-an-email,+1 (555) 010-4748,306.53,2023-05-05 12:00:00,GB,vip
+500,customer499@example.com,+1 (555) 010-6673,253.11,2023-05-05 18:00:00,DE,  premium 
+134,customer133@example.com,+1 (555) 010-9791,217.4,2023-02-03 06:00:00,US,
+182,customer181@example.com,+1 (555) 010-7906,269.26,2023-02-15 06:00:00,US,vip
+366,customer365@example.com,+1 (555) 010-6140,202.08,2023-04-02 06:00:00,DE,  
+154,customer153@example.com,+1 (555) 010-2796,358.4,2023-02-08 06:00:00,GB,
+233,customer232@example.com,+1 (555) 010-1076,357.32,2023-02-28 00:00:00,US,vip
+427,customer426@example.com,+1 (555) 010-2231,280.39,2023-04-17 12:00:00,GB,  
+223,customer222@example.com,+1 (555) 010-7701,191.78,2023-02-25 12:00:00,JP,standard
+433,customer432@example.com,+1 (555) 010-5938,179.6,2023-04-19 00:00:00,US,standard
