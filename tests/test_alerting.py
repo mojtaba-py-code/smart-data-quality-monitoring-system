@@ -9,6 +9,7 @@ globally routable must be refused.
 from __future__ import annotations
 
 from datetime import UTC, datetime
+from urllib.parse import urlsplit
 
 import pandas as pd
 import pytest
@@ -78,8 +79,13 @@ def test_opt_in_permits_a_local_endpoint() -> None:
 
 def test_redaction_keeps_the_secret_out_of_logs() -> None:
     redacted = redact_url("https://hooks.example.com/services/T00/B00/SUPERSECRET")
+    # Asserted on the parsed result rather than with `in`: a substring test
+    # would also pass for https://hooks.example.com.attacker.test/, which is
+    # exactly the confusion this project refuses elsewhere.
+    parts = urlsplit(redacted)
+    assert parts.hostname == "hooks.example.com"
+    assert parts.path == "/<redacted>"
     assert "SUPERSECRET" not in redacted
-    assert "hooks.example.com" in redacted
 
 
 # -- alert decisions --------------------------------------------------------
