@@ -171,7 +171,7 @@ class RunHistory:
     def recent(self, dataset_name: str | None = None, *, limit: int = 20) -> list[RunRecord]:
         """Return the most recent runs, newest first."""
         # _COLUMNS is a fixed literal; every value is bound as a parameter below.
-        query = f"SELECT {_COLUMNS} FROM runs"
+        query = f"SELECT {_COLUMNS} FROM runs"  # nosec B608 - fixed column list
         parameters: tuple[object, ...] = ()
         if dataset_name is not None:
             query += " WHERE dataset_name = ?"
@@ -187,8 +187,9 @@ class RunHistory:
         """Return the latest run for ``dataset_name`` strictly before ``before``."""
         cutoff = (before or datetime.now(UTC)).isoformat()
         with self._connect() as connection:
+            # _COLUMNS is a fixed literal; dataset_name and cutoff are bound.
             row = connection.execute(
-                f"SELECT {_COLUMNS} FROM runs WHERE dataset_name = ? AND run_at < ? "
+                f"SELECT {_COLUMNS} FROM runs WHERE dataset_name = ? AND run_at < ? "  # nosec B608
                 "ORDER BY run_at DESC, id DESC LIMIT 1",
                 (dataset_name, cutoff),
             ).fetchone()

@@ -107,3 +107,7 @@ ignore_missing_imports = true
 plugins = ["pydantic.mypy"]
 mypy_path = "src"
 packages = ["dqms"]
+
+[tool.bandit]
+# Tests deliberately exercise weak inputs and assert on failure paths.
+exclude_dirs = ["tests"]
