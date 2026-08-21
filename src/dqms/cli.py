@@ -418,6 +418,7 @@ def dashboard(
     dataset the operator uploads, so it is not exposed to the local network
     unless --host is set explicitly.
     """
+    import importlib.util
     import subprocess
     import sys
     import threading
@@ -427,6 +428,10 @@ def dashboard(
     app_path = Path(__file__).resolve().parent / "dashboard" / "app.py"
     if not app_path.is_file():
         _fail("dashboard application not found")
+    # Streamlit ships in the optional `dashboard` extra so the base install
+    # stays small; say so plainly instead of failing inside the subprocess.
+    if importlib.util.find_spec("streamlit") is None:
+        _fail("the dashboard needs Streamlit - install it with: pip install 'dqms[dashboard]'")
 
     url = f"http://{host}:{port}"
     console.print(f"Starting dashboard at {url} ...")

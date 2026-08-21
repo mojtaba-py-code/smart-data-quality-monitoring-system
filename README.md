@@ -144,6 +144,23 @@ protections are enforced by default:
 The threat model, the boundary these controls defend, and the hardening required for shared or
 automated deployments are documented in [SECURITY.md](SECURITY.md).
 
+## Install
+
+```bash
+pip install dqms
+```
+
+That gets the analysis engine, the CLI and HTML/PDF reporting. The Streamlit
+dashboard runs as its own process and is never imported by the library, so its
+stack is an opt-in extra rather than a cost every install pays:
+
+| Install | Adds |
+| --- | --- |
+| `pip install dqms` | profiling, validation, cleaning, scoring, drift, reports, CLI |
+| `pip install "dqms[dashboard]"` | the interactive Streamlit dashboard (`dqms dashboard`) |
+| `pip install "dqms[xls]"` | reading legacy BIFF `.xls` workbooks |
+| `pip install "dqms[all]"` | everything above |
+
 ## Quick Start
 
 ```bash
@@ -154,7 +171,7 @@ python -m venv .venv
 # Unix / macOS
 source .venv/bin/activate
 
-# 2. Install the package with development extras
+# 2. Install from a checkout, with the development extras
 pip install -e ".[dev]"
 
 # 3. Analyse a dataset
