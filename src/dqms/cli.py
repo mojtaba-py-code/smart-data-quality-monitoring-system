@@ -430,8 +430,14 @@ def dashboard(
         _fail("dashboard application not found")
     # Streamlit ships in the optional `dashboard` extra so the base install
     # stays small; say so plainly instead of failing inside the subprocess.
+    # The project is not on PyPI, so the command named here is the extras
+    # install from a checkout - the one the README documents. The backslash
+    # escapes the bracket so Rich prints it instead of reading it as markup.
     if importlib.util.find_spec("streamlit") is None:
-        _fail("the dashboard needs Streamlit - install it with: pip install 'dqms[dashboard]'")
+        _fail(
+            "the dashboard needs Streamlit - install the extra from a checkout "
+            'of the repository with: pip install ".\\[dashboard]"'
+        )
 
     url = f"http://{host}:{port}"
     console.print(f"Starting dashboard at {url} ...")
