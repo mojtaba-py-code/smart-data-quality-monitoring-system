@@ -42,7 +42,7 @@ dependencies = [
 [project.optional-dependencies]
 # The Streamlit dashboard is launched as a separate process and is never
 # imported by the library or the CLI, so its stack stays out of the base
-# install: `pip install dqms` gets the analysis engine, CLI and reports.
+# install: a plain `pip install .` gets the analysis engine, CLI and reports.
 dashboard = ["streamlit>=1.30", "plotly>=5.18"]
 # Legacy BIFF .xls workbooks; openpyxl only reads the modern zip-based formats.
 xls = ["xlrd>=2.0"]
