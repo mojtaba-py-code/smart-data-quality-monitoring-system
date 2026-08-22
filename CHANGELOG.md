@@ -4,21 +4,23 @@ All notable changes to this project are documented here. The format follows
 [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and the project adheres to
 [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [1.3.0] - 2026-08-21
+## [1.3.0] - unreleased
 
 ### Added
 
-**Published on PyPI.** `pip install dqms` now works without a checkout. Releases are built and
-uploaded by a tagged workflow using PyPI Trusted Publishing (OIDC), so no API token exists on a
-developer machine or in repository secrets, and every distribution carries a build attestation.
+**A release pipeline.** Distributions are built, checked, and version-matched against the tag on
+every `v*` tag, and uploaded by a workflow using PyPI Trusted Publishing (OIDC), so no API token
+exists on a developer machine or in repository secrets, and every distribution carries a build
+attestation. Nothing has been uploaded yet - `pip install dqms` does not work until the first tag
+is pushed; install from a clone or from the repository URL in the meantime.
 
 ### Changed
 
 **The dashboard is an opt-in extra.** Streamlit and Plotly moved out of the base dependencies into
-`dqms[dashboard]`. The dashboard runs as its own process and is never imported by the library or the
-CLI, so a plain `pip install dqms` no longer pulls a web framework in order to profile a CSV. A
-`dqms[all]` extra installs everything. Running `dqms dashboard` without the extra now explains what
-to install instead of failing inside the subprocess.
+the `dashboard` extra. The dashboard runs as its own process and is never imported by the library or
+the CLI, so a plain install no longer pulls a web framework in order to profile a CSV. An `all`
+extra installs everything. Running `dqms dashboard` without the extra now explains what to install
+instead of failing inside the subprocess.
 
 ## [1.2.0] - 2026-08-13
 

@@ -146,8 +146,12 @@ automated deployments are documented in [SECURITY.md](SECURITY.md).
 
 ## Install
 
+Install from a clone of this repository:
+
 ```bash
-pip install dqms
+git clone https://github.com/mojtaba-py-code/smart-data-quality-monitoring-system.git
+cd smart-data-quality-monitoring-system
+pip install .
 ```
 
 That gets the analysis engine, the CLI and HTML/PDF reporting. The Streamlit
@@ -156,10 +160,21 @@ stack is an opt-in extra rather than a cost every install pays:
 
 | Install | Adds |
 | --- | --- |
-| `pip install dqms` | profiling, validation, cleaning, scoring, drift, reports, CLI |
-| `pip install "dqms[dashboard]"` | the interactive Streamlit dashboard (`dqms dashboard`) |
-| `pip install "dqms[xls]"` | reading legacy BIFF `.xls` workbooks |
-| `pip install "dqms[all]"` | everything above |
+| `pip install .` | profiling, validation, cleaning, scoring, drift, reports, CLI |
+| `pip install ".[dashboard]"` | the interactive Streamlit dashboard (`dqms dashboard`) |
+| `pip install ".[xls]"` | reading legacy BIFF `.xls` workbooks |
+| `pip install ".[all]"` | everything above |
+
+Without cloning first, pip can install straight from the repository URL - the
+same extras apply:
+
+```bash
+pip install "git+https://github.com/mojtaba-py-code/smart-data-quality-monitoring-system.git"
+pip install "dqms[dashboard] @ git+https://github.com/mojtaba-py-code/smart-data-quality-monitoring-system.git"
+```
+
+Publication to PyPI is pending; the release workflow is in place but no version
+has been uploaded yet, so `pip install dqms` does not work today.
 
 ## Quick Start
 
