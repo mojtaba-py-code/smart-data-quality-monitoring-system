@@ -113,8 +113,9 @@ jobs:
           python-version: "3.12"
 
       # The declared requirement sets are audited rather than the installed
-      # environment: auditing the environment would trip over this project's own
-      # distribution, which is intentionally not published to PyPI.
+      # environment: what matters is what this project asks for, and auditing an
+      # environment would also trip over the package itself, which is installed
+      # from the checkout because no release has been uploaded to an index yet.
       - name: Audit declared dependencies for known advisories
         run: |
           python -m pip install --upgrade pip
