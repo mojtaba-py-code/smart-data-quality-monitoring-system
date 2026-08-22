@@ -56,3 +56,13 @@ data/private/
 data/history.db
 *.db-journal
 *.db-wal
+
+# Keys, certificates, and credential files: never committed, and ignored so a
+# stray one cannot be added by accident.
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+id_rsa*
+credentials.json
