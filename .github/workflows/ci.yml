@@ -129,13 +129,26 @@ jobs:
     steps:
       - name: Check out repository
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # Full history. A credential that was committed and deleted in the
+          # very next commit is still published, and scanning only the tip
+          # misses exactly that case - the one a history scan exists to catch.
+          fetch-depth: 0
 
       # Credential shapes, not the word "password": the tests legitimately carry
       # fake webhook URLs to prove the redactor masks them. Dependency-free on
       # purpose - a secret scanner is the last place to add a supply chain.
-      - name: Secret scan (nothing credential-shaped in the tree)
+      - name: Secret scan (nothing credential-shaped in any commit)
         run: |
           set -euo pipefail
+          # Nothing is exempt, this workflow least of all: a CI file is one of
+          # the likelier places for a token to be pasted while someone is
+          # debugging a job, and an exempted path stays invisible for the rest
+          # of the history. No exemption is needed, because no alternative can
+          # match the line that defines it - every literal prefix below runs
+          # straight into a "[" that opens a character class, and no class here
+          # accepts "[". Keep that property when adding a pattern: end the
+          # literal part at a "[".
           patterns='AKIA[0-9A-Z]{16}'
           patterns="$patterns"'|-----BEGIN [A-Z ]*PRIVATE KEY-----'
           patterns="$patterns"'|gh[pousr]_[A-Za-z0-9]{36}'
@@ -143,15 +156,29 @@ jobs:
           patterns="$patterns"'|sk_live_[0-9A-Za-z]{16,}'
           patterns="$patterns"'|AIza[0-9A-Za-z_-]{35}'
           patterns="$patterns"'|hooks\.slack\.com/services/[A-Za-z0-9_/-]{20,}'
-          if git grep -nIE "$patterns" -- . ':!.github/workflows/ci.yml'; then
+          # The revisions arrive on stdin rather than being spliced onto the
+          # command line by $(git rev-list --all): that list grows by one SHA
+          # per commit with no upper bound, so a long-lived repository would
+          # eventually push the command past the OS argument limit and fail the
+          # job with an exec error - a scan that cannot run, dressed up as a CI
+          # bug. xargs splits the revisions into as many invocations as the
+          # limit requires, so history size cannot break it.
+          #
+          # The captured output decides, not the exit status: xargs answers 123
+          # whenever any batch matched nothing, which is the ordinary case, so
+          # its status cannot tell "clean" apart from "found something".
+          hits="$(git rev-list --all | xargs -r git grep -nIE -e "$patterns")" || true
+          if [ -n "$hits" ]; then
+            printf '%s\n' "$hits"
             echo "::error::A committed value looks like a live credential"
+            echo "Rotate it first - deleting the line does not unpublish it."
             exit 1
           fi
           if git ls-files --error-unmatch .env > /dev/null 2>&1; then
             echo "::error::.env is tracked - secrets belong in the environment"
             exit 1
           fi
-          echo "No credential-shaped values are committed."
+          echo "No credential-shaped values in $(git rev-list --all --count) commits."
 
       - name: Set up Python
         uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
