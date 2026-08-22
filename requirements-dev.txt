@@ -1,5 +1,9 @@
 # Development dependencies. Install with: pip install -r requirements-dev.txt
 -r requirements.txt
+# The `dashboard` extra: not part of a base install, but the dashboard tests
+# import Streamlit, so a development environment needs it.
+streamlit>=1.30
+plotly>=5.18
 pytest>=7.4
 pytest-cov>=4.1
 ruff>=0.4
