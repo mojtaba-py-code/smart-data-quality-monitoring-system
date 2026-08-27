@@ -331,6 +331,9 @@ ruff check .
 mypy
 ```
 
+196 tests cover profiling, validation, cleaning, scoring, anomaly detection and drift
+monitoring, with an 80 % coverage floor enforced in CI — under the floor the build fails.
+
 Coverage settings, Ruff rule selection, and mypy strictness are all defined in
 [`pyproject.toml`](pyproject.toml).
 
