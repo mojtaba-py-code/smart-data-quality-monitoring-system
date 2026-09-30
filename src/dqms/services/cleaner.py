@@ -12,7 +12,6 @@ import re
 import unicodedata
 from dataclasses import dataclass, field
 
-import numpy as np
 import pandas as pd
 
 from dqms.config.settings import Settings, get_settings
@@ -164,11 +163,9 @@ class DataCleaner:
             has_symbol = series.str.contains(r"[$€£¥,]").mean()
             if looks_currency >= 0.9 and has_symbol > 0:
                 cleaned = (
-                    result.frame[column]
-                    .astype(str)
-                    .str.replace(_CURRENCY_CHARS, "", regex=True)
-                    .replace("", np.nan)
+                    result.frame[column].astype(str).str.replace(_CURRENCY_CHARS, "", regex=True)
                 )
+                # errors="coerce" already turns the empty strings left behind into NaN.
                 numeric = pd.to_numeric(cleaned, errors="coerce")
                 result.frame[column] = numeric
                 converted.append(column)
