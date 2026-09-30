@@ -8,7 +8,7 @@ on:
   schedule:
     # Weekly, so a newly disclosed advisory in a dependency surfaces even when
     # nothing has been pushed.
-    - cron: "0 6 * * 1"
+    - cron: "40 6 * * 1"
   workflow_dispatch:
 
 # Least privilege: nothing here needs to write to the repository.
